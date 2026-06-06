@@ -86,7 +86,8 @@ class _ScreenViewerState extends State<ScreenViewer> {
       
       // Remove any relative or absolute external references to nav_interceptor.js
       // as they cause MIME type errors on web due to SPA fallback routing.
-      htmlContent = htmlContent.replaceAll(RegExp(r'<script\s+src=["\']\/?nav_interceptor\.js["\']><\/script>'), '');
+      htmlContent = htmlContent.replaceAll('<script src="nav_interceptor.js"></script>', '');
+      htmlContent = htmlContent.replaceAll('<script src="/nav_interceptor.js"></script>', '');
       
       if (htmlContent.contains('</body>')) {
         htmlContent = htmlContent.replaceFirst('</body>', '<script>\n$js\n</script></body>');
