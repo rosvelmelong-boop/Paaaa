@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Unit B-3 Exit Walk-through - Placeholder - PropVeil</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "bg-canvas": "#0A1628",
+                        "bg-surface": "#1A2B45",
+                        "bg-surface-2": "#142239",
+                        "border-subtle": "#1E293B",
+                        "primary": "#6bd9c7",
+                        "on-primary": "#003731",
+                        "text-primary": "#FFFFFF",
+                        "text-secondary": "#94A3B8",
+                        "text-tertiary": "#64748B",
+                        "warning": "#F59E0B",
+                        "danger": "#EF4444",
+                        "success": "#10B981"
+                    },
+                    fontFamily: {
+                        "display": ["Montserrat", "sans-serif"],
+                        "body": ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body class="bg-bg-canvas text-text-primary font-body antialiased min-h-screen pb-24">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-bg-canvas/80 backdrop-blur-md border-b border-border-subtle">
+        <div class="flex justify-between items-center h-16 px-6 w-full">
+            <button class="flex items-center text-text-primary hover:text-primary transition-colors">
+                <span class="material-symbols-outlined mr-2">arrow_back_ios_new</span>
+                <span class="font-medium text-sm">Back</span>
+            </button>
+            <div class="text-text-tertiary text-xs font-semibold uppercase tracking-wider">General Flow</div>
+            <button class="text-text-primary hover:text-primary transition-colors relative">
+                <span class="material-symbols-outlined">notifications</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="px-6 pt-12 max-w-md mx-auto flex flex-col justify-center items-center text-center">
+        <!-- Badge -->
+        <div class="inline-flex items-center bg-bg-surface-2 border border-border-subtle text-primary px-4 py-1.5 rounded-full text-xs font-semibold mb-8 tracking-wider uppercase">
+            <span class="mr-2">⚡</span> PROTOTYPE VIEW
+        </div>
+
+        <!-- Title -->
+        <h1 class="font-display font-black text-3xl mb-4 leading-tight tracking-tight">Unit B-3 Exit Walk-through</h1>
+        <p class="text-text-tertiary text-xs font-mono mb-8 bg-bg-surface px-3 py-1 rounded border border-border-subtle">
+            ID: 16491dc31c04492c9aef5366b6781de3
+        </p>
+
+        <!-- Graphic / Illustration representation -->
+        <div class="w-full bg-bg-surface rounded-3xl p-8 border border-border-subtle mb-10 flex flex-col items-center">
+            <div class="w-20 h-20 bg-bg-surface-2 rounded-2xl flex items-center justify-center mb-6 border border-border-subtle">
+                <span class="material-symbols-outlined text-4xl text-primary">view_quilt</span>
+            </div>
+            <h3 class="font-display font-bold text-lg mb-2">Interface Placeholder</h3>
+            <p class="text-text-secondary text-sm leading-relaxed max-w-xs">
+                This screen represents <strong>Unit B-3 Exit Walk-through</strong> in the General Flow module.
+            </p>
+        </div>
+
+        <p class="text-text-tertiary text-xs max-w-xs mb-8 leading-relaxed">
+            Full user flows, business logic, and API integrations for this section will be enabled in staging/production deployments.
+        </p>
+
+        <!-- CTA back button -->
+        <button class="w-full bg-primary text-on-primary h-14 rounded-xl font-semibold hover:opacity-90 transition-opacity flex items-center justify-center shadow-lg shadow-primary/10">
+            <span class="material-symbols-outlined mr-2">arrow_back</span> Return to Previous View
+        </button>
+    </main>
+
+    <script src="nav_interceptor.js"></script>
+</body>
+</html>

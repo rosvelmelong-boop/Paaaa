@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PropVeil - Authentication</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Montserrat:wght@500;700;900&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Montserrat', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              navy: '#0A1628',
+              teal: '#1D9A8A',
+              card: '#162336',
+              border: '#2A3B52',
+            }
+          },
+          borderRadius: {
+            'xl': '0.875rem', // 14px
+            '2xl': '1.25rem', // 20px
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-utilities">
+    body {
+      background-color: #0A1628;
+      color: #ffffff;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    
+    /* Input placeholder styling */
+    ::placeholder {
+      color: #64748B; /* slate-500 */
+    }
+
+    /* Remove default styling for input number arrows */
+    input[type=number]::-webkit-inner-spin-button, 
+    input[type=number]::-webkit-outer-spin-button { 
+      -webkit-appearance: none; 
+      margin: 0; 
+    }
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center p-6 bg-[url('https://placehold.co/704x1520/0A1628/0A1628')] bg-cover bg-center bg-no-repeat">
+<!-- BEGIN: MainContent -->
+<main class="w-full max-w-sm flex flex-col items-center z-10 relative mt-12 mb-auto">
+<!-- Logo -->
+<div class="mb-12">
+<img alt="PropVeil Logo" class="h-24 w-auto object-contain drop-shadow-lg rounded-xl" src="https://lh3.googleusercontent.com/aida/ADBb0uj_8Vn8CY28v6nj98iji1XAKwFMRT-_yN7TyFNqV0eqZ2gd2Peo9b7WsrwhbrZax-X7wXyrvU6qJ-F3K68azRwsXehQ6JSSdTsZa3kB7G3igmQTtulNF3vmXlqBtJNe3hMyXmwGxmtmwmksLy4zkTJko5iKbV0BYv9NxocB-chFNeJbaA7p-wu9ieK_UKLu_SL06vIAvaJ2f_NlT7-2zZtwIbqiaEpCGu_igm0NGEMAaePSM7iEaeVS46ze"/>
+</div>
+<!-- Header Section -->
+<header class="text-center mb-10 w-full space-y-3">
+<h1 class="font-display font-black text-3xl tracking-tight text-white">Welcome to PropVeil</h1>
+<p class="text-slate-300 text-[15px]">Manage your finances with confidence.</p>
+</header>
+<!-- BEGIN: Authentication Form -->
+<div class="w-full flex flex-col gap-6">
+<!-- Primary Action: Google Sign-In -->
+<button class="w-full flex items-center justify-center gap-3 bg-brand-teal text-white rounded-xl py-4 px-6 font-semibold text-[15px] transition-all hover:bg-opacity-90 active:scale-[0.98] shadow-[0_0_20px_rgba(29,154,138,0.3)]" type="button">
+<svg class="w-5 h-5 text-white" fill="currentColor" viewbox="0 0 24 24">
+<path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"></path>
+<path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"></path>
+<path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"></path>
+<path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"></path>
+</svg>
+        Continue with Google
+      </button>
+<!-- Divider -->
+<div class="relative flex items-center py-2">
+<div class="flex-grow border-t border-brand-border"></div>
+<span class="flex-shrink-0 mx-4 text-slate-400 text-sm font-medium">OR</span>
+<div class="flex-grow border-t border-brand-border"></div>
+</div>
+<!-- Phone Input Card -->
+<div class="bg-brand-card rounded-2xl p-1.5 border border-brand-border focus-within:border-brand-teal transition-colors shadow-sm flex items-center h-14">
+<!-- Country Code Dropdown -->
+<button class="flex items-center gap-2 pl-3 pr-4 h-full border-r border-brand-border hover:bg-white/5 rounded-l-xl transition-colors shrink-0" type="button">
+<div class="w-5 h-3.5 rounded-[2px] overflow-hidden flex relative bg-green-600">
+<div class="w-1/3 h-full bg-red-600 z-10 relative flex items-center justify-center">
+<svg class="w-2 h-2 text-yellow-400 fill-current" viewbox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path></svg>
+</div>
+<div class="w-1/3 h-full bg-yellow-400 absolute right-0"></div>
+</div>
+<span class="text-white text-[15px]">+237</span>
+</button>
+<!-- Phone Input -->
+<input class="flex-1 bg-transparent border-none text-white text-[15px] placeholder-slate-500 focus:ring-0 px-4 h-full w-full" placeholder="Enter your phone number" type="tel"/>
+<!-- Paste Icon -->
+<button class="pr-4 pl-2 h-full flex items-center justify-center text-slate-400 hover:text-white transition-colors" type="button">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+<!-- Secondary Action: Continue Phone -->
+<button class="w-full flex items-center justify-center bg-transparent border border-brand-teal text-white rounded-xl py-[15px] px-6 font-semibold text-[15px] transition-all hover:bg-brand-teal/10 active:bg-brand-teal/20" type="button">
+        Continue
+      </button>
+<!-- Other Social Logins Row -->
+<div class="grid grid-cols-2 gap-3 mt-1">
+<!-- Apple Button -->
+<button class="flex items-center justify-center gap-2.5 bg-brand-card hover:bg-brand-card/80 border border-brand-border rounded-xl py-3.5 px-4 transition-colors" type="button">
+<svg class="w-[18px] h-[18px] text-white fill-current" viewbox="0 0 24 24">
+<path d="M16.636 10.603c-.021-2.924 2.385-4.321 2.496-4.391-1.357-1.986-3.454-2.253-4.195-2.285-1.782-.181-3.479 1.051-4.385 1.051-.906 0-2.316-1.025-3.791-1.001-1.936.024-3.722 1.125-4.717 2.85-2.022 3.504-.516 8.683 1.455 11.536.966 1.402 2.11 2.972 3.633 2.919 1.474-.055 2.031-.951 3.821-.951 1.788 0 2.292.951 3.844.922 1.577-.024 2.569-1.424 3.533-2.836 1.112-1.624 1.572-3.197 1.593-3.277-.035-.015-3.064-1.176-3.086-4.137zm-2.528-6.195c.813-.984 1.36-2.348 1.211-3.714-1.176.047-2.597.782-3.435 1.789-.667.792-1.325 2.185-1.144 3.522 1.309.102 2.556-.615 3.368-1.597z"></path>
+</svg>
+<span class="font-medium text-[15px]">Apple</span>
+</button>
+<!-- Email Button -->
+<button class="flex items-center justify-center gap-2.5 bg-brand-card hover:bg-brand-card/80 border border-brand-border rounded-xl py-3.5 px-4 transition-colors" type="button">
+<svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+<span class="font-medium text-[15px]">Email</span>
+</button>
+</div>
+</div>
+<!-- END: Authentication Form -->
+</main>
+<!-- END: MainContent -->
+<!-- BEGIN: Footer -->
+<footer class="w-full max-w-sm mt-auto pb-8 z-10 text-center relative px-6">
+<p class="text-slate-400 text-xs leading-relaxed">
+      By continuing, you accept the <a class="text-brand-teal hover:underline underline-offset-2" href="#">Terms</a> and <a class="text-brand-teal hover:underline underline-offset-2" href="#">Privacy Policy</a>.
+    </p>
+</footer>
+<!-- END: Footer -->
+<script src="nav_interceptor.js"></script>
+</body></html>

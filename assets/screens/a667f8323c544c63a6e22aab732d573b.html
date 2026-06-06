@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-container": "#00302a",
+                    "on-tertiary": "#432c00",
+                    "on-surface-variant": "#bcc9c5",
+                    "secondary-fixed": "#d6e3ff",
+                    "secondary-container": "#374763",
+                    "surface": "#071325",
+                    "accent-hover": "#17806F",
+                    "success": "#10B981",
+                    "on-error-container": "#ffdad6",
+                    "on-background": "#d7e3fc",
+                    "surface-container-highest": "#2a3548",
+                    "tertiary-container": "#b78935",
+                    "on-secondary": "#20314b",
+                    "outline-variant": "#3d4946",
+                    "background": "#071325",
+                    "bg-canvas": "#0A1628",
+                    "on-tertiary-container": "#3a2600",
+                    "primary-container": "#2aa191",
+                    "inverse-on-surface": "#253144",
+                    "tertiary": "#f3be65",
+                    "on-tertiary-fixed-variant": "#604100",
+                    "inverse-primary": "#006b5f",
+                    "text-secondary": "#94A3B8",
+                    "on-secondary-fixed-variant": "#374763",
+                    "text-tertiary": "#64748B",
+                    "surface-container-low": "#101c2e",
+                    "outline": "#879390",
+                    "danger": "#EF4444",
+                    "error-container": "#93000a",
+                    "bg-surface": "#1A2B45",
+                    "on-secondary-fixed": "#091c35",
+                    "surface-tint": "#6bd9c7",
+                    "text-primary": "#FFFFFF",
+                    "on-primary-fixed": "#00201c",
+                    "on-secondary-container": "#a5b6d6",
+                    "secondary-fixed-dim": "#b6c7e8",
+                    "primary-fixed-dim": "#6bd9c7",
+                    "surface-variant": "#2a3548",
+                    "surface-dim": "#071325",
+                    "tertiary-fixed-dim": "#f3be65",
+                    "on-primary-fixed-variant": "#005047",
+                    "primary-fixed": "#89f5e3",
+                    "primary": "#6bd9c7",
+                    "tertiary-fixed": "#ffdeac",
+                    "secondary": "#b6c7e8",
+                    "on-error": "#690005",
+                    "inverse-surface": "#d7e3fc",
+                    "warning": "#F59E0B",
+                    "coral-accent": "#FF7A5A",
+                    "surface-container": "#142032",
+                    "bg-surface-2": "#142239",
+                    "on-primary": "#003731",
+                    "error": "#ffb4ab",
+                    "cream-highlight": "rgba(255, 248, 240, 0.04)",
+                    "border-subtle": "#1E293B",
+                    "surface-container-high": "#1f2a3d",
+                    "on-tertiary-fixed": "#281900",
+                    "surface-container-lowest": "#030e20",
+                    "accent-glow": "rgba(29, 154, 138, 0.2)",
+                    "surface-bright": "#2e394d",
+                    "on-surface": "#d7e3fc"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.5rem",
+                    "lg": "1rem",
+                    "xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "28px",
+                    "safe-area-top": "44px",
+                    "safe-area-bottom": "34px",
+                    "element-gap": "16px",
+                    "card-padding": "20px",
+                    "section-gap": "32px"
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        ::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .carousel-snap { scroll-snap-type: x mandatory; }
+        .carousel-item { scroll-snap-align: start; }
+        .mask-gradient {
+            mask-image: linear-gradient(to right, black 80%, transparent 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-bg-canvas text-text-primary font-body-md antialiased selection:bg-primary/30">
+<!-- Scrollable Content Area -->
+<main class="pb-[120px] max-w-md mx-auto min-h-screen relative shadow-2xl bg-bg-canvas overflow-x-hidden">
+<!-- 1. Photo Hero Carousel -->
+<section class="relative h-[420px] w-full overflow-hidden">
+<div class="flex h-full carousel-snap overflow-x-auto no-scrollbar" id="main-carousel">
+<div class="carousel-item min-w-full h-full bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A luxurious modern residential building exterior in a tropical setting with large glass windows and clean white concrete lines. The lighting is warm sunset golden hour, highlighting the architectural elegance and lush palm trees surrounding the entrance. Deep navy shadows and teal-tinted glass reflect the PropVeil brand identity in a sophisticated dark-mode aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjtg_kauyy-qSK0vCoeXzvMpof3B09MwAOT8HqvCCSxsq4fWy2g5nTz6pmhNtkxbo5fpxYt-tuCIsFDvzWZuGFiH1VhRavgdiYG5jzHSMuaLDpAOK2fuBXpLNWOfQwHzc-8sjvMYiBfg4vkOYN7wRnJUfBCkv5Qucmc8ggL_hZwG1boM8vqIwOr7Agv2oMcvR1DdwMEqbT_AP_9s4AqqlspJptV3pVw6YYhJqbyEzTDeUDkB92FagLf6Dr9sbHK51d8MthPLNvPtaa"/>
+</div>
+<div class="carousel-item min-w-full h-full bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="An expansive interior view of a contemporary apartment lounge with polished tile floors and minimalist teal furniture. Soft evening light filters through floor-to-ceiling windows, creating a serene and premium atmosphere. The scene is framed with a professional architectural photography style, focusing on high-end textures and the calm navy-teal color palette of the brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEcrR0kZnbwt3Mil6mHVu7IXR3PseTniBWSS-t7YVTrMsTP3qk-bxkqcBQqwxpSKqg7x0LFLWUtVamuLXY37ZjjSgJsYhWV_vfPpB2veO_6lPdv1IEg7Cch7CyPct4i8ty9qBssl5JQLW9hVu4M4AUrYw18Zx-bOg_XfMXLRvdoJfEFmLf1zj-V9SYGSHwTeNsZu-CNXr57uR40akqWnT-WIqIWvHE713K89Rslb3MZ-3ePpgjPSl1desivVX4OyR8tjv-FXledg3t"/>
+</div>
+<!-- 5-7 placeholders simulated in code logic -->
+</div>
+<!-- Carousel Controls -->
+<div class="absolute top-safe-area-top left-gutter">
+<button class="w-11 h-11 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white active:scale-90 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'wght' 600;">chevron_left</span>
+</button>
+</div>
+<div class="absolute top-safe-area-top right-gutter flex gap-3">
+<button class="w-11 h-11 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white active:scale-90 transition-transform">
+<span class="material-symbols-outlined">share</span>
+</button>
+<button class="w-11 h-11 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white active:scale-90 transition-transform group">
+<span class="material-symbols-outlined group-active:text-coral-accent" data-icon="favorite">favorite</span>
+</button>
+</div>
+<!-- Pagination Dots -->
+<div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-1.5">
+<div class="w-1.5 h-1.5 rounded-full bg-white"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-white/40"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-white/40"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-white/40"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-white/40"></div>
+</div>
+<!-- Page Count Pill -->
+<div class="absolute bottom-6 right-gutter px-3 py-1 bg-surface/60 backdrop-blur-sm rounded-full border border-white/10">
+<span class="text-[12px] font-semibold font-numeric-data text-white">1/7</span>
+</div>
+</section>
+<!-- 2. Title & Stats Block -->
+<section class="px-gutter pt-8">
+<h1 class="text-headline-lg text-white font-black leading-tight">Résidence Bonamoussadi</h1>
+<p class="text-text-secondary text-body-md mt-1">Douala · Akwa North · Cameroon</p>
+<div class="mt-4 flex items-center gap-2">
+<span class="text-white font-bold text-[14px]">★ 5/6 Occupied · 6 Units · XAF 450,000/mo</span>
+</div>
+</section>
+<!-- 3. Status Badges -->
+<section class="px-gutter mt-6 overflow-x-auto no-scrollbar flex gap-2">
+<div class="flex-shrink-0 flex items-center gap-1.5 px-4 py-2 bg-success/10 border border-success/20 rounded-full">
+<span class="text-[14px]">🛡️</span>
+<span class="text-success font-semibold text-[12px] uppercase tracking-wider">OHADA Compliant</span>
+</div>
+<div class="flex-shrink-0 flex items-center gap-1.5 px-4 py-2 bg-bg-surface-2 border border-border-subtle rounded-full text-text-secondary">
+<span class="font-semibold text-[12px] uppercase tracking-wider">Acquired · Nov 2020</span>
+</div>
+<div class="flex-shrink-0 flex items-center gap-1.5 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-primary">
+<span class="font-semibold text-[12px] uppercase tracking-wider">Auto-Collect On</span>
+</div>
+</section>
+<hr class="mx-gutter my-8 border-border-subtle"/>
+<!-- 4. Host Card -->
+<section class="px-gutter flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="relative w-14 h-14">
+<img class="w-full h-full rounded-full object-cover grayscale-[20%]" data-alt="A professional headshot of a confident African woman in her late 30s, smiling warmly. She is wearing stylish modern business attire. The lighting is soft and flattering with a clean, high-end studio background that aligns with the premium PropVeil brand visual identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCthuFChiTqV5V8j1_P0ZMpZEb74cZ3q_eTmidZp2w3Zm-qbF4w4I3jqRKaK-tEJUU_rsQCCvL75IGbAhRWyMD0P9lgj0M7ONrtZQT1DMlv7DtTQG3EazWDNdle_ZIAlaY3I4YH-ZBXxdrN6asnqlXkHTvEv9aYg4U8U3K5vYZaE_perEjkQwHyFElL9K6jXquYDCrs7eqoXKHlsvXdZCR3u-ktFoGPMujCHtoziG_3dKvGidU3X1UPcK3OIQYdRtiC2c3hrW8Lx-Jm"/>
+<div class="absolute bottom-0 right-0 w-5 h-5 bg-primary rounded-full flex items-center justify-center border-2 border-bg-canvas">
+<span class="material-symbols-outlined text-[12px] text-on-primary font-bold">verified</span>
+</div>
+</div>
+<div>
+<h3 class="text-white font-bold text-headline-sm">Managed by Aïssatou</h3>
+<p class="text-text-tertiary text-body-sm">Landlord · 14 properties · since 2023</p>
+</div>
+</div>
+<button class="w-10 h-10 rounded-full border border-border-subtle flex items-center justify-center text-text-secondary hover:text-white transition-colors">
+<span class="material-symbols-outlined">chat_bubble</span>
+</button>
+</section>
+<!-- 5. KPI Strip -->
+<section class="px-gutter mt-8 grid grid-cols-3 gap-3">
+<div class="bg-bg-surface p-4 rounded-xl border border-border-subtle">
+<p class="text-[10px] font-semibold text-text-tertiary uppercase tracking-widest">Monthly Rev</p>
+<p class="text-headline-sm font-black mt-1 text-white">450k</p>
+</div>
+<div class="bg-bg-surface p-4 rounded-xl border border-border-subtle">
+<p class="text-[10px] font-semibold text-text-tertiary uppercase tracking-widest">Occupancy</p>
+<p class="text-headline-sm font-black mt-1 text-white">92%</p>
+</div>
+<div class="bg-bg-surface p-4 rounded-xl border border-border-subtle">
+<p class="text-[10px] font-semibold text-text-tertiary uppercase tracking-widest">Yield</p>
+<p class="text-headline-sm font-black mt-1 text-white">8.4%</p>
+</div>
+</section>
+<!-- 6. About Section -->
+<section class="px-gutter mt-section-gap">
+<h2 class="text-headline-sm text-white mb-3">About this property</h2>
+<p class="text-text-secondary text-body-md leading-relaxed">
+                Modern 6-unit residential building in Bonamoussadi, Douala. This property features premium finishes, 24/7 security, and high-yield potential in one of the city's most sought-after residential neighborhoods...
+                <a class="text-primary font-semibold hover:underline" href="#">show more</a>
+</p>
+</section>
+<hr class="mx-gutter my-8 border-border-subtle"/>
+<!-- 7. Units Tab -->
+<section class="px-gutter">
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-headline-sm text-white">Units</h2>
+<div class="text-primary text-body-sm font-bold">6 Total</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<!-- Unit 1 -->
+<div class="bg-bg-surface rounded-xl border border-border-subtle overflow-hidden relative group active:scale-95 transition-all">
+<div class="h-[100px] bg-surface-container relative">
+<img class="w-full h-full object-cover" data-alt="Interior of a modern studio apartment with sleek wood flooring, a minimalist bed, and a large window overlooking Douala. The morning light is bright and airy, accentuating the clean architectural lines and high-quality finishes. The aesthetic is consistent with a premium property management interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtdfZ75R3yX4twrvoFjQ8aTdNXXlcmdtxx8EKShu6eZHFAwnNDziZT4DL3sxa2IEw0Qc8X7m4-751JFIQPgLdEj4jvqRxQohbbUAJ5m2uK0UnrVj0We91fTGQjqSk5gvtT-Vab8fILetKm0KTjSzKp1P6mCSwD_JFskNcIV52gpEXj08tVGNvLxHJCrcMYeqjB6BQISqyRH0xjmQQug4SD43Q9cNw4nNoO4OLZ2cWGEBCgNLf7Zfn0MB6KATSOxLv_S3La1vxYTZaD"/>
+<div class="absolute top-2 right-2 px-2 py-0.5 bg-success rounded-full text-[10px] font-bold text-on-primary">OCCUPIED</div>
+</div>
+<div class="p-3">
+<h4 class="text-white font-bold text-[14px]">Unit B-3</h4>
+<p class="text-text-tertiary text-[12px] mt-1">Studio · 35m² · furnished</p>
+</div>
+</div>
+<!-- Unit 2 -->
+<div class="bg-bg-surface rounded-xl border border-border-subtle overflow-hidden relative group active:scale-95 transition-all">
+<div class="h-[100px] bg-surface-container relative">
+<img class="w-full h-full object-cover" data-alt="A spacious living area of a modern apartment with a neutral color palette, featuring a plush grey sofa and contemporary lighting. Soft daylight floods the room, creating a welcoming and upscale atmosphere. The visual style is crisp and professional, reflecting the high standards of PropVeil's managed listings." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8XfZ9g3Vzxvi58nyUqTN6sZ-q460wk4QOotnbdf8IujOTDBx2XfsY0eOLucmGNK8DFzkitBzj5dgINWdXmD_NLxJVtX53Nr_wcqep3rz0aRNCNLLrIlgdcZicKwda3Y1zbL0pgXUEaGpwHgO5nvpzLp2ilDWgBzji9vVmNm-6lZ2Mg7yjlt1LvpsopT6XS5KYJKyZiSFobHV0JouH2MWwP2FB2wR4PqpV0nrgWRID_huvJgGRjf2RZluSn6c3TZAOPObjoOEhSaA_"/>
+<div class="absolute top-2 right-2 px-2 py-0.5 bg-warning rounded-full text-[10px] font-bold text-on-tertiary-container">DUE</div>
+</div>
+<div class="p-3">
+<h4 class="text-white font-bold text-[14px]">Unit A-1</h4>
+<p class="text-text-tertiary text-[12px] mt-1">2BR · 65m² · unfurnished</p>
+</div>
+</div>
+<!-- Add Unit Ghost -->
+<button class="h-[168px] rounded-xl border-2 border-dashed border-border-subtle flex flex-col items-center justify-center gap-2 hover:border-primary/40 transition-colors">
+<div class="w-10 h-10 rounded-full bg-bg-surface-2 flex items-center justify-center text-text-tertiary">
+<span class="material-symbols-outlined">add</span>
+</div>
+<span class="text-text-tertiary font-bold text-[14px]">Add a unit</span>
+</button>
+</div>
+</section>
+<!-- 8. Amenities & Map -->
+<section class="px-gutter mt-section-gap">
+<h2 class="text-headline-sm text-white mb-5">What this property offers</h2>
+<div class="grid grid-cols-2 gap-y-6">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-text-secondary">local_parking</span>
+<span class="text-text-secondary text-body-md">Free parking</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-text-secondary">security</span>
+<span class="text-text-secondary text-body-md">24/7 Security</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-text-secondary">water_drop</span>
+<span class="text-text-secondary text-body-md">Running water</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-text-secondary">bolt</span>
+<span class="text-text-secondary text-body-md">Electricity</span>
+</div>
+</div>
+<button class="mt-8 w-full py-3 rounded-xl border border-border-subtle text-white font-bold hover:bg-bg-surface-2 transition-colors">Show all 12 amenities</button>
+</section>
+<!-- Location/Map -->
+<section class="px-gutter mt-section-gap">
+<h2 class="text-headline-sm text-white mb-4">Location</h2>
+<div class="relative w-full h-[200px] rounded-2xl overflow-hidden border border-border-subtle">
+<img class="w-full h-full object-cover grayscale opacity-60" data-alt="A detailed aerial map view of the Bonamoussadi neighborhood in Douala, Cameroon. The map is styled with a dark navy aesthetic, featuring clean white street lines and minimal topographic detail. A prominent teal pin glows in the center, marking the exact location of the Résidence Bonamoussadi property with a subtle radial pulse." data-location="Douala, Cameroon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDggLATnu8L8cwwd58FA-kPJOXcEsjYvDreVJA0P4gJKCA6xyXmlBaKrmXGRNm7wayWnT4jX1PlHXftCgVPCyeqpOSn11TeJyv1tU30Yp_1ULv6eyq88l7Zx0QTOd-_Q38Wwf0-JHnZ87PkyfHYQrd8YtiHhRW7tM4Bjz17hLsZ3KJBf5T9JfBehrg7inpg8Fwz7q8l91B3I6RZj7wEX3tpeoanAeo722NgL9EJYfiWYWv1n5qXUMnFML0-MeYk6x__bl6SPk4eqBt7"/>
+<!-- Map Marker Overlay -->
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="relative">
+<div class="absolute inset-0 bg-primary/30 rounded-full animate-ping"></div>
+<div class="w-10 h-10 bg-primary rounded-full border-4 border-bg-canvas flex items-center justify-center shadow-lg relative z-10">
+<span class="material-symbols-outlined text-on-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">apartment</span>
+</div>
+</div>
+</div>
+</div>
+<p class="mt-4 text-white font-bold">Bonamoussadi, Douala</p>
+<p class="text-text-tertiary text-body-sm mt-1">Akwa North district, known for its serene atmosphere and premium residential estates.</p>
+</section>
+</main>
+<!-- 9. Sticky Bottom CTA -->
+<nav class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md h-auto bg-surface-container-low border-t border-border-subtle px-gutter pt-4 pb-safe-area-bottom z-50 backdrop-blur-xl">
+<div class="flex items-center justify-between gap-6">
+<div class="flex flex-col">
+<p class="text-text-tertiary text-[10px] uppercase font-bold tracking-widest">This month rev</p>
+<p class="text-white font-black text-[22px] font-numeric-data">XAF 450,000</p>
+</div>
+<button class="flex-1 h-14 bg-primary hover:bg-accent-hover text-on-primary font-black rounded-2xl flex items-center justify-center gap-2 shadow-lg shadow-primary/20 active:scale-95 transition-all">
+<span>Collect rent</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+</nav>
+<script>
+        // Micro-interactions and Carousel logic
+        const carousel = document.getElementById('main-carousel');
+        const countPill = document.querySelector('.absolute.bottom-6.right-gutter span');
+        const dots = document.querySelectorAll('.absolute.bottom-6.left-1/2 div');
+
+        carousel.addEventListener('scroll', () => {
+            const index = Math.round(carousel.scrollLeft / carousel.offsetWidth);
+            countPill.textContent = `${index + 1}/7`;
+            
+            // Update dots
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('bg-white', i === index);
+                dot.classList.toggle('bg-white/40', i !== index);
+            });
+        });
+
+        // Favorite pulse effect
+        const heartBtn = document.querySelector('button .material-symbols-outlined[data-icon="favorite"]');
+        heartBtn.parentElement.addEventListener('click', () => {
+            const isFilled = heartBtn.style.fontVariationSettings.includes("'FILL' 1");
+            heartBtn.style.fontVariationSettings = isFilled ? "'FILL' 0" : "'FILL' 1";
+            heartBtn.classList.toggle('text-coral-accent');
+            
+            if(!isFilled) {
+                heartBtn.animate([
+                    { transform: 'scale(1)' },
+                    { transform: 'scale(1.4)' },
+                    { transform: 'scale(1)' }
+                ], { duration: 300, easing: 'ease-out' });
+            }
+        });
+    </script>
+<script src="nav_interceptor.js"></script>
+</body></html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>Biometric Setup | PropVeil</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "bg-canvas": "#0A1628",
+                        "bg-surface-2": "#142239",
+                        "success": "#10B981",
+                        "on-secondary": "#20314b",
+                        "error": "#ffb4ab",
+                        "primary-fixed-dim": "#6bd9c7",
+                        "surface-tint": "#6bd9c7",
+                        "on-tertiary": "#432c00",
+                        "bg-surface": "#1A2B45",
+                        "text-tertiary": "#64748B",
+                        "secondary-fixed-dim": "#b6c7e8",
+                        "outline-variant": "#3d4946",
+                        "secondary-container": "#374763",
+                        "error-container": "#93000a",
+                        "on-tertiary-fixed-variant": "#604100",
+                        "text-secondary": "#94A3B8",
+                        "on-surface-variant": "#bcc9c5",
+                        "on-primary-fixed-variant": "#005047",
+                        "border-subtle": "#1E293B",
+                        "surface-container-high": "#1f2a3d",
+                        "tertiary-fixed": "#ffdeac",
+                        "surface-container": "#142032",
+                        "inverse-on-surface": "#253144",
+                        "inverse-surface": "#d7e3fc",
+                        "background": "#071325",
+                        "text-primary": "#FFFFFF",
+                        "on-primary-fixed": "#00201c",
+                        "primary-container": "#2aa191",
+                        "inverse-primary": "#006b5f",
+                        "surface": "#071325",
+                        "surface-container-highest": "#2a3548",
+                        "surface-bright": "#2e394d",
+                        "accent-hover": "#17806F",
+                        "surface-dim": "#071325",
+                        "on-tertiary-fixed": "#281900",
+                        "on-error-container": "#ffdad6",
+                        "on-background": "#d7e3fc",
+                        "warning": "#F59E0B",
+                        "tertiary": "#f3be65",
+                        "surface-container-low": "#101c2e",
+                        "tertiary-fixed-dim": "#f3be65",
+                        "secondary-fixed": "#d6e3ff",
+                        "on-secondary-fixed-variant": "#374763",
+                        "primary-fixed": "#89f5e3",
+                        "on-primary-container": "#00302a",
+                        "on-tertiary-container": "#3a2600",
+                        "outline": "#879390",
+                        "accent-glow": "rgba(29, 154, 138, 0.2)",
+                        "danger": "#EF4444",
+                        "on-primary": "#003731",
+                        "on-surface": "#d7e3fc",
+                        "on-error": "#690005",
+                        "cream-highlight": "rgba(255, 248, 240, 0.04)",
+                        "surface-container-lowest": "#030e20",
+                        "secondary": "#b6c7e8",
+                        "primary": "#6bd9c7",
+                        "on-secondary-fixed": "#091c35",
+                        "on-secondary-container": "#a5b6d6",
+                        "surface-variant": "#2a3548",
+                        "tertiary-container": "#b78935",
+                        "coral-accent": "#FF7A5A"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "32px",
+                        "safe-area-top": "44px",
+                        "safe-area-bottom": "34px",
+                        "element-gap": "16px",
+                        "card-padding": "20px",
+                        "gutter": "28px"
+                    },
+                    "fontFamily": {
+                        "numeric-data": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "headline-sm": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "display-hero": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "numeric-data": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600"}],
+                        "headline-sm": ["18px", {"lineHeight": "24px", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "900"}],
+                        "headline-md": ["22px", {"lineHeight": "28px", "fontWeight": "700"}],
+                        "display-hero": ["40px", {"lineHeight": "48px", "fontWeight": "900"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "26px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.biometric-glow {
+    filter: drop-shadow(0 0 30px rgba(107, 217, 199, 0.4))
+    }
+.bg-noise {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAcKnJX3KIa52BSLjjw4LuNTYvVEZMFul5Wh4xdzXCCpLiw7oU-z2BE40YEn1yTkwABHh1NlhAioD3EuZr4AgsjlfsQnhmJCTKHh-D9b2GybRGzDf-CgtWk6V5GTNjNPnFtoClG5Ob_nXo4dWa1Zy96Ov6Mu34fKz4YiVrTUN7km-WUmnAMRfPOZ6U5xHKbbfa11-d_tKDOVPOJi1wzyMzAUHvdQrDAqtr3LWS1TjU0PB29KAGt1JXgVQHf8t4dQOtnms7Tgo7i4e34);
+    opacity: 0.03
+    }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-bg-canvas text-text-primary min-h-screen flex flex-col font-body-md overflow-hidden">
+<!-- Atmospheric Background Element -->
+<div class="fixed inset-0 pointer-events-none z-0">
+<div class="absolute top-[-10%] right-[-10%] w-[60%] h-[40%] bg-primary/10 blur-[120px] rounded-full"></div>
+<div class="absolute bottom-[-5%] left-[-5%] w-[40%] h-[30%] bg-secondary/5 blur-[100px] rounded-full"></div>
+<div class="absolute inset-0 bg-noise"></div>
+</div>
+<!-- Header Navigation -->
+<nav class="relative z-50 flex items-center justify-between px-gutter pt-safe-area-top h-16">
+<div class="flex items-center">
+<span class="font-headline-md text-headline-md font-black text-primary tracking-tighter">PropVeil</span>
+</div>
+<button aria-label="Go back" class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-high text-text-primary transition-transform active:scale-90">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+</nav>
+<!-- Main Content -->
+<main class="relative z-10 flex-1 flex flex-col items-center justify-center px-gutter text-center pb-safe-area-bottom">
+<!-- Illustration Section -->
+<div class="relative mb-section-gap">
+<div class="w-32 h-32 rounded-full bg-surface-2 flex items-center justify-center biometric-glow border border-primary/20 relative overflow-hidden">
+<!-- Inner Pulse Effect -->
+<div class="absolute inset-0 bg-primary/10 animate-pulse"></div>
+<span class="material-symbols-outlined text-[64px] text-primary relative z-10" data-icon="fingerprint">fingerprint</span>
+</div>
+<!-- Smaller secondary icon for FaceID representation -->
+<div class="absolute -bottom-2 -right-2 w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center border border-border-subtle shadow-xl">
+<span class="material-symbols-outlined text-[24px] text-secondary" data-icon="face">face</span>
+</div>
+</div>
+<!-- Copy Section -->
+<section class="max-w-xs mb-section-gap">
+<h1 class="font-headline-lg text-headline-lg font-black text-text-primary mb-element-gap leading-tight">
+                Enable Biometrics
+            </h1>
+<p class="font-body-md text-body-md text-text-secondary">
+                Use Face ID or Touch ID for faster access and secure transaction approvals.
+            </p>
+</section>
+<!-- Spacer for layout balance -->
+<div class="flex-1"></div>
+<!-- Security Info Card -->
+<div class="w-full bg-bg-surface-2 border border-border-subtle rounded-[20px] p-card-padding mb-element-gap flex items-start gap-4 text-left">
+<span class="material-symbols-outlined text-primary shrink-0" data-icon="verified_user">verified_user</span>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+                Biometric data is stored securely on your device and is never shared with PropVeil.
+            </p>
+</div>
+<!-- Actions -->
+<div class="w-full flex flex-col gap-4">
+<button class="w-full h-[56px] bg-primary hover:bg-accent-hover text-on-primary font-semibold text-body-md rounded-[20px] transition-all duration-300 flex items-center justify-center gap-2 shadow-lg shadow-primary/20 active:scale-[0.98]">
+<span>Enable Biometrics</span>
+</button>
+<button class="w-full h-[56px] bg-transparent text-primary border border-primary/30 hover:bg-primary/5 font-semibold text-body-md rounded-[20px] transition-all duration-300 active:scale-[0.98]">
+                Maybe Later
+            </button>
+</div>
+</main>
+<!-- Bottom Indicator Decoration -->
+<div class="h-safe-area-bottom w-full flex justify-center items-end pb-2">
+<div class="w-32 h-1 bg-surface-container-highest rounded-full"></div>
+</div>
+<script>
+        // Micro-interaction for the fingerprint icon
+        const fingerprint = document.querySelector('[data-icon="fingerprint"]');
+        if (fingerprint) {
+            fingerprint.parentElement.addEventListener('click', () => {
+                fingerprint.classList.add('scale-110', 'text-primary-fixed');
+                setTimeout(() => {
+                    fingerprint.classList.remove('scale-110', 'text-primary-fixed');
+                }, 400);
+            });
+        }
+
+        // Logic for handling "Maybe Later" and "Enable" buttons
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const text = e.currentTarget.textContent.trim();
+                console.log(`User clicked: ${text}`);
+                // Add haptic feedback simulation
+                if (window.navigator.vibrate) {
+                    window.navigator.vibrate(10);
+                }
+            });
+        });
+    </script>
+<script src="nav_interceptor.js"></script>
+</body></html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>PropVeil Splash</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Montserrat:wght@700;900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#89f5e3",
+                        "coral-accent": "#FF7A5A",
+                        "surface-container-lowest": "#030e20",
+                        "background": "#071325",
+                        "on-primary-container": "#00302a",
+                        "surface-bright": "#2e394d",
+                        "surface-dim": "#071325",
+                        "secondary": "#b6c7e8",
+                        "on-surface": "#d7e3fc",
+                        "secondary-fixed-dim": "#b6c7e8",
+                        "on-primary-fixed": "#00201c",
+                        "bg-surface-2": "#142239",
+                        "on-error": "#690005",
+                        "surface-tint": "#6bd9c7",
+                        "border-subtle": "#1E293B",
+                        "primary-container": "#2aa191",
+                        "inverse-on-surface": "#253144",
+                        "on-error-container": "#ffdad6",
+                        "error": "#ffb4ab",
+                        "text-tertiary": "#64748B",
+                        "on-secondary-container": "#a5b6d6",
+                        "warning": "#F59E0B",
+                        "on-tertiary-fixed-variant": "#604100",
+                        "surface-container-low": "#101c2e",
+                        "surface-container": "#142032",
+                        "tertiary-container": "#b78935",
+                        "tertiary": "#f3be65",
+                        "surface-container-high": "#1f2a3d",
+                        "inverse-primary": "#006b5f",
+                        "accent-hover": "#17806F",
+                        "primary-fixed-dim": "#6bd9c7",
+                        "accent-glow": "rgba(29, 154, 138, 0.2)",
+                        "on-secondary-fixed-variant": "#374763",
+                        "on-primary-fixed-variant": "#005047",
+                        "surface": "#071325",
+                        "secondary-container": "#374763",
+                        "bg-surface": "#1A2B45",
+                        "on-tertiary-container": "#3a2600",
+                        "on-secondary": "#20314b",
+                        "text-primary": "#FFFFFF",
+                        "surface-variant": "#2a3548",
+                        "bg-canvas": "#0A1628",
+                        "on-tertiary": "#432c00",
+                        "outline-variant": "#3d4946",
+                        "inverse-surface": "#d7e3fc",
+                        "secondary-fixed": "#d6e3ff",
+                        "on-secondary-fixed": "#091c35",
+                        "success": "#10B981",
+                        "primary": "#6bd9c7",
+                        "cream-highlight": "rgba(255, 248, 240, 0.04)",
+                        "danger": "#EF4444",
+                        "tertiary-fixed-dim": "#f3be65",
+                        "text-secondary": "#94A3B8",
+                        "tertiary-fixed": "#ffdeac",
+                        "on-tertiary-fixed": "#281900",
+                        "error-container": "#93000a",
+                        "surface-container-highest": "#2a3548",
+                        "outline": "#879390",
+                        "on-primary": "#003731",
+                        "on-surface-variant": "#bcc9c5",
+                        "on-background": "#d7e3fc"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "card-padding": "20px",
+                        "safe-area-bottom": "34px",
+                        "element-gap": "16px",
+                        "safe-area-top": "44px",
+                        "gutter": "28px",
+                        "section-gap": "32px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "headline-md": ["Montserrat"],
+                        "display-hero": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "numeric-data": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "headline-sm": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "body-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "700" }],
+                        "display-hero": ["40px", { "lineHeight": "48px", "fontWeight": "900" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "900" }],
+                        "numeric-data": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600" }],
+                        "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "26px", "fontWeight": "400" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .pulse-dot {
+            animation: pulse 1.5s infinite ease-in-out;
+        }
+        .pulse-dot:nth-child(2) { animation-delay: 0.2s; }
+        .pulse-dot:nth-child(3) { animation-delay: 0.4s; }
+        @keyframes pulse {
+            0%, 100% { opacity: 0.3; transform: scale(0.8); }
+            50% { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="bg-bg-canvas min-h-screen flex flex-col items-center justify-center relative overflow-hidden font-body-md text-text-primary antialiased">
+<!-- Radial Glow Background -->
+<div class="absolute top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[640px] h-[640px] rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(29, 154, 138, 0.1) 0%, rgba(10, 22, 40, 0) 70%);"></div>
+<!-- Main Content Container -->
+<div class="relative z-10 flex flex-col items-center w-full max-w-[390px] px-gutter h-screen justify-center pt-[15%]">
+<!-- Logo Image -->
+<img alt="" class="w-48 h-auto object-contain mb-8 mix-blend-screen invert hue-rotate-180 brightness-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBF7fAHEZEbX1IAUdZI-JBRCRyrACuLGqEbnqtmLiFQ1dok88DYKkZcLkug7BwhkK_oXEiX_ZstlW4xkABqcFoBUtn5CCaSf2avPsCgr19tB3jXqB8cTtrRh8eqFW_cSt9b1TJGsuC2K065kBBGcsZwinG4jdCjm5o3kXW3vCBK3mJrpHUY6IzeCs3qV2xjVsgFJEf19bsAyzWOOsWNJBYLZcw10wCcc502HNGLlxn7r9soWw-_Ll6DUz-24ldRot4dhes3SO1WkaCA">
+<!-- Wordmark -->
+<h1 class="font-display-hero text-text-primary mb-6" style="font-size: 36px; line-height: 40px; color: #F5F7FA;">PropVeil</h1>
+<!-- Decorative Underline -->
+<div class="w-[80px] h-[2px] bg-primary mb-8 rounded-full"></div>
+<!-- Tagline -->
+<p class="font-label-caps text-text-secondary mb-3 uppercase tracking-[0.08em]">MANAGE. COLLECT. MASTER.</p>
+<!-- Compliance Line -->
+<p class="font-label-caps text-text-tertiary uppercase tracking-[0.08em]" style="font-size: 12px; color: #64748B;">CAMEROON · OHADA-COMPLIANT</p>
+</div>
+<!-- Bottom Indicator -->
+<div class="absolute bottom-safe-area-bottom left-1/2 -translate-x-1/2 flex flex-col items-center pb-6">
+<!-- Pulsing Dots -->
+<div class="flex gap-2 mb-3">
+<div class="w-[6px] h-[6px] rounded-full bg-primary pulse-dot"></div>
+<div class="w-[6px] h-[6px] rounded-full bg-primary pulse-dot"></div>
+<div class="w-[6px] h-[6px] rounded-full bg-primary pulse-dot"></div>
+</div>
+<!-- Version Info -->
+<p class="font-label-caps text-text-tertiary uppercase" style="font-size: 11px; color: #64748B;">PROPVEIL · v1.0</p>
+</div>
+
+
+<script src="nav_interceptor.js"></script>
+</body></html>

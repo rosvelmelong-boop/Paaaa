@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Payments Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error": "#690005",
+                        "accent-glow": "rgba(29, 154, 138, 0.2)",
+                        "surface-tint": "#6bd9c7",
+                        "warning": "#F59E0B",
+                        "surface-container-lowest": "#030e20",
+                        "primary-fixed": "#89f5e3",
+                        "on-tertiary-container": "#3a2600",
+                        "text-tertiary": "#64748B",
+                        "text-secondary": "#94A3B8",
+                        "surface-container": "#142032",
+                        "bg-surface": "#1A2B45",
+                        "on-primary-fixed-variant": "#005047",
+                        "bg-canvas": "#0A1628",
+                        "surface-dim": "#071325",
+                        "secondary": "#b6c7e8",
+                        "on-secondary-fixed": "#091c35",
+                        "danger": "#EF4444",
+                        "border-subtle": "#1E293B",
+                        "on-tertiary-fixed-variant": "#604100",
+                        "surface": "#071325",
+                        "primary-container": "#2aa191",
+                        "surface-container-low": "#101c2e",
+                        "on-surface": "#d7e3fc",
+                        "inverse-primary": "#006b5f",
+                        "tertiary-fixed": "#ffdeac",
+                        "outline-variant": "#3d4946",
+                        "tertiary-fixed-dim": "#f3be65",
+                        "inverse-on-surface": "#253144",
+                        "tertiary": "#f3be65",
+                        "on-primary-fixed": "#00201c",
+                        "surface-bright": "#2e394d",
+                        "accent-hover": "#17806F",
+                        "on-tertiary-fixed": "#281900",
+                        "tertiary-container": "#b78935",
+                        "error": "#ffb4ab",
+                        "on-secondary": "#20314b",
+                        "on-surface-variant": "#bcc9c5",
+                        "primary-fixed-dim": "#6bd9c7",
+                        "on-tertiary": "#432c00",
+                        "success": "#10B981",
+                        "coral-accent": "#FF7A5A",
+                        "primary": "#6bd9c7",
+                        "outline": "#879390",
+                        "surface-container-high": "#1f2a3d",
+                        "on-background": "#d7e3fc",
+                        "on-secondary-fixed-variant": "#374763",
+                        "inverse-surface": "#d7e3fc",
+                        "error-container": "#93000a",
+                        "on-secondary-container": "#a5b6d6",
+                        "on-primary": "#003731",
+                        "secondary-container": "#374763",
+                        "secondary-fixed": "#d6e3ff",
+                        "background": "#071325",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-highest": "#2a3548",
+                        "secondary-fixed-dim": "#b6c7e8",
+                        "text-primary": "#FFFFFF",
+                        "cream-highlight": "rgba(255, 248, 240, 0.04)",
+                        "surface-variant": "#2a3548",
+                        "on-primary-container": "#00302a",
+                        "bg-surface-2": "#142239"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px",
+                        "card": "24px",
+                        "list-item": "20px"
+                    },
+                    "spacing": {
+                        "safe-area-top": "44px",
+                        "gutter": "28px",
+                        "section-gap": "32px",
+                        "safe-area-bottom": "34px",
+                        "element-gap": "16px",
+                        "card-padding": "20px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "numeric-data": ["Inter"],
+                        "display-hero": ["Montserrat"],
+                        "headline-sm": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "body-sm": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["22px", {"lineHeight": "28px", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "26px", "fontWeight": "400"}],
+                        "numeric-data": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                        "display-hero": ["40px", {"lineHeight": "48px", "fontWeight": "900"}],
+                        "headline-sm": ["18px", {"lineHeight": "24px", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "900"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.bg-canvas');
+            color: theme('colors.text-primary');
+        }
+        /* Custom scrollbar for horizontal lists */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-bg-canvas font-body-md text-text-primary antialiased min-h-screen pb-[120px]">
+<!-- Top Navigation (JSON) -->
+<header class="fixed top-0 w-full z-50 bg-background dark:bg-background border-b border-border-subtle flex items-center justify-between px-gutter h-14 w-full pt-safe-area-top">
+<button class="text-primary dark:text-primary hover:opacity-80 active:scale-95 transition-transform flex items-center justify-center p-2 rounded-full">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="font-headline-sm text-headline-sm text-text-primary text-center flex-1">Conversations</h1>
+<button class="text-primary dark:text-primary hover:opacity-80 active:scale-95 transition-transform flex items-center justify-center p-2 rounded-full">
+<span class="material-symbols-outlined">add_comment</span>
+</button>
+</header>
+<main class="pt-[100px] px-gutter space-y-section-gap">
+<!-- Title Section -->
+<section class="flex flex-col gap-2">
+<div class="flex justify-between items-center">
+<h1 class="font-headline-lg text-headline-lg font-black text-text-primary">Payments</h1>
+<button class="w-12 h-12 bg-bg-surface rounded-full flex items-center justify-center text-primary hover:bg-bg-surface-2 transition-colors border border-border-subtle shadow-[0_0_15px_theme('colors.accent-glow')]">
+<span class="material-symbols-outlined text-2xl font-bold">add</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-text-secondary">May 2026 · XAF 2 750 000 collected · XAF 380 000 due</p>
+</section>
+<!-- KPI Hero (2-Up) -->
+<section class="flex bg-bg-surface rounded-card border border-border-subtle overflow-hidden">
+<!-- Left Side: Received -->
+<div class="flex-1 p-card-padding flex flex-col gap-2 relative overflow-hidden group">
+<div class="absolute inset-0 bg-accent-glow opacity-20 pointer-events-none transition-opacity group-hover:opacity-30"></div>
+<span class="font-label-caps text-label-caps text-text-secondary uppercase tracking-widest z-10">RECEIVED</span>
+<div class="font-headline-lg text-headline-lg font-black text-text-primary tracking-tight z-10 truncate">
+<span class="text-lg align-top opacity-50 mr-1">XAF</span>2 750 000
+                </div>
+<div class="inline-flex items-center gap-1 bg-success/10 text-success rounded-full px-2 py-1 w-max z-10 border border-success/20">
+<span class="material-symbols-outlined text-sm">arrow_upward</span>
+<span class="font-numeric-data text-numeric-data">11.8%</span>
+</div>
+</div>
+<!-- Divider -->
+<div class="w-px bg-border-subtle my-card-padding"></div>
+<!-- Right Side: Due -->
+<div class="flex-1 p-card-padding flex flex-col gap-2 bg-bg-surface-2/50 relative">
+<span class="font-label-caps text-label-caps text-text-secondary uppercase tracking-widest">DUE</span>
+<div class="font-headline-lg text-headline-lg font-black text-warning tracking-tight truncate">
+<span class="text-lg align-top opacity-50 mr-1">XAF</span>380 000
+                </div>
+<div class="inline-flex items-center gap-1 bg-warning/10 text-warning rounded-full px-2 py-1 w-max border border-warning/20">
+<span class="material-symbols-outlined text-sm">arrow_upward</span>
+<span class="font-numeric-data text-numeric-data">31%</span>
+</div>
+</div>
+</section>
+<!-- Status Filter -->
+<section>
+<div class="flex overflow-x-auto hide-scrollbar gap-2 pb-2">
+<button class="h-12 px-6 rounded-full bg-primary text-on-primary font-numeric-data text-numeric-data whitespace-nowrap shrink-0 transition-transform active:scale-95 shadow-[0_0_10px_theme('colors.accent-glow')]">
+                    All (24)
+                </button>
+<button class="h-12 px-6 rounded-full bg-bg-surface border border-border-subtle text-text-primary font-numeric-data text-numeric-data whitespace-nowrap shrink-0 hover:bg-bg-surface-2 transition-colors active:scale-95">
+                    ✅ Paid (12)
+                </button>
+<button class="h-12 px-6 rounded-full bg-bg-surface border border-border-subtle text-text-primary font-numeric-data text-numeric-data whitespace-nowrap shrink-0 hover:bg-bg-surface-2 transition-colors active:scale-95">
+                    ⏳ Pending (7)
+                </button>
+<button class="h-12 px-6 rounded-full bg-bg-surface border border-border-subtle text-text-primary font-numeric-data text-numeric-data whitespace-nowrap shrink-0 hover:bg-bg-surface-2 transition-colors active:scale-95">
+                    🔴 Late (5)
+                </button>
+</div>
+</section>
+<!-- Search & Date -->
+<section class="flex flex-col gap-element-gap">
+<!-- Search Pill -->
+<div class="h-14 rounded-full bg-bg-surface-2 border border-border-subtle flex items-center px-4 gap-3 focus-within:border-primary transition-colors">
+<span class="material-symbols-outlined text-text-tertiary">search</span>
+<input class="bg-transparent border-none outline-none flex-1 text-text-primary placeholder:text-text-tertiary font-body-md text-body-md focus:ring-0" placeholder="Search tenant or property..." type="text"/>
+<div class="w-px h-6 bg-border-subtle"></div>
+<button class="text-text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined">tune</span>
+</button>
+</div>
+<!-- Date Range -->
+<div class="flex justify-center items-center gap-2 py-2 cursor-pointer group">
+<span class="material-symbols-outlined text-text-tertiary text-lg group-hover:text-primary transition-colors">calendar_month</span>
+<span class="font-numeric-data text-numeric-data text-text-secondary group-hover:text-text-primary transition-colors">1 May - 31 May · 2026</span>
+<span class="material-symbols-outlined text-text-tertiary text-lg group-hover:text-primary transition-colors">expand_more</span>
+</div>
+</section>
+<!-- Payment List -->
+<section class="flex flex-col gap-element-gap">
+<!-- List Item 1 -->
+<div class="h-[88px] bg-bg-surface rounded-list-item border border-border-subtle flex items-center p-4 gap-4 hover:bg-bg-surface-2 transition-colors cursor-pointer group">
+<img alt="Avatar of Marie Ngo" class="w-14 h-14 rounded-full object-cover border border-border-subtle" data-alt="Close up portrait photo of a professional African woman with braided hair, soft studio lighting, professional corporate style, dark elegant background, high quality photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwra97Q5Vin1dkNWsGbm78JzzyWhlF8DNk4WIKEQDkYA9QP1c1yhpv6yDyJVFj7F9VusrWt4O4smHmZOsxXpoJRttjOoeXQVh8edinGN74PNDzY6lZ31JR-ttNeb3RrcsOnv6CdTsZq6r2hBCj_nOZZBBqlqFgM_XdSYcvaJ4c7gzc9_gPtQivLQoB8Z_AH-qoDVolwBO5UoZsMHiXbGFiwgQzubeM33REim9VqD-ADbyO9J4AqmfH0avfgfa6TW_oqnPoBean23bk"/>
+<div class="flex-1 flex flex-col justify-center overflow-hidden">
+<h3 class="font-headline-sm text-headline-sm text-text-primary truncate">Marie Ngo</h3>
+<p class="font-body-sm text-body-sm text-text-secondary truncate">Apt 4B · Résidence Céleste</p>
+</div>
+<div class="flex flex-col items-end justify-center gap-1">
+<div class="font-numeric-data text-numeric-data font-bold text-text-primary">XAF 550K</div>
+<div class="flex items-center gap-2">
+<span class="font-label-caps text-[10px] text-text-tertiary">via MoMo MTN</span>
+<div class="bg-success/10 text-success border border-success/20 px-2 py-0.5 rounded-md font-label-caps text-[10px] flex items-center gap-1">
+<span>✅ PAID</span>
+</div>
+</div>
+</div>
+</div>
+<!-- List Item 2 -->
+<div class="h-[88px] bg-bg-surface rounded-list-item border border-border-subtle flex items-center p-4 gap-4 hover:bg-bg-surface-2 transition-colors cursor-pointer group">
+<div class="w-14 h-14 rounded-full bg-surface-variant flex items-center justify-center font-headline-md text-headline-md text-text-primary border border-border-subtle">JT</div>
+<div class="flex-1 flex flex-col justify-center overflow-hidden">
+<h3 class="font-headline-sm text-headline-sm text-text-primary truncate">Jean Talla</h3>
+<p class="font-body-sm text-body-sm text-text-secondary truncate">Villa 2 · Les Cocotiers</p>
+</div>
+<div class="flex flex-col items-end justify-center gap-1">
+<div class="font-numeric-data text-numeric-data font-bold text-text-primary">XAF 1.2M</div>
+<div class="flex items-center gap-2">
+<span class="font-label-caps text-[10px] text-text-tertiary">Reminder sent</span>
+<div class="bg-warning/10 text-warning border border-warning/20 px-2 py-0.5 rounded-md font-label-caps text-[10px] flex items-center gap-1">
+<span>⏳ DUE</span>
+</div>
+</div>
+</div>
+</div>
+<!-- List Item 3 -->
+<div class="h-[88px] bg-bg-surface rounded-list-item border border-danger/30 flex items-center p-4 gap-4 hover:bg-bg-surface-2 transition-colors cursor-pointer group relative overflow-hidden">
+<div class="absolute inset-y-0 left-0 w-1 bg-danger"></div>
+<img alt="Avatar of Eric Fotso" class="w-14 h-14 rounded-full object-cover border border-border-subtle ml-1" data-alt="Portrait of a serious African man with short hair and a beard, wearing a casual polo shirt, soft natural light, urban background out of focus, high resolution." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDI-JirvOyWYFnV4IFQvQTJDPsQ8atpMDR4dv_0mNk7iiI5Q4ef4gzgmZplzP4tYjP0B_k_7uqHgAmDSs5iiIKUKJ0OkZOEpCPevAs34_I4NkllckBYglxiTTFpFMwWnBXS5nqeqVNA5Vft_f9qjP2ERnTNPj1IlVfobgm4SWTO7rERbPq4wdE5F9x6PlqCx-vl6VA2qU9QnFgxPpM4PNvM3GQ2FMRImuX-bZ3NDYqhFPvS0QOSko6igmpEbujPWVHUOt1pOONgsqhp"/>
+<div class="flex-1 flex flex-col justify-center overflow-hidden">
+<h3 class="font-headline-sm text-headline-sm text-text-primary truncate">Eric Fotso</h3>
+<p class="font-body-sm text-body-sm text-text-secondary truncate">Studio 1 · Centre Ville</p>
+</div>
+<div class="flex flex-col items-end justify-center gap-1">
+<div class="font-numeric-data text-numeric-data font-bold text-text-primary">XAF 150K</div>
+<div class="flex items-center gap-2">
+<span class="font-label-caps text-[10px] text-danger/70">No contact</span>
+<div class="bg-danger/10 text-danger border border-danger/20 px-2 py-0.5 rounded-md font-label-caps text-[10px] flex items-center gap-1">
+<span>🔴 32D LATE</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bottom padding for nav -->
+<div class="h-8"></div>
+</main>
+<!-- BottomNavBar (JSON) -->
+<nav class="fixed bottom-0 w-full z-50 h-[84px] bg-surface dark:bg-surface border-t border-border-subtle flex justify-around items-center px-4 pb-safe-area-bottom hidden md:hidden block">
+<!-- Home -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary-fixed tap-highlight-transparent w-16 group">
+<span class="material-symbols-outlined text-[28px] mb-1 group-hover:scale-110 transition-transform">home</span>
+<span class="font-label-caps text-label-caps">Home</span>
+</button>
+<!-- Domain -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary-fixed tap-highlight-transparent w-16 group">
+<span class="material-symbols-outlined text-[28px] mb-1 group-hover:scale-110 transition-transform">domain</span>
+<span class="font-label-caps text-label-caps">Properties</span>
+</button>
+<!-- Chat Bubble - ACTIVE STATE FOR PAYMENTS (Semantic match logic failure in original prompt, assuming account_balance_wallet is meant to be active for Payments based on standard UX, but JSON lists chat_bubble. I will use account_balance_wallet as active for Payments based on intent) -->
+<button class="flex flex-col items-center justify-center relative before:content-[''] before:absolute before:top-0 before:w-6 before:h-1 before:bg-primary before:rounded-full text-primary hover:text-primary-fixed tap-highlight-transparent w-16 pt-2">
+<span class="material-symbols-outlined text-[28px] mb-1 drop-shadow-[0_0_8px_theme('colors.accent-glow')]">account_balance_wallet</span>
+<span class="font-label-caps text-label-caps font-bold">Payments</span>
+</button>
+<!-- Person -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary-fixed tap-highlight-transparent w-16 group">
+<span class="material-symbols-outlined text-[28px] mb-1 group-hover:scale-110 transition-transform">person</span>
+<span class="font-label-caps text-label-caps">Profile</span>
+</button>
+</nav>
+<script src="nav_interceptor.js"></script>
+</body></html>

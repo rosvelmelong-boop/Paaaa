@@ -1,0 +1,300 @@
+<!DOCTYPE html><html class="dark" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=390, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<title>Propveil - OTP Verification</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "on-primary-fixed-variant": "#005047",
+                "on-tertiary-fixed": "#281900",
+                "on-secondary": "#20314b",
+                "text-primary": "#FFFFFF",
+                "tertiary-container": "#b78935",
+                "success": "#10B981",
+                "danger": "#EF4444",
+                "surface-dim": "#071325",
+                "outline": "#879390",
+                "background": "#071325",
+                "error": "#ffb4ab",
+                "surface-variant": "#2a3548",
+                "on-tertiary": "#432c00",
+                "warning": "#F59E0B",
+                "on-tertiary-fixed-variant": "#604100",
+                "secondary-fixed": "#d6e3ff",
+                "tertiary-fixed-dim": "#f3be65",
+                "on-primary": "#003731",
+                "on-background": "#d7e3fc",
+                "secondary": "#b6c7e8",
+                "bg-canvas": "#0A1628",
+                "surface-container-high": "#1f2a3d",
+                "primary": "#6bd9c7",
+                "primary-container": "#2aa191",
+                "primary-fixed": "#89f5e3",
+                "on-error": "#690005",
+                "secondary-fixed-dim": "#b6c7e8",
+                "inverse-on-surface": "#253144",
+                "tertiary-fixed": "#ffdeac",
+                "secondary-container": "#374763",
+                "primary-fixed-dim": "#6bd9c7",
+                "on-primary-fixed": "#00201c",
+                "tertiary": "#f3be65",
+                "border-subtle": "#1E293B",
+                "surface-container-highest": "#2a3548",
+                "on-primary-container": "#00302a",
+                "surface-container-lowest": "#030e20",
+                "on-secondary-container": "#a5b6d6",
+                "on-surface": "#d7e3fc",
+                "on-error-container": "#ffdad6",
+                "coral-accent": "#FF7A5A",
+                "on-secondary-fixed-variant": "#374763",
+                "surface-tint": "#6bd9c7",
+                "surface-bright": "#2e394d",
+                "inverse-primary": "#006b5f",
+                "on-tertiary-container": "#3a2600",
+                "bg-surface-2": "#142239",
+                "outline-variant": "#3d4946",
+                "surface-container-low": "#101c2e",
+                "accent-hover": "#17806F",
+                "surface": "#071325",
+                "bg-surface": "#1A2B45",
+                "text-tertiary": "#64748B",
+                "surface-container": "#142032",
+                "error-container": "#93000a",
+                "on-secondary-fixed": "#091c35",
+                "text-secondary": "#94A3B8",
+                "accent-glow": "rgba(29, 154, 138, 0.2)",
+                "cream-highlight": "rgba(255, 248, 240, 0.04)",
+                "inverse-surface": "#d7e3fc",
+                "on-surface-variant": "#bcc9c5"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "section-gap": "32px",
+                "gutter": "28px",
+                "element-gap": "16px",
+                "card-padding": "20px",
+                "safe-area-top": "44px",
+                "safe-area-bottom": "34px"
+        },
+        "fontFamily": {
+                "body-lg": [
+                        "Inter"
+                ],
+                "headline-lg": [
+                        "Montserrat"
+                ],
+                "body-sm": [
+                        "Inter"
+                ],
+                "label-caps": [
+                        "Inter"
+                ],
+                "numeric-data": [
+                        "Inter"
+                ],
+                "headline-sm": [
+                        "Montserrat"
+                ],
+                "display-hero": [
+                        "Montserrat"
+                ],
+                "headline-md": [
+                        "Montserrat"
+                ],
+                "body-md": [
+                        "Inter"
+                ]
+        },
+        "fontSize": {
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "26px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "fontWeight": "900"
+                        }
+                ],
+                "body-sm": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "label-caps": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.08em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "numeric-data": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "fontWeight": "500"
+                        }
+                ],
+                "headline-sm": [
+                        "18px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "700"
+                        }
+                ],
+                "display-hero": [
+                        "40px",
+                        {
+                                "lineHeight": "48px",
+                                "fontWeight": "900"
+                        }
+                ],
+                "headline-md": [
+                        "22px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+  body { background-color: #0A1628; }
+  .glass-orb {
+    background: linear-gradient(180deg, rgba(20, 34, 57, 0.8) 0%, rgba(20, 34, 57, 0.4) 100%);
+    backdrop-filter: blur(12px);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 0 16px rgba(29, 154, 138, 0.3);
+  }
+  .glass-input {
+    background: linear-gradient(180deg, rgba(26, 43, 69, 0.9) 0%, rgba(26, 43, 69, 0.6) 100%);
+    backdrop-filter: blur(8px);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+  .glass-input.active {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 12px rgba(29, 154, 138, 0.2);
+    border-color: #6bd9c7;
+  }
+  .glass-input.filled {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 8px rgba(29, 154, 138, 0.1);
+    border-color: #6bd9c7;
+  }
+  .caret-blink {
+    animation: blink 1s step-end infinite;
+  }
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+  .glass-strip {
+    background: linear-gradient(180deg, rgba(20, 34, 57, 0.9) 0%, rgba(20, 34, 57, 0.7) 100%);
+    backdrop-filter: blur(16px);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+</style>
+</head>
+<body class="text-text-primary min-h-screen flex flex-col items-center justify-start antialiased overflow-hidden selection:bg-primary selection:text-bg-canvas relative w-full mx-auto md:max-w-[390px] h-[844px] shadow-2xl">
+<!-- TopAppBar (Simulated from JSON intent) -->
+<header class="w-full h-[56px] px-gutter flex items-center justify-between z-10 shrink-0 mt-safe-area-top">
+<div class="flex items-center">
+<img alt="" class="h-[24px] w-[96px] object-contain object-left pointer-events-none" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0IhfEe50KV6YztB_kwzmXrFYO1V8p3XqmQ87c6ry7alitb9OTEPGwLUNd26wlLkrZ1_3lmU7TpjFJYsYdoo25tGxE18ZnO8FYiueZD3lhI0H-RhC6FjTRxprQvsuVgxR9ms3ZxIdfmXFctMpfi5zLzpAmh1zk4ucbP3OZHmmnoDshsQcPL-EU22BOi7nX-GUht72NHzdmvdF4YIUq2bzgWHiWliNWuF1H88V4SyxE4alYFkJk9NIWLg__r8yBOTI6bstQ7AZdIbHp">
+</div>
+<button class="flex items-center justify-center w-10 h-10 -mr-2 rounded-full hover:bg-surface-container-highest transition-colors group" type="button">
+<span class="material-symbols-outlined text-text-secondary group-hover:text-text-primary transition-colors">chevron_right</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="flex-1 w-full flex flex-col items-center px-gutter pt-8 pb-safe-area-bottom z-10 relative">
+<!-- Hero Icon -->
+<div class="glass-orb w-[64px] h-[64px] rounded-full flex items-center justify-center mb-8 shrink-0">
+<span class="material-symbols-outlined text-[32px] text-primary" style="font-variation-settings: &quot;FILL&quot; 1;">sms</span>
+</div>
+<!-- Typography Header -->
+<div class="text-center w-full mb-section-gap flex flex-col items-center space-y-3">
+<h1 class="font-headline-lg text-text-primary text-[26px] leading-tight tracking-tight">Verify your number</h1>
+<p class="font-body-md text-[15px] text-text-secondary max-w-[280px]">
+        Enter the 6-digit code sent to your device<br>
+
+</p>
+<button class="font-body-sm text-[13px] text-primary hover:text-primary-fixed transition-colors underline decoration-primary/30 underline-offset-4 mt-1">Not your number? Change it</button>
+</div>
+<!-- OTP Input Row -->
+<div class="flex w-full justify-between items-center mb-8 space-x-2">
+<!-- Filled 1 -->
+<div class="glass-input filled w-[48px] h-[60px] rounded-[14px] flex items-center justify-center border-[1.5px]">
+<span class="font-headline-lg text-[28px] text-text-primary">3</span>
+</div>
+<!-- Filled 2 -->
+<div class="glass-input filled w-[48px] h-[60px] rounded-[14px] flex items-center justify-center border-[1.5px]">
+<span class="font-headline-lg text-[28px] text-text-primary">8</span>
+</div>
+<!-- Filled 3 -->
+<div class="glass-input filled w-[48px] h-[60px] rounded-[14px] flex items-center justify-center border-[1.5px]">
+<span class="font-headline-lg text-[28px] text-text-primary">4</span>
+</div>
+<!-- Filled 4 -->
+<div class="glass-input filled w-[48px] h-[60px] rounded-[14px] flex items-center justify-center border-[1.5px]">
+<span class="font-headline-lg text-[28px] text-text-primary">1</span>
+</div>
+<!-- Active -->
+<div class="glass-input active w-[48px] h-[60px] rounded-[14px] flex items-center justify-center border-[1.5px] relative">
+<div class="w-[2px] h-[24px] bg-primary caret-blink absolute"></div>
+</div>
+<!-- Empty -->
+<div class="glass-input w-[48px] h-[60px] rounded-[14px] flex items-center justify-center border border-border-subtle">
+</div>
+</div>
+<!-- Timer & Resend -->
+<div class="flex flex-col items-center space-y-2 mb-auto">
+<div class="flex items-center space-x-2 text-primary">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+<span class="font-numeric-data text-[14px]">Resend code in 01:24</span>
+</div>
+<button class="font-label-caps text-primary/40 cursor-not-allowed">Resend Code</button>
+</div>
+</main>
+<!-- Bottom Static Elements -->
+<div class="w-full px-gutter pb-safe-area-bottom pt-4 flex flex-col items-center space-y-4 z-20 bg-gradient-to-t from-bg-canvas via-bg-canvas to-transparent absolute bottom-0">
+<!-- Info Strip -->
+<div class="glass-strip w-full rounded-xl p-4 flex items-start space-x-3 border border-border-subtle/50">
+<span class="material-symbols-outlined text-primary shrink-0 mt-0.5 text-[20px]" style="font-variation-settings: &quot;FILL&quot; 1;">shield_lock</span>
+<p class="font-body-sm text-[13px] text-text-secondary leading-relaxed">
+        Code expires in 5 minutes. Never share your code with anyone.
+      </p>
+</div>
+<!-- CTA Button -->
+<button class="w-full h-[56px] rounded-xl bg-primary/50 text-text-primary font-body-md font-semibold cursor-not-allowed transition-all duration-300 flex items-center justify-center mt-2" type="button">
+      Confirm Code
+    </button>
+</div>
+
+
+<script src="nav_interceptor.js"></script>
+</body></html>

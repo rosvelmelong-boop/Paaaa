@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<title>PropVeil - Pricing</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Montserrat:wght@700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#1f2a3d",
+                        "tertiary-fixed": "#ffdeac",
+                        "surface-container": "#142032",
+                        "on-primary-fixed-variant": "#005047",
+                        "border-subtle": "#1E293B",
+                        "error-container": "#93000a",
+                        "on-tertiary-fixed-variant": "#604100",
+                        "text-secondary": "#94A3B8",
+                        "on-surface-variant": "#bcc9c5",
+                        "text-tertiary": "#64748B",
+                        "secondary-fixed-dim": "#b6c7e8",
+                        "outline-variant": "#3d4946",
+                        "secondary-container": "#374763",
+                        "primary-fixed-dim": "#6bd9c7",
+                        "surface-tint": "#6bd9c7",
+                        "on-tertiary": "#432c00",
+                        "bg-surface": "#1A2B45",
+                        "bg-surface-2": "#142239",
+                        "success": "#10B981",
+                        "on-secondary": "#20314b",
+                        "error": "#ffb4ab",
+                        "bg-canvas": "#0A1628",
+                        "on-tertiary-fixed": "#281900",
+                        "surface-dim": "#071325",
+                        "surface-bright": "#2e394d",
+                        "accent-hover": "#17806F",
+                        "primary-container": "#2aa191",
+                        "inverse-primary": "#006b5f",
+                        "surface": "#071325",
+                        "surface-container-highest": "#2a3548",
+                        "inverse-surface": "#d7e3fc",
+                        "background": "#071325",
+                        "text-primary": "#FFFFFF",
+                        "on-primary-fixed": "#00201c",
+                        "inverse-on-surface": "#253144",
+                        "on-surface": "#d7e3fc",
+                        "on-primary": "#003731",
+                        "outline": "#879390",
+                        "accent-glow": "rgba(29, 154, 138, 0.2)",
+                        "danger": "#EF4444",
+                        "primary-fixed": "#89f5e3",
+                        "on-primary-container": "#00302a",
+                        "on-tertiary-container": "#3a2600",
+                        "secondary-fixed": "#d6e3ff",
+                        "on-secondary-fixed-variant": "#374763",
+                        "surface-container-low": "#101c2e",
+                        "tertiary-fixed-dim": "#f3be65",
+                        "on-error-container": "#ffdad6",
+                        "on-background": "#d7e3fc",
+                        "warning": "#F59E0B",
+                        "tertiary": "#f3be65",
+                        "coral-accent": "#FF7A5A",
+                        "on-secondary-container": "#a5b6d6",
+                        "surface-variant": "#2a3548",
+                        "tertiary-container": "#b78935",
+                        "on-secondary-fixed": "#091c35",
+                        "secondary": "#b6c7e8",
+                        "primary": "#6bd9c7",
+                        "surface-container-lowest": "#030e20",
+                        "on-error": "#690005",
+                        "cream-highlight": "rgba(255, 248, 240, 0.04)"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "element-gap": "16px",
+                        "card-padding": "20px",
+                        "gutter": "28px",
+                        "section-gap": "32px",
+                        "safe-area-top": "44px",
+                        "safe-area-bottom": "34px"
+                    },
+                    "fontFamily": {
+                        "display-hero": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "label-caps": ["Inter"],
+                        "headline-sm": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "numeric-data": ["Inter"],
+                        "body-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-hero": ["40px", { "lineHeight": "48px", "fontWeight": "900" }],
+                        "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600" }],
+                        "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "900" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "26px", "fontWeight": "400" }],
+                        "numeric-data": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .custom-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .custom-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .pro-glow {
+            box-shadow: 0 0 24px rgba(243, 190, 101, 0.15);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-bg-canvas text-text-primary min-h-screen flex flex-col font-body-md antialiased pt-safe-area-top pb-safe-area-bottom">
+<!-- Header -->
+<header class="flex items-center justify-between px-gutter py-4 shrink-0">
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-bg-surface-2 hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-text-primary">chevron_left</span>
+</button>
+<button class="font-body-md text-text-secondary hover:text-text-primary transition-colors">
+            Skip
+        </button>
+</header>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col px-gutter overflow-y-auto">
+<!-- Top Illustration & Headline -->
+<div class="flex flex-col items-center text-center mt-section-gap mb-section-gap">
+<div class="relative mb-6">
+<div class="absolute inset-0 bg-primary/20 blur-xl rounded-full"></div>
+<div class="w-20 h-20 bg-bg-surface rounded-full flex items-center justify-center relative border border-border-subtle shadow-lg">
+<span class="material-symbols-outlined text-[40px] text-primary" data-weight="fill" style="font-variation-settings: 'FILL' 1;">vpn_key</span>
+</div>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-text-primary max-w-[300px]">
+                Start free. Upgrade when you're ready.
+            </h1>
+</div>
+<!-- Pricing Cards Scroll Area -->
+<div class="flex gap-element-gap overflow-x-auto custom-scrollbar pb-8 snap-x snap-mandatory -mx-gutter px-gutter">
+<!-- Starter Card -->
+<div class="shrink-0 w-[280px] snap-center bg-bg-surface rounded-2xl p-card-padding border border-border-subtle flex flex-col">
+<div class="mb-6">
+<span class="inline-block px-3 py-1 bg-surface-container-low rounded-full font-label-caps text-label-caps text-text-secondary mb-4">
+                        Gérant Starter
+                    </span>
+<div class="font-headline-lg text-headline-lg text-text-primary">XAF 0</div>
+</div>
+<div class="flex-1 space-y-4">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-success text-[20px] mt-0.5" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-sm text-body-sm text-text-secondary">3 properties</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-success text-[20px] mt-0.5" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-sm text-body-sm text-text-secondary">NotchPay integration</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-success text-[20px] mt-0.5" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-sm text-body-sm text-text-secondary">Manual WhatsApp messaging</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-success text-[20px] mt-0.5" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-sm text-body-sm text-text-secondary">3-month history limit</span>
+</div>
+</div>
+</div>
+<!-- Pro Card -->
+<div class="shrink-0 w-[280px] snap-center bg-bg-surface rounded-2xl p-card-padding border border-tertiary/30 pro-glow flex flex-col relative overflow-hidden">
+<!-- Subtle top gradient -->
+<div class="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-tertiary/10 to-transparent pointer-events-none"></div>
+<div class="mb-6 relative z-10">
+<span class="inline-block px-3 py-1 bg-tertiary/10 border border-tertiary/20 rounded-full font-label-caps text-label-caps text-tertiary mb-4">
+                        Gérant Pro ✨
+                    </span>
+<div class="font-headline-lg text-headline-lg text-text-primary flex items-baseline gap-1">
+                        XAF 15,000<span class="font-body-sm text-body-sm text-text-secondary font-normal">/mo</span>
+</div>
+</div>
+<div class="flex-1 space-y-4 relative z-10">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary text-[20px] mt-0.5" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-sm text-body-sm text-text-primary">Unlimited properties</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary text-[20px] mt-0.5" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-sm text-body-sm text-text-primary">Auto WhatsApp reminders</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary text-[20px] mt-0.5" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-sm text-body-sm text-text-primary">AI maintenance triage</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary text-[20px] mt-0.5" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-sm text-body-sm text-text-primary">OHADA compliant leases</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary text-[20px] mt-0.5" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-sm text-body-sm text-text-primary">Unbranded PDF receipts</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Action Area -->
+<footer class="px-gutter pb-8 pt-4 shrink-0 bg-bg-canvas relative z-20">
+<!-- Fade overlay for content scrolling behind -->
+<div class="absolute top-0 left-0 right-0 h-12 -translate-y-full bg-gradient-to-t from-bg-canvas to-transparent pointer-events-none"></div>
+<button class="w-full h-[56px] bg-[#1D9A8A] hover:bg-primary-container text-text-primary font-body-md font-semibold rounded-xl transition-colors shadow-lg shadow-primary/20 mb-4 flex items-center justify-center">
+            Continue with Starter
+        </button>
+<div class="text-center">
+<a class="font-body-sm text-body-sm text-text-tertiary hover:text-text-secondary transition-colors inline-flex items-center gap-1" href="#">
+                Compare all features <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</footer>
+<script src="nav_interceptor.js"></script>
+</body></html>

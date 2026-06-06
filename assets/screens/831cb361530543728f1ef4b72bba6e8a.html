@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Screen 007 — PropVeil PIN Setup</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#253144",
+                        "coral-accent": "#FF7A5A",
+                        "border-subtle": "#1E293B",
+                        "bg-canvas": "#0A1628",
+                        "on-tertiary": "#432c00",
+                        "on-secondary": "#20314b",
+                        "error": "#ffb4ab",
+                        "error-container": "#93000a",
+                        "secondary": "#b6c7e8",
+                        "on-tertiary-fixed-variant": "#604100",
+                        "warning": "#F59E0B",
+                        "surface": "#071325",
+                        "outline-variant": "#3d4946",
+                        "text-tertiary": "#64748B",
+                        "text-secondary": "#94A3B8",
+                        "surface-container-high": "#1f2a3d",
+                        "text-primary": "#FFFFFF",
+                        "primary-fixed-dim": "#6bd9c7",
+                        "cream-highlight": "rgba(255, 248, 240, 0.04)",
+                        "bg-surface": "#1A2B45",
+                        "tertiary": "#f3be65",
+                        "inverse-primary": "#006b5f",
+                        "on-secondary-fixed-variant": "#374763",
+                        "accent-hover": "#17806F",
+                        "on-primary": "#003731",
+                        "bg-surface-2": "#142239",
+                        "surface-container-low": "#101c2e",
+                        "surface-tint": "#6bd9c7",
+                        "primary": "#6bd9c7",
+                        "on-primary-fixed-variant": "#005047",
+                        "on-tertiary-fixed": "#281900",
+                        "accent-glow": "rgba(29, 154, 138, 0.2)",
+                        "on-tertiary-container": "#3a2600",
+                        "tertiary-fixed-dim": "#f3be65",
+                        "surface-container-lowest": "#030e20",
+                        "danger": "#EF4444",
+                        "primary-fixed": "#89f5e3",
+                        "surface-dim": "#071325",
+                        "on-error-container": "#ffdad6",
+                        "on-error": "#690005",
+                        "secondary-container": "#374763",
+                        "surface-container-highest": "#2a3548",
+                        "inverse-surface": "#d7e3fc",
+                        "tertiary-container": "#b78935",
+                        "surface-bright": "#2e394d",
+                        "on-background": "#d7e3fc",
+                        "on-primary-fixed": "#00201c",
+                        "surface-container": "#142032",
+                        "primary-container": "#2aa191",
+                        "secondary-fixed-dim": "#b6c7e8",
+                        "tertiary-fixed": "#ffdeac",
+                        "on-surface": "#d7e3fc",
+                        "on-secondary-container": "#a5b6d6",
+                        "on-primary-container": "#00302a",
+                        "background": "#071325",
+                        "secondary-fixed": "#d6e3ff",
+                        "outline": "#879390",
+                        "on-surface-variant": "#bcc9c5",
+                        "on-secondary-fixed": "#091c35",
+                        "success": "#10B981",
+                        "surface-variant": "#2a3548"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "32px",
+                        "safe-area-top": "44px",
+                        "element-gap": "16px",
+                        "card-padding": "20px",
+                        "safe-area-bottom": "34px",
+                        "gutter": "28px"
+                    },
+                    "fontFamily": {
+                        "display-hero": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "numeric-data": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "headline-sm": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "body-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-hero": ["40px", {"lineHeight": "48px", "fontWeight": "900"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "900"}],
+                        "numeric-data": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600"}],
+                        "headline-sm": ["18px", {"lineHeight": "24px", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["22px", {"lineHeight": "28px", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "26px", "fontWeight": "400"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #0A1628; /* bg-canvas */
+            color: #FFFFFF; /* text-primary */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .glass-orb {
+            background: rgba(20, 34, 57, 0.4); /* surface-2 frosted */
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 20px rgba(29, 154, 138, 0.15);
+        }
+
+        .glass-key {
+            background: rgba(26, 43, 69, 0.4); /* bg-surface frosted */
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+            transition: background 0.15s ease;
+        }
+        .glass-key:active {
+            background: rgba(26, 43, 69, 0.6);
+        }
+
+        .pin-dot-filled {
+            background: #1D9A8A; /* Primary-ish, using specific teal from prompt */
+            box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.3), 0 0 10px rgba(29, 154, 138, 0.4);
+        }
+
+        .pin-dot-empty {
+            background: rgba(20, 34, 57, 0.4);
+            border-top: 1px solid rgba(0,0,0,0.3);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            box-shadow: inset 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .progress-segment-active {
+            background: #1D9A8A;
+            box-shadow: 0 0 8px rgba(29, 154, 138, 0.5);
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen">
+<!-- Mobile Canvas 390x844 -->
+<main class="relative w-full max-w-[390px] h-[844px] bg-canvas overflow-hidden flex flex-col pt-safe-area-top pb-safe-area-bottom shadow-2xl">
+<!-- Background Ambient Glows -->
+<div class="absolute top-0 left-0 w-full h-[300px] bg-[radial-gradient(ellipse_at_top,rgba(29,154,138,0.08),transparent_70%)] pointer-events-none"></div>
+<!-- 1. Top Bar -->
+<header class="flex justify-between items-center px-gutter h-16 shrink-0 relative z-10">
+<!-- Left: Logo area (using the vertical logo placeholder as requested, though horizontal is often better here, following exact instructions to use IMAGE_38) -->
+<div class="h-8 w-8 rounded-lg overflow-hidden flex items-center justify-center">
+<img alt="PropVeil Logo" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uj_8Vn8CY28v6nj98iji1XAKwFMRT-_yN7TyFNqV0eqZ2gd2Peo9b7WsrwhbrZax-X7wXyrvU6qJ-F3K68azRwsXehQ6JSSdTsZa3kB7G3igmQTtulNF3vmXlqBtJNe3hMyXmwGxmtmwmksLy4zkTJko5iKbV0BYv9NxocB-chFNeJbaA7p-wu9ieK_UKLu_SL06vIAvaJ2f_NlT7-2zZtwIbqiaEpCGu_igm0NGEMAaePSM7iEaeVS46ze"/>
+</div>
+<!-- Right: Back Chevron -->
+<button class="w-10 h-10 flex items-center justify-end text-text-secondary hover:text-text-primary transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'wght' 300;">arrow_back_ios_new</span>
+</button>
+</header>
+<!-- 2. Step Indicator -->
+<div class="px-gutter pt-4 pb-6 shrink-0 flex gap-2">
+<div class="h-1 flex-1 rounded-full progress-segment-active"></div>
+<div class="h-1 flex-1 rounded-full bg-surface-2"></div>
+<div class="h-1 flex-1 rounded-full bg-surface-2"></div>
+</div>
+<!-- Main Content Area -->
+<div class="flex-1 flex flex-col items-center px-gutter pt-2">
+<!-- 3. Hero Orb -->
+<div class="w-16 h-16 rounded-full glass-orb flex items-center justify-center mb-section-gap">
+<span class="material-symbols-outlined text-[32px] text-primary" style="font-variation-settings: 'FILL' 1;">dialpad</span>
+</div>
+<!-- 4. Typography -->
+<div class="text-center mb-8">
+<h1 class="font-headline-lg text-headline-lg text-text-primary mb-2 font-black">Create your PIN</h1>
+<p class="font-body-md text-body-md text-text-secondary max-w-[280px] mx-auto leading-relaxed">
+                    You'll use this 6-digit PIN to securely access your portfolio and approve key actions.
+                </p>
+</div>
+<!-- 5. PIN Dots -->
+<div class="flex justify-center gap-4 mb-section-gap">
+<div class="w-5 h-5 rounded-full pin-dot-filled"></div>
+<div class="w-5 h-5 rounded-full pin-dot-filled"></div>
+<div class="w-5 h-5 rounded-full pin-dot-filled"></div>
+<div class="w-5 h-5 rounded-full pin-dot-filled"></div>
+<div class="w-5 h-5 rounded-full pin-dot-empty"></div>
+<div class="w-5 h-5 rounded-full pin-dot-empty"></div>
+</div>
+<!-- Spacer before numpad -->
+<div class="flex-1"></div>
+<!-- 6. Numpad Grid -->
+<div class="w-full grid grid-cols-3 gap-x-4 gap-y-4 mb-8">
+<!-- Row 1 -->
+<button class="h-[64px] rounded-2xl glass-key flex flex-col items-center justify-center">
+<span class="font-headline-lg text-[24px] leading-none font-black text-text-primary">1</span>
+</button>
+<button class="h-[64px] rounded-2xl glass-key flex flex-col items-center justify-center">
+<span class="font-headline-lg text-[24px] leading-none font-black text-text-primary">2</span>
+<span class="font-label-caps text-[9px] text-text-tertiary mt-0.5 tracking-widest">ABC</span>
+</button>
+<button class="h-[64px] rounded-2xl glass-key flex flex-col items-center justify-center">
+<span class="font-headline-lg text-[24px] leading-none font-black text-text-primary">3</span>
+<span class="font-label-caps text-[9px] text-text-tertiary mt-0.5 tracking-widest">DEF</span>
+</button>
+<!-- Row 2 -->
+<button class="h-[64px] rounded-2xl glass-key flex flex-col items-center justify-center">
+<span class="font-headline-lg text-[24px] leading-none font-black text-text-primary">4</span>
+<span class="font-label-caps text-[9px] text-text-tertiary mt-0.5 tracking-widest">GHI</span>
+</button>
+<button class="h-[64px] rounded-2xl glass-key flex flex-col items-center justify-center">
+<span class="font-headline-lg text-[24px] leading-none font-black text-text-primary">5</span>
+<span class="font-label-caps text-[9px] text-text-tertiary mt-0.5 tracking-widest">JKL</span>
+</button>
+<button class="h-[64px] rounded-2xl glass-key flex flex-col items-center justify-center">
+<span class="font-headline-lg text-[24px] leading-none font-black text-text-primary">6</span>
+<span class="font-label-caps text-[9px] text-text-tertiary mt-0.5 tracking-widest">MNO</span>
+</button>
+<!-- Row 3 -->
+<button class="h-[64px] rounded-2xl glass-key flex flex-col items-center justify-center">
+<span class="font-headline-lg text-[24px] leading-none font-black text-text-primary">7</span>
+<span class="font-label-caps text-[9px] text-text-tertiary mt-0.5 tracking-widest">PQRS</span>
+</button>
+<button class="h-[64px] rounded-2xl glass-key flex flex-col items-center justify-center">
+<span class="font-headline-lg text-[24px] leading-none font-black text-text-primary">8</span>
+<span class="font-label-caps text-[9px] text-text-tertiary mt-0.5 tracking-widest">TUV</span>
+</button>
+<button class="h-[64px] rounded-2xl glass-key flex flex-col items-center justify-center">
+<span class="font-headline-lg text-[24px] leading-none font-black text-text-primary">9</span>
+<span class="font-label-caps text-[9px] text-text-tertiary mt-0.5 tracking-widest">WXYZ</span>
+</button>
+<!-- Row 4 -->
+<div class="h-[64px]"></div> <!-- Empty slot -->
+<button class="h-[64px] rounded-2xl glass-key flex flex-col items-center justify-center">
+<span class="font-headline-lg text-[24px] leading-none font-black text-text-primary">0</span>
+</button>
+<button class="h-[64px] rounded-2xl flex flex-col items-center justify-center bg-transparent hover:bg-surface-2 transition-colors">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">backspace</span>
+</button>
+</div>
+<!-- 7. Footer -->
+<div class="text-center w-full pb-4">
+<p class="font-body-sm text-body-sm text-text-tertiary mb-2">
+                    Use biometric authentication instead?
+                </p>
+<a class="font-numeric-data text-numeric-data text-primary hover:text-accent-hover transition-colors font-medium" href="#">
+                    Why do I need a PIN?
+                </a>
+</div>
+</div>
+</main>
+<script src="nav_interceptor.js"></script>
+</body></html>

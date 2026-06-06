@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Properties - PropVeil</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "text-tertiary": "#64748B",
+                        "on-primary": "#003731",
+                        "tertiary-fixed-dim": "#f3be65",
+                        "secondary": "#b6c7e8",
+                        "surface": "#071325",
+                        "coral-accent": "#FF7A5A",
+                        "tertiary-fixed": "#ffdeac",
+                        "surface-container-highest": "#2a3548",
+                        "surface-container": "#142032",
+                        "secondary-fixed-dim": "#b6c7e8",
+                        "primary-fixed": "#89f5e3",
+                        "accent-glow": "rgba(29, 154, 138, 0.2)",
+                        "on-surface": "#d7e3fc",
+                        "outline-variant": "#3d4946",
+                        "on-secondary-container": "#a5b6d6",
+                        "on-error-container": "#ffdad6",
+                        "cream-highlight": "rgba(255, 248, 240, 0.04)",
+                        "secondary-container": "#374763",
+                        "on-tertiary": "#432c00",
+                        "bg-surface": "#1A2B45",
+                        "error": "#ffb4ab",
+                        "error-container": "#93000a",
+                        "text-secondary": "#94A3B8",
+                        "outline": "#879390",
+                        "surface-bright": "#2e394d",
+                        "border-subtle": "#1E293B",
+                        "tertiary": "#f3be65",
+                        "on-primary-fixed-variant": "#005047",
+                        "on-primary-container": "#00302a",
+                        "bg-surface-2": "#142239",
+                        "surface-container-lowest": "#030e20",
+                        "on-secondary-fixed-variant": "#374763",
+                        "text-primary": "#FFFFFF",
+                        "surface-container-high": "#1f2a3d",
+                        "inverse-surface": "#d7e3fc",
+                        "danger": "#EF4444",
+                        "success": "#10B981",
+                        "on-background": "#d7e3fc",
+                        "on-secondary-fixed": "#091c35",
+                        "surface-tint": "#6bd9c7",
+                        "on-tertiary-container": "#3a2600",
+                        "bg-canvas": "#0A1628",
+                        "on-secondary": "#20314b",
+                        "on-primary-fixed": "#00201c",
+                        "background": "#071325",
+                        "surface-container-low": "#101c2e",
+                        "accent-hover": "#17806F",
+                        "primary-fixed-dim": "#6bd9c7",
+                        "on-tertiary-fixed": "#281900",
+                        "tertiary-container": "#b78935",
+                        "on-surface-variant": "#bcc9c5",
+                        "surface-variant": "#2a3548",
+                        "surface-dim": "#071325",
+                        "on-error": "#690005",
+                        "inverse-primary": "#006b5f",
+                        "secondary-fixed": "#d6e3ff",
+                        "on-tertiary-fixed-variant": "#604100",
+                        "primary": "#6bd9c7",
+                        "inverse-on-surface": "#253144",
+                        "warning": "#F59E0B",
+                        "primary-container": "#2aa191"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "28px",
+                        "element-gap": "16px",
+                        "safe-area-top": "44px",
+                        "card-padding": "20px",
+                        "section-gap": "32px",
+                        "safe-area-bottom": "34px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Montserrat"],
+                        "display-hero": ["Montserrat"],
+                        "label-caps": ["Inter"],
+                        "headline-md": ["Montserrat"],
+                        "numeric-data": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-sm": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "900" }],
+                        "display-hero": ["40px", { "lineHeight": "48px", "fontWeight": "900" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600" }],
+                        "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "700" }],
+                        "numeric-data": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "26px", "fontWeight": "400" }],
+                        "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-bg-canvas text-text-primary antialiased min-h-screen pb-[118px]">
+<!-- Top Navigation (Web) / Suppressed on Mobile per rules -->
+<header class="hidden md:flex justify-between items-center px-gutter py-4 fixed top-0 w-full z-50 bg-background dark:bg-background border-b border-border-subtle">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary dark:text-primary">home</span>
+<span class="font-headline-md text-headline-md font-black text-primary dark:text-primary tracking-tight">PropVeil</span>
+</div>
+<div class="flex items-center gap-6">
+<nav class="flex gap-6">
+<a class="font-body-md text-body-md text-on-surface-variant hover:opacity-80 transition-opacity duration-200" href="#">Dashboard</a>
+<a class="font-body-md text-body-md text-primary hover:opacity-80 transition-opacity duration-200" href="#">Properties</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:opacity-80 transition-opacity duration-200" href="#">Payments</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:opacity-80 transition-opacity duration-200" href="#">Tenants</a>
+</nav>
+<div class="w-10 h-10 rounded-full bg-surface-container overflow-hidden flex items-center justify-center">
+<span class="material-symbols-outlined text-text-secondary">person</span>
+</div>
+</div>
+</header>
+<main class="md:pt-[100px] pt-safe-area-top max-w-[480px] mx-auto md:max-w-4xl relative">
+<!-- Header Section -->
+<section class="px-gutter pt-6 pb-4">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h1 class="font-headline-lg text-headline-lg text-text-primary tracking-tight" style="font-size: 28px; line-height: 36px;">Your properties</h1>
+<p class="font-body-sm text-body-sm text-text-secondary mt-1">6 properties · 12 units · 92% occupied</p>
+</div>
+<button class="w-[44px] h-[44px] rounded-full bg-surface flex items-center justify-center hover:opacity-80 transition-opacity shadow-sm border border-border-subtle">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">add</span>
+</button>
+</div>
+</section>
+<!-- Search & Filters -->
+<section class="px-gutter mb-6">
+<div class="relative w-full h-[56px] rounded-full bg-bg-surface-2 border border-border-subtle flex items-center px-4 mb-4">
+<span class="material-symbols-outlined text-text-secondary mr-3">search</span>
+<input class="bg-transparent border-none outline-none w-full font-body-md text-body-md text-text-primary placeholder:text-text-secondary focus:ring-0 p-0" placeholder="Search property or city..." type="text"/>
+<span class="material-symbols-outlined text-text-secondary ml-3">tune</span>
+</div>
+<div class="flex overflow-x-auto hide-scrollbar gap-2 pb-2 -mx-gutter px-gutter">
+<button class="flex-none h-[36px] px-4 rounded-full bg-primary text-text-primary font-body-sm text-body-sm font-medium whitespace-nowrap">All</button>
+<button class="flex-none h-[36px] px-4 rounded-full bg-surface border border-border-subtle text-text-secondary font-body-sm text-body-sm whitespace-nowrap hover:bg-surface-container transition-colors">Occupied</button>
+<button class="flex-none h-[36px] px-4 rounded-full bg-surface border border-border-subtle text-text-secondary font-body-sm text-body-sm whitespace-nowrap hover:bg-surface-container transition-colors">Vacant</button>
+<button class="flex-none h-[36px] px-4 rounded-full bg-surface border border-border-subtle text-text-secondary font-body-sm text-body-sm whitespace-nowrap hover:bg-surface-container transition-colors">Late</button>
+<button class="flex-none h-[36px] px-4 rounded-full bg-surface border border-border-subtle text-text-secondary font-body-sm text-body-sm whitespace-nowrap hover:bg-surface-container transition-colors">Douala</button>
+<button class="flex-none h-[36px] px-4 rounded-full bg-surface border border-border-subtle text-text-secondary font-body-sm text-body-sm whitespace-nowrap hover:bg-surface-container transition-colors">Yaoundé</button>
+</div>
+</section>
+<!-- Attention Required (Horizontal Scroll) -->
+<section class="mb-section-gap">
+<h2 class="px-gutter font-headline-sm text-headline-sm mb-4 text-text-primary">Attention Required</h2>
+<div class="flex overflow-x-auto hide-scrollbar gap-element-gap px-gutter pb-4">
+<!-- Alert Card 1 -->
+<div class="flex-none w-[280px] bg-bg-surface rounded-3xl overflow-hidden border border-border-subtle relative group cursor-pointer">
+<div class="relative h-[160px] w-full">
+<img alt="Property image" class="w-full h-full object-cover" data-alt="A modern multi-unit compound building in a tropical setting, seen during daytime with bright, clear lighting. The architecture is clean and contemporary with white walls and dark trim. The overall aesthetic is high-end real estate catalog style, fitting a premium dark-mode fintech interface. The mood is sunny but professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCu-jNpLHLYdpQdwa0c_kM9j6YhN0rFx04eeIUqbLLxg1g4vWdvF0ku_yIIHUysH0RNE-_Hl7_dRTIQwvnTYBOSp_xl5cZOP6q6B3kMw3EPfNDdjG_feYTTJMSwqC3B3OtZyXf6MSE2p6AweFlN8PVNrUFI6rPA1LpoA5fULxkyKNsFtznoH8F2QYdxz4VT5hE7EYDzK4WnAU-nFqjJQwq0dWFKWdYIyL03Kx59_uH0VTauwHt6oJdQt3qBT6nU5cw3TM5JQPWBQ2-I"/>
+<!-- Warning Strip -->
+<div class="absolute bottom-0 left-0 right-0 h-[32px] bg-warning/90 backdrop-blur-sm flex items-center px-3 gap-2">
+<span class="text-[14px]">⚠️</span>
+<span class="font-numeric-data text-numeric-data text-on-tertiary-fixed font-semibold">1 vacant · 23 days</span>
+</div>
+</div>
+<div class="p-4">
+<h3 class="font-headline-sm text-[16px] leading-[20px] font-bold text-text-primary truncate">Compound Tamdja</h3>
+<p class="font-body-sm text-body-sm text-text-secondary mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span> Bafoussam
+                        </p>
+</div>
+</div>
+<!-- Alert Card 2 -->
+<div class="flex-none w-[280px] bg-bg-surface rounded-3xl overflow-hidden border border-border-subtle relative group cursor-pointer">
+<div class="relative h-[160px] w-full">
+<img alt="Property image" class="w-full h-full object-cover" data-alt="A stylish urban studio apartment exterior or entryway, featuring modern clean lines and minimalist design. The lighting is warm late afternoon sun casting long shadows. It feels like a high-quality listing on a premium travel or real estate app. The colors are rich and contrast well with a dark UI ecosystem." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6Z72NoRsc12SriGav0OKf19Lw6spb0-J33yXRcTlwlwzLX9Y0K8UTU0xOXdIr0tQmG_M52s79Jl_Jg91y37NZhLVHcy5eb_jHpLHe-ugOXU94Odlsirqz6aNMzwMevNvcBKb4poBEM2W6qCVgYztV7P40jOJRo42BOhegTEKNHQllTZbI-k-WXU5BiL9sDBSJxYZ8pT74E-P8oIRapFRAWr1Syq7epE8S9YHZ88SJiK2A9gLAW6cNIKO71KJks-K4yn85IvAdVERJ"/>
+<!-- Danger Strip -->
+<div class="absolute bottom-0 left-0 right-0 h-[32px] bg-danger/90 backdrop-blur-sm flex items-center px-3 gap-2">
+<span class="text-[14px]">🔴</span>
+<span class="font-numeric-data text-numeric-data text-white font-semibold">Overdue XAF 45 000</span>
+</div>
+</div>
+<div class="p-4">
+<h3 class="font-headline-sm text-[16px] leading-[20px] font-bold text-text-primary truncate">Studio Akwa</h3>
+<p class="font-body-sm text-body-sm text-text-secondary mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span> Douala
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- All Properties Feed -->
+<section class="px-gutter grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-gutter pb-8">
+<div class="col-span-full mb-2">
+<h2 class="font-headline-sm text-headline-sm text-text-primary">All Properties</h2>
+</div>
+<!-- Property 1 -->
+<div class="group cursor-pointer">
+<div class="relative w-full aspect-square rounded-[24px] overflow-hidden mb-3 bg-surface-container">
+<img alt="Property" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A luxurious modern residential building with a grand entrance and well-manicured landscaping. Shot in golden hour lighting creating a warm, inviting atmosphere. The image is high-resolution, sharp, and composed perfectly for a square crop, typical of premium property catalogs. It contrasts beautifully against dark navy UI elements." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzldB_LnUn5IEj9G4VqAefgk6wetmd9E_qAzra-OdBFCPu6CdfwQislr_3qjU7BnshWcNnWSRtPU6RRLEC8vFagRC8MEqZlvEALPU-QdBE8rP5WZBbD-_typT6sNqTpothYJhe2Qkn1rVcFwo6BRbjVHBs2hVMQ4YiMIXT5JgTQkSvbbEyxq0SHdDYuW2e6Qa04AEIrLBKI2wL2v-fQPLTyQVPlrqsVyTRQ0x6tAVJCSAtwok-XqBhTc_ANQdgIhFsAEjqwCciUYs-"/>
+<button class="absolute top-4 right-4 w-[36px] h-[36px] rounded-full glass-panel flex items-center justify-center hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-surface text-[20px]">favorite</span>
+</button>
+<!-- Carousel Dots -->
+<div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
+<div class="w-1.5 h-1.5 rounded-full bg-white"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-white/40"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-white/40"></div>
+</div>
+</div>
+<div class="px-1 flex justify-between items-start">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary mb-1">Résidence Bonamoussadi</h3>
+<p class="font-body-sm text-body-sm text-text-secondary flex items-center gap-1">
+                            Douala <span class="text-[10px]">•</span> 6 units
+                        </p>
+</div>
+<div class="text-right">
+<p class="font-numeric-data text-[16px] font-bold text-text-primary">XAF 450k<span class="text-[12px] font-normal text-text-secondary">/mo</span></p>
+<div class="flex items-center gap-1.5 justify-end mt-1">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<span class="font-body-sm text-[13px] text-text-secondary">5/6 occupied</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Property 2 -->
+<div class="group cursor-pointer">
+<div class="relative w-full aspect-square rounded-[24px] overflow-hidden mb-3 bg-surface-container">
+<img alt="Property" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="An elegant, modern villa with expansive glass windows and a sleek architectural profile. Taken during daytime with bright, natural light. The aesthetic is extremely polished, fitting seamlessly into a high-end spatial real estate application with a dark mode base. The scene is calm and aspirational." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsDAuqjqMhRZsxzaFq43qnbD_1OiiVMQuqCyTrf2vpOVvQqjzaT4ovF2awfh_P_gQf_NrQRgOUweUCmADAIHd5UFAqmB6t43r2dqCUOL-XwU1Y09ldn1wrYRCUKg9rhCxXu9yxOUs80_bwaGo0K3ngo26gMelQjKDeo-da4ZzMBKl0KHUfIqI26c3318ESfz9i5huO_iOFYmQpL64aUl7TiUtOTL_0TzMUgh-KOZgyOfWmO52W0xYFQg3-YD94OhKVtSZmmS1vuThR"/>
+<button class="absolute top-4 right-4 w-[36px] h-[36px] rounded-full glass-panel flex items-center justify-center hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-surface text-[20px]">favorite</span>
+</button>
+<!-- Carousel Dots -->
+<div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
+<div class="w-1.5 h-1.5 rounded-full bg-white"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-white/40"></div>
+</div>
+</div>
+<div class="px-1 flex justify-between items-start">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary mb-1">Villa Bastos</h3>
+<p class="font-body-sm text-body-sm text-text-secondary flex items-center gap-1">
+                            Yaoundé <span class="text-[10px]">•</span> 1 unit
+                        </p>
+</div>
+<div class="text-right">
+<p class="font-numeric-data text-[16px] font-bold text-text-primary">XAF 750k<span class="text-[12px] font-normal text-text-secondary">/mo</span></p>
+<div class="flex items-center gap-1.5 justify-end mt-1">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<span class="font-body-sm text-[13px] text-text-secondary">1/1 occupied</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Property 3 -->
+<div class="group cursor-pointer">
+<div class="relative w-full aspect-square rounded-[24px] overflow-hidden mb-3 bg-surface-container">
+<img alt="Property" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A sprawling, well-maintained multi-unit compound building featuring warm earthy tones and modern design elements. The lighting suggests early morning, creating soft contrasts. The photography style is editorial real estate, high clarity, serving as a striking visual anchor within a sophisticated dark-themed rent management dashboard." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWPz2tyVSb0OJ2HcbAVYAi0v2ts3eRTUGWjWUOTbasLYBEPWqsiEr4yW2mV-SUjSE5v2d70A5385S_-jPjg8yWjWKdkgaqzT8tiTKuJrMPBFtfIA1NaS6FC2_o_u2mEyZHRSRA8VS42sctOACPom4CcjvUEamRHThgdjHxkufO9Kxn8lxoo6RQQ1i4eCRe3DYTs5MewRCrlmTOVYMSyCKtmxY_JLqCveW4w8YXC7kb5IHCpjJfAHR2ENLR81I-cQiH16SXJc1xBfh9"/>
+<button class="absolute top-4 right-4 w-[36px] h-[36px] rounded-full glass-panel flex items-center justify-center hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-surface text-[20px]">favorite</span>
+</button>
+</div>
+<div class="px-1 flex justify-between items-start">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary mb-1">Compound Tamdja</h3>
+<p class="font-body-sm text-body-sm text-text-secondary flex items-center gap-1">
+                            Bafoussam <span class="text-[10px]">•</span> 4 units
+                        </p>
+</div>
+<div class="text-right">
+<p class="font-numeric-data text-[16px] font-bold text-text-primary">XAF 220k<span class="text-[12px] font-normal text-text-secondary">/mo</span></p>
+<div class="flex items-center gap-1.5 justify-end mt-1">
+<div class="w-2 h-2 rounded-full bg-warning"></div>
+<span class="font-body-sm text-[13px] text-text-secondary">3/4 occupied</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Property 4 -->
+<div class="group cursor-pointer">
+<div class="relative w-full aspect-square rounded-[24px] overflow-hidden mb-3 bg-surface-container">
+<img alt="Property" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A chic urban apartment building exterior or interior glimpse, highlighting modern spatial generosity and clean lines. The mood is confident and calm, with subtle architectural lighting. It looks like a premium Airbnb listing, perfectly cropped to a 1:1 ratio for a high-end fintech real estate interface in dark mode." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB29FwLFCbmf-8cBErjjrQ8qvAsm6o6AaKKAvcUxn83GUV0UpUk1RLDV-Bq-uD9sDoPXRkMBYQm22qoKBnD1o7wSCTz-5jbIm1RGmq88Cci53cmSExu7UjL5wSVaIWOLTO_UmLDRPsWe4cQAjC6tEMUcgxggAO76FfQTf_Ws__JKSsUE6QqBRBDO_eczF3xSzXWhmZA0eX24Mh4hyiMlTGHeGvirwKQrm2lJ5Ysf6_OeZkeZBMkVuQyHXbRzKPxqKtccL5qmj__hLYe"/>
+<button class="absolute top-4 right-4 w-[36px] h-[36px] rounded-full glass-panel flex items-center justify-center hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-surface text-[20px]">favorite</span>
+</button>
+</div>
+<div class="px-1 flex justify-between items-start">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary mb-1">Résidence Akwa</h3>
+<p class="font-body-sm text-body-sm text-text-secondary flex items-center gap-1">
+                            Douala <span class="text-[10px]">•</span> 2 units
+                        </p>
+</div>
+<div class="text-right">
+<p class="font-numeric-data text-[16px] font-bold text-text-primary">XAF 280k<span class="text-[12px] font-normal text-text-secondary">/mo</span></p>
+<div class="flex items-center gap-1.5 justify-end mt-1">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<span class="font-body-sm text-[13px] text-text-secondary">2/2 occupied</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Shell (Mobile Only) -->
+<nav class="md:hidden bg-surface dark:bg-surface fixed bottom-0 w-full z-50 h-[84px] border-t border-border-subtle flex justify-around items-center px-4 pb-safe-area-bottom">
+<div class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary-fixed-dim active:scale-95 transition-transform duration-150 cursor-pointer w-[64px]">
+<span class="material-symbols-outlined mb-1">dashboard</span>
+<span class="font-label-caps text-[10px] uppercase tracking-wider">Dashboard</span>
+</div>
+<div class="flex flex-col items-center justify-center text-primary relative before:content-[''] before:absolute before:top-[-12px] before:w-6 before:h-1 before:bg-primary before:rounded-full hover:text-primary-fixed-dim active:scale-95 transition-transform duration-150 cursor-pointer w-[64px]">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">domain</span>
+<span class="font-label-caps text-[10px] uppercase tracking-wider font-bold">Properties</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary-fixed-dim active:scale-95 transition-transform duration-150 cursor-pointer w-[64px]">
+<span class="material-symbols-outlined mb-1">payments</span>
+<span class="font-label-caps text-[10px] uppercase tracking-wider">Payments</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary-fixed-dim active:scale-95 transition-transform duration-150 cursor-pointer w-[64px]">
+<span class="material-symbols-outlined mb-1">group</span>
+<span class="font-label-caps text-[10px] uppercase tracking-wider">Tenants</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary-fixed-dim active:scale-95 transition-transform duration-150 cursor-pointer w-[64px]">
+<div class="w-6 h-6 rounded-full bg-surface-container mb-1 flex items-center justify-center overflow-hidden border border-border-subtle">
+<span class="material-symbols-outlined text-[16px]">person</span>
+</div>
+<span class="font-label-caps text-[10px] uppercase tracking-wider">Profile</span>
+</div>
+</nav>
+<script src="nav_interceptor.js"></script>
+</body></html>

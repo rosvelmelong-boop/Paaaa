@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PropVeil - Role Selector</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Montserrat:wght@700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "success": "#10B981",
+                        "on-tertiary-fixed": "#281900",
+                        "surface-dim": "#071325",
+                        "bg-canvas": "#0A1628",
+                        "text-secondary": "#94A3B8",
+                        "primary-container": "#2aa191",
+                        "warning": "#F59E0B",
+                        "surface": "#071325",
+                        "surface-container": "#142032",
+                        "secondary-container": "#374763",
+                        "surface-tint": "#6bd9c7",
+                        "on-primary-fixed": "#00201c",
+                        "bg-surface": "#1A2B45",
+                        "coral-accent": "#FF7A5A",
+                        "on-surface": "#d7e3fc",
+                        "secondary-fixed": "#d6e3ff",
+                        "accent-hover": "#17806F",
+                        "on-secondary-fixed": "#091c35",
+                        "cream-highlight": "rgba(255, 248, 240, 0.04)",
+                        "surface-container-highest": "#2a3548",
+                        "on-error": "#690005",
+                        "border-subtle": "#1E293B",
+                        "on-secondary-fixed-variant": "#374763",
+                        "surface-container-low": "#101c2e",
+                        "on-background": "#d7e3fc",
+                        "error-container": "#93000a",
+                        "on-primary-fixed-variant": "#005047",
+                        "on-tertiary-fixed-variant": "#604100",
+                        "on-tertiary": "#432c00",
+                        "inverse-surface": "#d7e3fc",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary-container": "#3a2600",
+                        "on-surface-variant": "#bcc9c5",
+                        "primary-fixed": "#89f5e3",
+                        "outline": "#879390",
+                        "surface-variant": "#2a3548",
+                        "bg-surface-2": "#142239",
+                        "background": "#071325",
+                        "tertiary-fixed": "#ffdeac",
+                        "primary": "#6bd9c7",
+                        "surface-bright": "#2e394d",
+                        "tertiary": "#f3be65",
+                        "on-primary-container": "#00302a",
+                        "surface-container-lowest": "#030e20",
+                        "primary-fixed-dim": "#6bd9c7",
+                        "on-secondary-container": "#a5b6d6",
+                        "danger": "#EF4444",
+                        "secondary-fixed-dim": "#b6c7e8",
+                        "inverse-on-surface": "#253144",
+                        "secondary": "#b6c7e8",
+                        "surface-container-high": "#1f2a3d",
+                        "on-primary": "#003731",
+                        "text-tertiary": "#64748B",
+                        "inverse-primary": "#006b5f",
+                        "tertiary-fixed-dim": "#f3be65",
+                        "accent-glow": "rgba(29, 154, 138, 0.2)",
+                        "text-primary": "#FFFFFF",
+                        "tertiary-container": "#b78935",
+                        "on-secondary": "#20314b",
+                        "outline-variant": "#3d4946",
+                        "error": "#ffb4ab"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "card-padding": "20px",
+                        "section-gap": "32px",
+                        "gutter": "28px",
+                        "safe-area-bottom": "34px",
+                        "element-gap": "16px",
+                        "safe-area-top": "44px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "numeric-data": ["Inter"],
+                        "display-hero": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Montserrat"],
+                        "body-sm": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "headline-sm": ["Montserrat"],
+                        "headline-md": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "26px", "fontWeight": "400"}],
+                        "numeric-data": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                        "display-hero": ["40px", {"lineHeight": "48px", "fontWeight": "900"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "900"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600"}],
+                        "headline-sm": ["18px", {"lineHeight": "24px", "fontWeight": "700"}],
+                        "headline-md": ["22px", {"lineHeight": "28px", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .glass-panel {
+                @apply bg-bg-surface/90 backdrop-blur-md border border-white/10 shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),inset_0_-1px_1px_rgba(0,0,0,0.2)];
+            }
+            .glass-panel-selected {
+                @apply bg-bg-surface/90 backdrop-blur-md border-[1.5px] border-primary shadow-[0_0_12px_rgba(29,154,138,0.3),inset_0_1px_1px_rgba(255,255,255,0.1),inset_0_-1px_1px_rgba(0,0,0,0.2)];
+            }
+        }
+    </style>
+</head>
+<body class="bg-bg-canvas text-text-primary min-h-screen flex flex-col font-body-md antialiased pt-safe-area-top pb-safe-area-bottom">
+<!-- Top Bar -->
+<header class="h-[56px] px-gutter flex items-center justify-between shrink-0">
+<div class="h-8 w-8 rounded-full overflow-hidden">
+<img alt="PropVeil Logo" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uj_8Vn8CY28v6nj98iji1XAKwFMRT-_yN7TyFNqV0eqZ2gd2Peo9b7WsrwhbrZax-X7wXyrvU6qJ-F3K68azRwsXehQ6JSSdTsZa3kB7G3igmQTtulNF3vmXlqBtJNe3hMyXmwGxmtmwmksLy4zkTJko5iKbV0BYv9NxocB-chFNeJbaA7p-wu9ieK_UKLu_SL06vIAvaJ2f_NlT7-2zZtwIbqiaEpCGu_igm0NGEMAaePSM7iEaeVS46ze"/>
+</div>
+<button class="text-text-secondary hover:text-text-primary transition-colors flex items-center justify-center h-10 w-10">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">chevron_left</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="flex-1 px-gutter pt-8 pb-8 flex flex-col">
+<!-- Header Section -->
+<section class="mb-section-gap">
+<h1 class="font-headline-lg text-headline-lg text-text-primary mb-2">Who are you on PropVeil?</h1>
+<p class="font-body-md text-body-md text-text-secondary">Pick the role that fits. You can manage multiple roles later from Settings.</p>
+</section>
+<!-- Role Grid -->
+<section class="grid grid-cols-2 gap-4 mb-section-gap">
+<!-- Card 1: Landlord (Selected) -->
+<button class="glass-panel-selected rounded-xl p-card-padding flex flex-col items-start relative h-[180px] text-left transition-transform active:scale-95 group">
+<div class="absolute top-3 right-3 h-6 w-6 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<div class="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center text-primary mb-4 shrink-0">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">real_estate_agent</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary mb-1">LANDLORD</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-snug">Own properties, collect rent</p>
+<div class="absolute bottom-3 left-1/2 -translate-x-1/2 w-max px-2 py-1 bg-tertiary/20 text-tertiary rounded-full font-label-caps text-[10px]">MOST POPULAR</div>
+</button>
+<!-- Card 2: Tenant -->
+<button class="glass-panel rounded-xl p-card-padding flex flex-col items-start h-[180px] text-left transition-transform active:scale-95 hover:border-primary/50">
+<div class="h-10 w-10 rounded-full bg-surface-bright flex items-center justify-center text-text-secondary mb-4 shrink-0">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">key</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary mb-1">TENANT</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-snug">Pay rent, track receipts</p>
+</button>
+<!-- Card 3: Agency -->
+<button class="glass-panel rounded-xl p-card-padding flex flex-col items-start relative h-[180px] text-left transition-transform active:scale-95 hover:border-primary/50">
+<div class="absolute bottom-3 right-3 px-2 py-1 bg-primary/20 text-primary rounded-full font-label-caps text-[10px]">PRO</div>
+<div class="h-10 w-10 rounded-full bg-surface-bright flex items-center justify-center text-text-secondary mb-4 shrink-0">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">handshake</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary mb-1">AGENCY</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-snug">Manage multiple landlords</p>
+</button>
+<!-- Card 4: Caretaker -->
+<button class="glass-panel rounded-xl p-card-padding flex flex-col items-start h-[180px] text-left transition-transform active:scale-95 hover:border-primary/50">
+<div class="h-10 w-10 rounded-full bg-surface-bright flex items-center justify-center text-text-secondary mb-4 shrink-0">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">build</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary mb-1">CARETAKER</h3>
+<p class="font-body-sm text-body-sm text-text-secondary leading-snug">Maintenance + on-site duties</p>
+</button>
+</section>
+<!-- Info Strip -->
+<div class="bg-bg-surface-2/60 backdrop-blur-md border border-white/5 rounded-lg p-4 flex items-start gap-3 mb-auto">
+<span class="material-symbols-outlined text-primary shrink-0" style="font-variation-settings: 'FILL' 0;">info</span>
+<p class="font-body-sm text-body-sm text-text-secondary">You can switch roles anytime in Profile → Account Type.</p>
+</div>
+</main>
+<!-- Bottom Action Area -->
+<div class="px-gutter pb-8 pt-4 bg-gradient-to-t from-bg-canvas via-bg-canvas to-transparent">
+<button class="w-full h-[56px] rounded-full bg-primary hover:bg-primary-fixed-dim text-on-primary font-body-md text-body-md font-semibold flex items-center justify-center gap-2 shadow-[0_0_12px_rgba(29,154,138,0.3)] transition-all active:scale-95 mb-4">
+            Continue as Landlord
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">chevron_right</span>
+</button>
+<div class="text-center font-body-sm text-body-sm text-text-tertiary">
+            Step 2 of 5
+        </div>
+</div>
+<script src="nav_interceptor.js"></script>
+</body></html>

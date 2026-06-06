@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tenants - PropVeil</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Montserrat:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "accent-glow": "rgba(29, 154, 138, 0.2)",
+                      "on-secondary": "#20314b",
+                      "on-secondary-container": "#a5b6d6",
+                      "border-subtle": "#1E293B",
+                      "tertiary-container": "#b78935",
+                      "error": "#ffb4ab",
+                      "surface-container-low": "#101c2e",
+                      "background": "#071325",
+                      "surface-container": "#142032",
+                      "surface-tint": "#6bd9c7",
+                      "surface": "#071325",
+                      "tertiary-fixed-dim": "#f3be65",
+                      "tertiary-fixed": "#ffdeac",
+                      "primary": "#6bd9c7",
+                      "inverse-primary": "#006b5f",
+                      "bg-canvas": "#0A1628",
+                      "secondary": "#b6c7e8",
+                      "secondary-fixed": "#d6e3ff",
+                      "on-error-container": "#ffdad6",
+                      "surface-container-high": "#1f2a3d",
+                      "bg-surface-2": "#142239",
+                      "on-primary-container": "#00302a",
+                      "warning": "#F59E0B",
+                      "outline-variant": "#3d4946",
+                      "on-tertiary": "#432c00",
+                      "on-primary": "#003731",
+                      "surface-container-highest": "#2a3548",
+                      "danger": "#EF4444",
+                      "surface-variant": "#2a3548",
+                      "on-tertiary-container": "#3a2600",
+                      "success": "#10B981",
+                      "surface-dim": "#071325",
+                      "on-tertiary-fixed-variant": "#604100",
+                      "on-surface-variant": "#bcc9c5",
+                      "error-container": "#93000a",
+                      "text-primary": "#FFFFFF",
+                      "primary-fixed": "#89f5e3",
+                      "surface-container-lowest": "#030e20",
+                      "surface-bright": "#2e394d",
+                      "on-secondary-fixed": "#091c35",
+                      "secondary-container": "#374763",
+                      "on-primary-fixed-variant": "#005047",
+                      "coral-accent": "#FF7A5A",
+                      "on-background": "#d7e3fc",
+                      "on-surface": "#d7e3fc",
+                      "primary-container": "#2aa191",
+                      "text-tertiary": "#64748B",
+                      "primary-fixed-dim": "#6bd9c7",
+                      "text-secondary": "#94A3B8",
+                      "on-secondary-fixed-variant": "#374763",
+                      "tertiary": "#f3be65",
+                      "outline": "#879390",
+                      "secondary-fixed-dim": "#b6c7e8",
+                      "on-error": "#690005",
+                      "inverse-on-surface": "#253144",
+                      "cream-highlight": "rgba(255, 248, 240, 0.04)",
+                      "on-tertiary-fixed": "#281900",
+                      "accent-hover": "#17806F",
+                      "inverse-surface": "#d7e3fc",
+                      "bg-surface": "#1A2B45",
+                      "on-primary-fixed": "#00201c"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "28px",
+                      "element-gap": "16px",
+                      "card-padding": "20px",
+                      "section-gap": "32px",
+                      "safe-area-bottom": "34px",
+                      "safe-area-top": "44px"
+              },
+              "fontFamily": {
+                      "headline-sm": [
+                              "Montserrat"
+                      ],
+                      "headline-md": [
+                              "Montserrat"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "numeric-data": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "label-caps": [
+                              "Inter"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "display-hero": [
+                              "Montserrat"
+                      ],
+                      "headline-lg": [
+                              "Montserrat"
+                      ]
+              },
+              "fontSize": {
+                      "headline-sm": [
+                              "18px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "22px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "26px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "numeric-data": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.08em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-hero": [
+                              "40px",
+                              {
+                                      "lineHeight": "48px",
+                                      "fontWeight": "900"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "900"
+                              }
+                      ]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-bg-canvas text-text-primary font-body-md antialiased pb-safe-area-bottom">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-canvas/80 backdrop-blur-md dark:bg-canvas/80 border-b border-border-subtle shadow-sm flex items-center justify-between px-gutter h-16 transition-colors">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary dark:text-primary cursor-pointer hover:bg-cream-highlight transition-colors rounded-full p-2" data-icon="chevron_left">chevron_left</span>
+<h1 class="font-headline-md text-headline-md font-black text-primary tracking-tighter">PropVeil</h1>
+</div>
+<div>
+<img alt="User Profile Picture" class="w-8 h-8 rounded-full object-cover border border-border-subtle" data-alt="A close up, high quality headshot of a confident professional man in a dark modern setting. Warm subtle lighting highlights his features. Used as a tiny profile avatar in a premium dark mode UI." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgZppuLRDoNst_-1LK2Vnbmwpslpzq88BZzzUxGAMGqCyBI64Vled2RvwXV_776P9HmOOp5HgRY3bSa_BAxEIWrB-t49y68p5HIvyQhdvxe63uzn06EOc_gWdM4CNsVv_ep7FKKu-0PIsDB4KrZe-4vpEoHh-1c0wDi0W38JmTkAFqg8OSnLPvadkTqegiTu6t5ZegRHv_noVxyohA6oAgcIW74CXZU2UZ7QidCryxDF9kFVn4vYliqveKnQqtdo9A4vX1XCtHPI7p"/>
+</div>
+</header>
+<!-- Main Content -->
+<main class="pt-[88px] px-gutter pb-[120px]">
+<!-- Header Section -->
+<div class="flex justify-between items-end mb-2">
+<div>
+<h2 class="font-display-hero text-display-hero tracking-tight">Tenants</h2>
+</div>
+<button class="w-12 h-12 rounded-full bg-bg-surface flex items-center justify-center hover:bg-cream-highlight transition-colors shadow-sm">
+<span class="material-symbols-outlined text-primary text-[24px]" style="font-variation-settings: 'FILL' 1;">add</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-text-secondary mb-section-gap">11 active tenants · 2 late · low avg risk</p>
+<!-- Search & Filter Sticky Area -->
+<div class="sticky top-[80px] z-40 bg-bg-canvas/90 backdrop-blur-xl pb-4 -mx-gutter px-gutter">
+<!-- Search Pill -->
+<div class="h-[56px] rounded-full bg-bg-surface-2 border border-border-subtle flex items-center px-4 mb-4 shadow-sm">
+<span class="material-symbols-outlined text-text-secondary mr-3 text-[20px]">search</span>
+<input class="bg-transparent border-none outline-none text-text-primary flex-1 font-body-md text-body-md placeholder-text-tertiary focus:ring-0 w-full" placeholder="Search tenants..." type="text"/>
+<span class="material-symbols-outlined text-primary ml-3 text-[20px] cursor-pointer hover:text-primary/80 transition-colors">tune</span>
+</div>
+<!-- Filter Chips Horizontal Scroll -->
+<div class="flex gap-2 overflow-x-auto no-scrollbar pb-2 snap-x">
+<button class="h-[36px] rounded-full px-4 bg-primary text-on-primary font-body-sm text-body-sm font-semibold whitespace-nowrap snap-start shadow-[0_0_12px_rgba(29,154,138,0.3)] transition-all">All</button>
+<button class="h-[36px] rounded-full px-4 bg-bg-surface text-text-secondary border border-border-subtle hover:bg-bg-surface-2 font-body-sm text-body-sm whitespace-nowrap snap-start transition-all">Up-to-date</button>
+<button class="h-[36px] rounded-full px-4 bg-bg-surface text-text-secondary border border-border-subtle hover:bg-bg-surface-2 font-body-sm text-body-sm whitespace-nowrap snap-start transition-all">Late</button>
+<button class="h-[36px] rounded-full px-4 bg-bg-surface text-text-secondary border border-border-subtle hover:bg-bg-surface-2 font-body-sm text-body-sm whitespace-nowrap snap-start transition-all">High risk</button>
+<button class="h-[36px] rounded-full px-4 bg-bg-surface text-text-secondary border border-border-subtle hover:bg-bg-surface-2 font-body-sm text-body-sm whitespace-nowrap snap-start transition-all">Lease ending</button>
+<button class="h-[36px] rounded-full px-4 bg-bg-surface text-text-secondary border border-border-subtle hover:bg-bg-surface-2 font-body-sm text-body-sm whitespace-nowrap snap-start transition-all">New</button>
+</div>
+</div>
+<!-- Needs Attention Horizontal Scroll -->
+<div class="mb-section-gap pt-4">
+<h3 class="font-label-caps text-label-caps text-warning mb-4 flex items-center gap-2">
+<span>⚠️</span> NEEDS YOUR ATTENTION
+            </h3>
+<div class="flex gap-4 overflow-x-auto no-scrollbar pb-4 -mx-gutter px-gutter snap-x">
+<!-- Attention Card 1 -->
+<div class="min-w-[280px] w-[280px] h-[220px] rounded-2xl bg-bg-surface overflow-hidden relative snap-start shadow-lg group cursor-pointer border border-border-subtle">
+<img alt="Jean Talla" class="w-full h-[140px] object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Portrait of an older man looking serious, set against a dark architectural background with moody lighting. High-end real estate platform dark mode imagery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQ86oKyQSW3AajJmHMCa8Y1ZAvsTnjKem_5YD6Asep-aJMdXUhTyLJzqMG3JP2P2mQCeYsGx3rVmTWBJ2PptStCrfQm-cbSwKv8ceJE7szypNaGakWfweWIl__ENujNns2MRIkuneae-WyUpnJXV4DaPoPE8hyhyeFtcBYhgVaXMT3_73WsuLA6BvpENemKBBYh3wE9A3MtyfmQews49_HWrJvFG8P-IUnS9RQks4SQPfOV_nWbXe_tHwWXOF0oVbqTVbxtG941A_0"/>
+<div class="absolute top-3 right-3 bg-danger/90 backdrop-blur-md px-3 py-1 rounded-full border border-danger/20 flex items-center gap-1 shadow-md">
+<span class="material-symbols-outlined text-[14px] text-white">warning</span>
+<span class="font-numeric-data text-numeric-data text-white">78% Risk</span>
+</div>
+<div class="p-card-padding">
+<h4 class="font-headline-sm text-headline-sm">Jean Talla</h4>
+<p class="font-body-sm text-body-sm text-text-secondary truncate mt-1">Villa Royale · Unit 3</p>
+</div>
+</div>
+<!-- Attention Card 2 -->
+<div class="min-w-[280px] w-[280px] h-[220px] rounded-2xl bg-bg-surface overflow-hidden relative snap-start shadow-lg group cursor-pointer border border-border-subtle">
+<img alt="Patrice Etoa" class="w-full h-[140px] object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Portrait of a young professional male in a sharp suit, standing near a modern glass window with city lights reflecting in the background at night. Premium dark UI style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYfWJdOjfrVMpDL18eRQy_t2doM6TqiBCv0LI0Xuf_NtayBTJPUkd2XUlyg5yghl3YfO46YcWN9N7COr8WFinZpAEhHB0wzASHOGCrsno2yH314N39riOd84r9nKRMhPkcBQOKelgbaiKZfjUSFy8xzn2Yrsqo-XNmrX0TOL5ZeRchrGerVnchGowmsHdZyGFf0yXnphAMEqd8O1LJL5rn2xdIz4FftHLE-hF-tUNj5lh5AQCpSQQjyajm3r125YMUdjCh3zqH87Mk"/>
+<div class="absolute top-3 right-3 bg-warning/90 backdrop-blur-md px-3 py-1 rounded-full border border-warning/20 flex items-center gap-1 shadow-md">
+<span class="material-symbols-outlined text-[14px] text-white">schedule</span>
+<span class="font-numeric-data text-numeric-data text-white">45 Days Late</span>
+</div>
+<div class="p-card-padding">
+<h4 class="font-headline-sm text-headline-sm">Patrice Etoa</h4>
+<p class="font-body-sm text-body-sm text-text-secondary truncate mt-1">Residence Horizon · Apt 12B</p>
+</div>
+</div>
+</div>
+</div>
+<!-- All Tenants List -->
+<div>
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-headline-md text-headline-md">All tenants</h3>
+<button class="font-body-sm text-body-sm text-primary hover:text-primary-container transition-colors flex items-center gap-1">
+                    Sorted A-Z <span class="material-symbols-outlined text-[16px]">swap_vert</span>
+</button>
+</div>
+<div class="flex flex-col gap-element-gap">
+<!-- Tenant Card: Aïcha Bello -->
+<div class="bg-bg-surface rounded-2xl p-3 flex gap-4 border border-border-subtle shadow-sm hover:bg-bg-surface-2 transition-colors cursor-pointer group">
+<img alt="Aïcha Bello" class="w-[96px] h-[96px] rounded-xl object-cover shadow-sm group-hover:shadow-md transition-shadow" data-alt="Portrait of a smiling professional woman with a clean dark background, subtle warm rim lighting. High quality avatar for a premium fintech app." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQzEvpjRdPiz2cuMD7NtcgmxRHv0e2ml6iiQ95qtvWmfmGFmsuUSBjqv6DSPORZO_3m4oWV6nhmzC0JMvezkdHJhxSvbFxIn7XgRJTF2ach8-9jGgHeYYsSxbAXxiZWAgLxF7p2BPl24QockuHbDr6-_qNDdvSMby9tROFzwjJ7WkoguS1ufKwISUaF9t28XX06rEHq8I9fx_hwDDR8unZm8TcYFnPm19DnkKjBBfIj1cJGzKNJP4FJv7dQxUUgKk1029H3-z2noQq"/>
+<div class="flex-1 flex flex-col justify-center py-1">
+<h4 class="font-headline-sm text-headline-sm mb-1">Aïcha Bello</h4>
+<p class="font-body-sm text-body-sm text-text-secondary truncate mb-2">Oasis Tower · Unit 402 · 12 Sep</p>
+<div class="flex items-center gap-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-success/10 border border-success/20 text-success font-label-caps text-label-caps">
+                                ✅ Paid
+                            </span>
+<div class="flex items-center gap-2 flex-1">
+<div class="h-[6px] w-[60px] bg-bg-surface-2 rounded-full overflow-hidden">
+<div class="h-full bg-success rounded-full" style="width: 22%;"></div>
+</div>
+<span class="font-numeric-data text-numeric-data text-text-tertiary text-[12px]">22%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Tenant Card: Eric Fotso -->
+<div class="bg-bg-surface rounded-2xl p-3 flex gap-4 border border-border-subtle shadow-sm hover:bg-bg-surface-2 transition-colors cursor-pointer group">
+<img alt="Eric Fotso" class="w-[96px] h-[96px] rounded-xl object-cover shadow-sm group-hover:shadow-md transition-shadow" data-alt="Headshot of a middle-aged man looking thoughtful, set against an abstract dark blue architectural background. Soft directional light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYdYZ2lNFHy5jdxVzzbhojNL9OTih9_r4yVHOk3Q7IqDkUKFCLEiqfEg96XR3RICe69Lm_Jz1rMt73UvVWVja9LZ6dAa7_7JQq3qYeGUXcJyg4lo_xfOUusqkofB0todr9anlFxrhTO8CK6iaIDNX2s9uvCgxjW4_sSmx75jWe8Kq5sIVQZ5mWStzp9r2DWOLWZRFFcJ6p6o_3UpHpXnmS0hekmqZXe2f5SVX2UYXgOFpAfbZz-DE2hygAaBBu5-wAPb4yfT_RR9oa"/>
+<div class="flex-1 flex flex-col justify-center py-1">
+<h4 class="font-headline-sm text-headline-sm mb-1">Eric Fotso</h4>
+<p class="font-body-sm text-body-sm text-text-secondary truncate mb-2">Les Cocotiers · Apt 3 · 01 Oct</p>
+<div class="flex items-center gap-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-warning/10 border border-warning/20 text-warning font-label-caps text-label-caps">
+                                ⚠️ Late 32d
+                            </span>
+<div class="flex items-center gap-2 flex-1">
+<div class="h-[6px] w-[60px] bg-bg-surface-2 rounded-full overflow-hidden">
+<div class="h-full bg-warning rounded-full" style="width: 72%;"></div>
+</div>
+<span class="font-numeric-data text-numeric-data text-text-tertiary text-[12px]">72%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Tenant Card: Jean Talla -->
+<div class="bg-bg-surface rounded-2xl p-3 flex gap-4 border border-border-subtle shadow-sm hover:bg-bg-surface-2 transition-colors cursor-pointer group relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-danger"></div>
+<img alt="Jean Talla" class="w-[96px] h-[96px] rounded-xl object-cover shadow-sm group-hover:shadow-md transition-shadow ml-1" data-alt="Portrait of an older man looking serious, set against a dark architectural background with moody lighting. High-end real estate platform dark mode imagery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBo8ACW4ToPyrpIO5WWoQ98HIMo5vRYY84hucN4xtfLiy-X0LoR5Wc72nkIwpPsC6ivyZO5-J8_iRshxingFuas8_tqF2nGq-2ehwcO8oup4ZOUT3K48nae0qMYODsHBno1sot_VftBHsyM15jrVU2sLoqGKXUAQZfDzoFSPHTWxhpnZF7YjaY-96EdkoEI1nAK0km-75lhEPN7ZQ9COclLKI5oGlM7miPcuf7vNynsnMD1yP5HAZrAWl05FiN7nvCSbhoJzP_LKdGw"/>
+<div class="flex-1 flex flex-col justify-center py-1">
+<h4 class="font-headline-sm text-headline-sm mb-1">Jean Talla</h4>
+<p class="font-body-sm text-body-sm text-text-secondary truncate mb-2">Villa Royale · Unit 3 · 15 Nov</p>
+<div class="flex items-center gap-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-danger/10 border border-danger/20 text-danger font-label-caps text-label-caps">
+                                🛑 Due
+                            </span>
+<div class="flex items-center gap-2 flex-1">
+<div class="h-[6px] w-[60px] bg-bg-surface-2 rounded-full overflow-hidden">
+<div class="h-full bg-danger rounded-full" style="width: 78%;"></div>
+</div>
+<span class="font-numeric-data text-numeric-data text-text-tertiary text-[12px]">78%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Tenant Card: Marie Ngo -->
+<div class="bg-bg-surface rounded-2xl p-3 flex gap-4 border border-border-subtle shadow-sm hover:bg-bg-surface-2 transition-colors cursor-pointer group">
+<img alt="Marie Ngo" class="w-[96px] h-[96px] rounded-xl object-cover shadow-sm group-hover:shadow-md transition-shadow" data-alt="Portrait of a young woman with a natural smile, set against a dark abstract studio background. Modern, corporate fintech aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRpLlGmaHw45ABwpHYg8o5Rq11u5_YI3MrNZml2eD37pNW63z_YVR5YC_r-nzA2gvOZ_1jZU4IYGy8MupCbCDqHSli3zLPByWac1qbRvTzviUqYt7VfbmbK6sAYESrUFQKhmsGBVSdeJpJa6EB7tol0L33EM6vsSLd-jn0d2piKNdQzyU-jr2LyeCQ8kFLY54yjh8mSe2riEjY-XN4fnf0-u-49mQdugiS75FKQPHrLp7RpGSZVZ8Y-wGJFZmk_pVezYgmlY4VduWQ"/>
+<div class="flex-1 flex flex-col justify-center py-1">
+<h4 class="font-headline-sm text-headline-sm mb-1">Marie Ngo</h4>
+<p class="font-body-sm text-body-sm text-text-secondary truncate mb-2">Plateau Central · Studio B · 28 Aug</p>
+<div class="flex items-center gap-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-success/10 border border-success/20 text-success font-label-caps text-label-caps">
+                                ✅ Paid
+                            </span>
+<div class="flex items-center gap-2 flex-1">
+<div class="h-[6px] w-[60px] bg-bg-surface-2 rounded-full overflow-hidden">
+<div class="h-full bg-success rounded-full" style="width: 18%;"></div>
+</div>
+<span class="font-numeric-data text-numeric-data text-text-tertiary text-[12px]">18%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Tenant Card: Patrice Etoa -->
+<div class="bg-bg-surface rounded-2xl p-3 flex gap-4 border border-border-subtle shadow-sm hover:bg-bg-surface-2 transition-colors cursor-pointer group">
+<img alt="Patrice Etoa" class="w-[96px] h-[96px] rounded-xl object-cover shadow-sm group-hover:shadow-md transition-shadow" data-alt="Portrait of a young professional male in a sharp suit, standing near a modern glass window with city lights reflecting in the background at night. Premium dark UI style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5B7xYSE2dBpBOFc53GWB-3kDASwhBT_5r-_Vr5GYhkFJqa_Lz98HJuIodxbHBSsDUO8UBdNk1t-kLoWOmHHZguvzVXV8EUFI0INPO7jmeyeR1s4dFZcbyqIDqcYAUxH1bzXR6xTvRKtNP-A8-QwcSSyd9zn_kKP2Gv1enxXyJ8eBsMnqgQ8n4JSWmu_UyUmPNUQuXUrp888ZQYpM7o_AtqBgsJGnch6GJFc_ySeBnOGHoBNm2EzvXGg21Y0ia0zJwkKrzRVH23DOi"/>
+<div class="flex-1 flex flex-col justify-center py-1">
+<h4 class="font-headline-sm text-headline-sm mb-1">Patrice Etoa</h4>
+<p class="font-body-sm text-body-sm text-text-secondary truncate mb-2">Residence Horizon · Apt 12B · 05 Dec</p>
+<div class="flex items-center gap-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-danger/10 border border-danger/20 text-danger font-label-caps text-label-caps">
+                                🛑 Late 45d
+                            </span>
+<div class="flex items-center gap-2 flex-1">
+<div class="h-[6px] w-[60px] bg-bg-surface-2 rounded-full overflow-hidden">
+<div class="h-full bg-danger rounded-full" style="width: 88%;"></div>
+</div>
+<span class="font-numeric-data text-numeric-data text-text-tertiary text-[12px]">88%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Tenant Card: Pauline Mvogo -->
+<div class="bg-bg-surface rounded-2xl p-3 flex gap-4 border border-border-subtle shadow-sm hover:bg-bg-surface-2 transition-colors cursor-pointer group">
+<img alt="Pauline Mvogo" class="w-[96px] h-[96px] rounded-xl object-cover shadow-sm group-hover:shadow-md transition-shadow" data-alt="A sophisticated older woman in elegant attire, looking directly at the camera. Dark, premium background with subtle blue undertones. High-end photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkbGarE7mXd6eJ7IJtc2-jgIH4ExPYoHJDAzyHfJ03iYOGJvYbrkeoU78WsSOnEpKw_LnkgUrJzKOrtPi1j9VhP3qYodeMTehNsLtf0vTFTNkt8ori3njt76FJPU5zcwI9o68KyZbgflkQN311V7KAErLVV-7mt3Q0vr00rHYIfCM0jjo03YQRh0CU2ZW9h2e-nAn5H2PvW9CIRt9pXSiZnXDaCI8bsY395DS8pB2eV-VYuHaiIHfItCO91v25YN7-Zh8kxY9aucoG"/>
+<div class="flex-1 flex flex-col justify-center py-1">
+<h4 class="font-headline-sm text-headline-sm mb-1">Pauline Mvogo</h4>
+<p class="font-body-sm text-body-sm text-text-secondary truncate mb-2">Golf Estates · Villa 7 · 10 Jan</p>
+<div class="flex items-center gap-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-success/10 border border-success/20 text-success font-label-caps text-label-caps">
+                                ✅ Paid · OHADA
+                            </span>
+<div class="flex items-center gap-2 flex-1">
+<div class="h-[6px] w-[60px] bg-bg-surface-2 rounded-full overflow-hidden">
+<div class="h-full bg-success rounded-full" style="width: 12%;"></div>
+</div>
+<span class="font-numeric-data text-numeric-data text-text-tertiary text-[12px]">12%</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 h-[84px] bg-surface dark:bg-surface border-t border-border-subtle shadow-[0_-4px_20px_rgba(29,154,138,0.1)] flex justify-around items-center px-4 pb-safe-area-bottom md:hidden transition-colors">
+<a class="flex flex-col items-center gap-1 text-text-secondary hover:text-primary/80 tap-highlight-none active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined text-[24px]">home</span>
+<span class="font-label-caps text-label-caps">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-text-secondary hover:text-primary/80 tap-highlight-none active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined text-[24px]">domain</span>
+<span class="font-label-caps text-label-caps">Properties</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-text-secondary hover:text-primary/80 tap-highlight-none active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined text-[24px]">payments</span>
+<span class="font-label-caps text-label-caps">Payments</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary relative before:content-[''] before:absolute before:-top-2 before:w-6 before:h-1 before:bg-primary before:rounded-full tap-highlight-none active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">group</span>
+<span class="font-label-caps text-label-caps">Tenants</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-text-secondary hover:text-primary/80 tap-highlight-none active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined text-[24px]">person</span>
+<span class="font-label-caps text-label-caps">Profile</span>
+</a>
+</nav>
+<style>
+        /* Utility to hide scrollbar but keep functionality */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<script src="nav_interceptor.js"></script>
+</body></html>

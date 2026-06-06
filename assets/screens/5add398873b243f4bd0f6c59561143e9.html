@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>PropVeil Landlord Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "bg-canvas": "#0A1628",
+                        "bg-surface": "#1A2B45",
+                        "bg-surface-2": "#142239",
+                        "border-subtle": "#1E293B",
+                        "accent": "#1D9A8A",
+                        "accent-hover": "#17806F",
+                        "accent-glow": "rgba(29, 154, 138, 0.2)",
+                        "text-primary": "#FFFFFF",
+                        "text-secondary": "#94A3B8",
+                        "text-tertiary": "#64748B",
+                        "success": "#10B981",
+                        "warning": "#F59E0B",
+                        "danger": "#EF4444",
+                        "coral-accent": "#FF7A5A",
+                    },
+                    spacing: {
+                        "gutter": "28px",
+                        "element-gap": "16px",
+                        "section-gap": "32px",
+                    },
+                    borderRadius: {
+                        "card": "20px",
+                        "input": "12px",
+                        "button": "14px",
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #0A1628; color: #FFFFFF; }
+        .font-display { font-family: 'Montserrat', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .teal-glow { box-shadow: 0 0 40px -10px rgba(29, 154, 138, 0.25); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-bg-canvas text-text-primary min-h-screen pb-24">
+<!-- Header Section -->
+<header class="px-gutter pt-safe-area-top mt-10 mb-6 flex justify-between items-center">
+<div class="flex flex-col">
+<span class="text-label-caps text-text-secondary uppercase tracking-widest text-[12px] font-semibold mb-1">GOOD MORNING, AÏSSATOU</span>
+<h1 class="font-display text-headline-md text-white font-bold text-[22px]">Here's your portfolio today.</h1>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative">
+<span class="material-symbols-outlined text-white text-[28px]" data-icon="notifications">notifications</span>
+<span class="absolute top-0 right-0 w-2.5 h-2.5 bg-accent rounded-full border-2 border-bg-canvas"></span>
+</div>
+<div class="w-11 h-11 rounded-full bg-cover bg-center border border-border-subtle" data-alt="A professional portrait of a West African woman in her late 30s with a warm smile and sharp business attire. The lighting is soft and professional, set against a blurred modern architectural interior. The image maintains the dark navy and teal color palette of the PropVeil brand for visual harmony." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD3nJX-ZTUoCgevLC2UZY4YPSOyRHGLcdRvGbwwp7ZchEiSRfyJL7upImbz_kx2h36Y1kvEU92hqrpONEBKi6n3X92jjyigTvDjGUVGHpF287gHp5mqc5N_Pe3L0oWK9h4MDsivqbdYM8V2CHLoHwopOOl_Fae2aevaC4dcuiWvn7f-8M1iet0qwtm9hILh9eui2qFqFA9Y_tmHz6SbCMuinqGYH33h8-me8tEbviPTzV9h47NoSIYZrrFU_vsz7nvrAW0dCMGmLhF6')">
+</div>
+</div>
+</header>
+<!-- Search Pill -->
+<div class="px-gutter mb-8">
+<div class="h-14 bg-bg-surface-2 rounded-full border border-border-subtle flex items-center px-5 gap-3">
+<span class="material-symbols-outlined text-text-secondary" data-icon="search">search</span>
+<span class="text-text-secondary flex-1 text-[15px]">Search property, tenant, payment...</span>
+<div class="w-9 h-9 rounded-full bg-bg-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-accent text-[20px]" data-icon="settings">settings</span>
+</div>
+</div>
+</div>
+<!-- KPI Hero -->
+<div class="px-gutter mb-8 relative">
+<div class="absolute inset-0 bg-accent opacity-5 blur-[60px] rounded-full teal-glow"></div>
+<div class="relative z-10">
+<span class="text-label-caps text-text-secondary uppercase tracking-widest text-[12px] font-semibold mb-1">COLLECTED THIS MONTH</span>
+<div class="flex items-end gap-3">
+<h2 class="font-display font-black text-[40px] text-white leading-none">XAF 2 750 000</h2>
+<div class="bg-success/15 px-3 py-1 rounded-full mb-1">
+<span class="text-success text-[13px] font-semibold">↑ 12% <span class="text-[11px] opacity-70">vs. April</span></span>
+</div>
+</div>
+</div>
+</div>
+<!-- KPI Strip -->
+<div class="flex overflow-x-auto hide-scrollbar gap-4 px-gutter mb-10">
+<!-- Outstanding -->
+<div class="flex-shrink-0 w-[156px] h-[112px] bg-bg-surface border border-border-subtle rounded-card p-5 flex flex-col justify-between">
+<span class="text-[11px] font-bold text-text-secondary uppercase tracking-wider">Outstanding</span>
+<span class="text-lg font-bold text-white">XAF 380k</span>
+</div>
+<!-- Occupancy -->
+<div class="flex-shrink-0 w-[156px] h-[112px] bg-bg-surface border border-border-subtle rounded-card p-5 flex flex-col justify-between">
+<span class="text-[11px] font-bold text-text-secondary uppercase tracking-wider">Occupancy</span>
+<span class="text-lg font-bold text-white">92%</span>
+</div>
+<!-- Tickets -->
+<div class="flex-shrink-0 w-[156px] h-[112px] bg-bg-surface border border-border-subtle rounded-card p-5 flex flex-col justify-between">
+<span class="text-[11px] font-bold text-text-secondary uppercase tracking-wider">Maintenance</span>
+<span class="text-lg font-bold text-white">3 tickets</span>
+</div>
+<!-- Yield -->
+<div class="flex-shrink-0 w-[156px] h-[112px] bg-bg-surface border border-border-subtle rounded-card p-5 flex flex-col justify-between">
+<span class="text-[11px] font-bold text-text-secondary uppercase tracking-wider">Net Yield</span>
+<span class="text-lg font-bold text-white">8.4%</span>
+</div>
+</div>
+<!-- AI Insight Card -->
+<div class="px-gutter mb-section-gap">
+<div class="bg-bg-surface border border-border-subtle rounded-[24px] p-6 relative overflow-hidden">
+<div class="absolute -right-8 -top-8 w-32 h-32 bg-accent opacity-10 blur-3xl"></div>
+<div class="flex mb-4">
+<div class="bg-accent/20 px-3 py-1 rounded-full flex items-center gap-1.5 border border-accent/30">
+<span class="text-[14px]">🤖</span>
+<span class="text-[11px] font-bold text-accent uppercase tracking-tighter">AI Insight</span>
+</div>
+</div>
+<h3 class="text-[18px] font-bold text-white mb-2 leading-tight">3 tenants at risk of late payment this Friday.</h3>
+<p class="text-[14px] text-text-secondary mb-5 leading-relaxed">Sending a WhatsApp reminder now could recover XAF 240,000.</p>
+<div class="flex items-center justify-between">
+<div class="flex -space-x-3">
+<img class="w-8 h-8 rounded-full border-2 border-bg-surface" data-alt="Close up face of a male tenant, realistic professional photography, dark moody lighting background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQ0kB1AoJLA1z26xDlXkY4dj_dXfSvKAtSyiLG0JyAPL1WaCdJEa31w0hsOLJx5srOOpqYBn39zkQ2TLOLxEp7fHfdjDjGCcGO3-0QKN7WEZ30KRUpK4cyKqJpQVc88TGAq4uFviG1zgQUyY8pyV3acmK0GlTxZbBmT2q9OavF6zM69JYTSWOQFTTc0uYsBOjd7DW5W1rgEIYRPKDyi2EteAikrVc5A-W-WAQMZPBsKL9dLGIw6RQS4GzaVVF4l5LRDljVbsEQyT64"/>
+<img class="w-8 h-8 rounded-full border-2 border-bg-surface" data-alt="Close up face of a female tenant, realistic professional photography, dark moody lighting background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0FWDaW3CakR0ad2oRG9KHDYzpXMCpbPQM0CAxGkmgGlfvgl0Qh00Xd8hNIDiDbMvX7mLMDuX_xpbfNPj5IFd7mwDIU-uKL7EE_FzJ8-2axncADdzdQaEo0q8DrZx_dzZ6ciKWMAm3ZWrZfCrvvVmyCACm13e-6DvTGuTROOUhP454ttpDskDj3DxM_gsubN84JaGGtLMssL83NHI8wjlFEl5caiWVyS60OGwg4XsMGEQMqZA7j1nrGFAAOVbvpkd2Vgj6Z-0ULRac"/>
+<img class="w-8 h-8 rounded-full border-2 border-bg-surface" data-alt="Close up face of a male tenant, realistic professional photography, dark moody lighting background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiYO3_JAK5adWk5q_XO18PJQ7jrU1oFoJbCATe8zsfkLkQhbOSv7z6hW1QdhEOIU729I3238eXG24t2Z1sumz7FnAPPRngaUYBK9Z79GNB01cr3nFxRjbzBJh0abvLVIs-ux0H-3PQ5KP2-rZlt9eJAh2jes75r6UTq4uxlnoCO3S3ERZ_VeuIeKu4qyuyZk5sbbtFj7wZkLe95pOHeVqTe5OvegMoNCzOLltOaqF8fKEYScITiiuMOKn3h9dAllUjRLQb7hnCcgqj"/>
+</div>
+<button class="border border-accent text-accent px-5 py-2.5 rounded-full text-[13px] font-semibold hover:bg-accent/10 transition-all">
+                    Send 3 reminders →
+                </button>
+</div>
+</div>
+</div>
+<!-- Property Scroll -->
+<div class="mb-section-gap">
+<div class="px-gutter flex justify-between items-center mb-5">
+<h2 class="font-display text-[18px] font-bold text-white">Your properties in focus</h2>
+<span class="text-accent text-[14px] font-medium">View all</span>
+</div>
+<div class="flex overflow-x-auto hide-scrollbar gap-6 px-gutter">
+<!-- Property 1 -->
+<div class="flex-shrink-0 w-[280px]">
+<div class="relative w-[280px] h-[280px] rounded-[24px] overflow-hidden mb-4 group">
+<img class="w-full h-full object-cover" data-alt="A luxurious modern residential building in Douala, Cameroon, with sleek architecture and lush tropical greenery. Dusk setting with warm interior lighting contrasting the deep navy twilight sky. Architectural photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZzrEI4w_QGav8ZPNqusDsc4HqPo2AaZcgWF2AP2Ou4amKhtBbHPUonc69YdQHv4JQa1a5ilOJGDuipm7fYD46lfdGlPGIU6-LqiaZmCwcOAzlvCOSQ_-sIT8zTSMoIOk8qPeAJ6-YchHP_IKARQU2vyQ-YbU0fg8IS6oSYLgq-LS-CpbD9J5RQ52J6cLKtgw2XcZgnu33l2cQ5NqMask0JZvEpzuiENhi8_YLe2mwpksvmCEsOlceO6HBUWOcYKyRSV3xmnQdgwRb"/>
+<div class="absolute top-4 right-4 w-9 h-9 bg-white/80 backdrop-blur-md rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-text-tertiary text-[20px]" data-icon="favorite">favorite</span>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-bold text-[16px] text-white">Résidence Bonamoussadi</h4>
+<p class="text-[14px] text-text-secondary">Douala · 6 units</p>
+<p class="text-[14px] text-text-secondary mt-1"><span class="text-white font-medium">XAF 450 000</span> /mo · ★ 5/6</p>
+</div>
+<div class="w-2.5 h-2.5 bg-accent rounded-full mt-1.5"></div>
+</div>
+</div>
+<!-- Property 2 -->
+<div class="flex-shrink-0 w-[280px]">
+<div class="relative w-[280px] h-[280px] rounded-[24px] overflow-hidden mb-4">
+<img class="w-full h-full object-cover" data-alt="A grand white colonial-style villa in the Bastos neighborhood of Yaoundé. Symmetrical design with high pillars and manicured gardens. Bright, clear day lighting, high-end real estate photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDArSQJRueo6wWN9RZYbJrDHZD6lp2TT0fANuwCr_uKJYyJmaOtXMI16nBPLpF94N-jUliRdbdHojpsx0NTiwP6rI1VgiHQHpLATtBDCdw7Nymh8Z9oFLLXuPAZeDskaMO3lqmhP_j3ChOu0ccU2zZ2MYuxldxc6hYYkc7dTuWfXPO4kHqs4Xnlwmuex7_cixXGTt5r4Ogj-dFzCZWYp4Usf0bY57jIGm1BRx0QryblYC0HIwVhJ-1u4pCs2mMt_JtkIc0Hmqj7-MKV"/>
+<div class="absolute top-4 right-4 w-9 h-9 bg-white/80 backdrop-blur-md rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-danger text-[20px]" data-icon="favorite" data-weight="fill">favorite</span>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-bold text-[16px] text-white">Villa Bastos</h4>
+<p class="text-[14px] text-text-secondary">Yaoundé · 1 unit</p>
+<p class="text-[14px] text-text-secondary mt-1"><span class="text-white font-medium">XAF 750 000</span> /mo · ★ 1/1</p>
+</div>
+<div class="w-2.5 h-2.5 bg-accent rounded-full mt-1.5"></div>
+</div>
+</div>
+<!-- Property 3 -->
+<div class="flex-shrink-0 w-[280px]">
+<div class="relative w-[280px] h-[280px] rounded-[24px] overflow-hidden mb-4">
+<img class="w-full h-full object-cover" data-alt="A clean, multi-unit compound in Bafoussam with orange tiled roofs and beige stone walls. Vibrant courtyard with local plants. Traditional yet modern Cameroonian architecture under a soft cloudy sky." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsNBQji4h5ijqO9v1JZ8D4IWm50mqYtTkWe_PLkvkMsmGk-PRi4ognyNTmdIwpR1r7jiSBaxVJp4axp8dyNn7VTNerS4cJlEkaCWKu5fBjDQM23qTkzNFRbJnxLvQcR3gMTGodEETvr8EBFidnzxIlETJ1BQDrMfgsIMMVG5yO7xDL7ht3Uvk6Y3m5nPb2U_iG5WDce9TcEn0TG1E8rEfzr3T1j52N3MxHjOcJlXDSv_nJkjmN6d9cQcGoZByrgtLX42BMz5p9YXb4"/>
+<div class="absolute top-4 right-4 w-9 h-9 bg-white/80 backdrop-blur-md rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-text-tertiary text-[20px]" data-icon="favorite">favorite</span>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-bold text-[16px] text-white">Compound Tamdja</h4>
+<p class="text-[14px] text-text-secondary">Bafoussam · 4 units</p>
+<p class="text-[14px] text-text-secondary mt-1"><span class="text-white font-medium">XAF 220 000</span> /mo · ★ 3/4</p>
+</div>
+<div class="w-2.5 h-2.5 bg-warning rounded-full mt-1.5"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Activity Feed -->
+<div class="px-gutter mb-8">
+<h2 class="font-display text-[18px] font-bold text-white mb-5">Recent activity</h2>
+<div class="space-y-6">
+<!-- Row 1 -->
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-success/10 rounded-full flex items-center justify-center border border-success/20">
+<span class="text-[18px]">💰</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between">
+<span class="text-[15px] font-medium text-white">Payment received · Marie Ngo</span>
+<span class="text-[14px] font-bold text-white">XAF 75k</span>
+</div>
+<div class="flex justify-between mt-0.5">
+<span class="text-[13px] text-text-tertiary">12 min ago</span>
+<span class="text-[12px] text-success">Unit A-2</span>
+</div>
+</div>
+</div>
+<!-- Row 2 -->
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center border border-accent/20">
+<span class="text-[18px]">🔧</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between">
+<span class="text-[15px] font-medium text-white">New ticket · Plumbing</span>
+<span class="text-[13px] text-text-tertiary">1h ago</span>
+</div>
+<div class="mt-0.5">
+<span class="text-[13px] text-text-tertiary">Unit B-3 · High Priority</span>
+</div>
+</div>
+</div>
+<!-- Row 3 -->
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-warning/10 rounded-full flex items-center justify-center border border-warning/20">
+<span class="text-[18px]">⚠️</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between">
+<span class="text-[15px] font-medium text-white">Reminder sent · Jean Talla</span>
+<span class="text-[13px] text-text-tertiary">3h ago</span>
+</div>
+<div class="mt-0.5">
+<span class="text-[13px] text-text-tertiary">WhatsApp · Due tomorrow</span>
+</div>
+</div>
+</div>
+<!-- Row 4 -->
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-coral-accent/10 rounded-full flex items-center justify-center border border-coral-accent/20">
+<span class="text-[18px]">🛡️</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between">
+<span class="text-[15px] font-medium text-white">Lease signed · Pauline Mvogo</span>
+<span class="text-[13px] text-text-tertiary">yesterday</span>
+</div>
+<div class="mt-0.5">
+<span class="text-[13px] text-text-tertiary">OHADA · 24 months term</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Nav -->
+<nav class="fixed bottom-0 left-0 right-0 h-[84px] bg-bg-canvas border-t border-border-subtle z-50 px-4 flex items-center justify-around pb-safe-area-bottom">
+<!-- Home -->
+<a class="flex flex-col items-center gap-1 relative" href="#">
+<div class="absolute -top-[16px] left-1/2 -translate-x-1/2 w-6 h-0.5 bg-accent rounded-full"></div>
+<span class="material-symbols-outlined text-accent" data-icon="house" style="font-variation-settings: 'FILL' 1;">house</span>
+<span class="text-[11px] font-bold text-accent">Home</span>
+</a>
+<!-- Properties -->
+<a class="flex flex-col items-center gap-1" href="#">
+<span class="material-symbols-outlined text-text-tertiary" data-icon="apartment">apartment</span>
+<span class="text-[11px] font-medium text-text-tertiary">Properties</span>
+</a>
+<!-- Payments -->
+<a class="flex flex-col items-center gap-1" href="#">
+<span class="material-symbols-outlined text-text-tertiary" data-icon="account_balance_wallet">account_balance_wallet</span>
+<span class="text-[11px] font-medium text-text-tertiary">Payments</span>
+</a>
+<!-- Tickets -->
+<a class="flex flex-col items-center gap-1" href="#">
+<span class="material-symbols-outlined text-text-tertiary" data-icon="confirmation_number">confirmation_number</span>
+<span class="text-[11px] font-medium text-text-tertiary">Tickets</span>
+</a>
+<!-- Profile (Slot 5) -->
+<a class="flex flex-col items-center gap-1" href="#">
+<div class="w-6 h-6 rounded-full border border-border-subtle bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC6W6jClUdv-af9CfV-3wX_97Nzchp9jBGdqkkcsh0tX17l32EvnYDvh6r9-7rPlIpCWLGtdnIi1nWkAKRSsirEIRbj7Ly3vI5BBZ6GDPR7A1ur20lm8GVgQtkFJbYLwfeUBS9IrXHlglFxLsF9wiO5qMI4CKtzNpYEW8_4O1GaCFG8WC_8f6-JcZjl-XQT_quUD3ydmkNZmciEimjmlo1m9x-opR0hxiQm_abYIkRLykM-lFlogo9_4kXs236ej_thdb6nadA3b9UH')"></div>
+<span class="text-[11px] font-medium text-text-tertiary">Aïssatou</span>
+</a>
+</nav>
+<script>
+        // Micro-interaction for heart pulse
+        document.querySelectorAll('[data-icon="favorite"]').forEach(icon => {
+            icon.parentElement.addEventListener('click', function(e) {
+                e.preventDefault();
+                const span = this.querySelector('span');
+                const isFilled = span.style.fontVariationSettings.includes("'FILL' 1");
+                
+                span.style.transition = "transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.2s ease";
+                span.style.transform = "scale(1.4)";
+                
+                setTimeout(() => {
+                    span.style.transform = "scale(1)";
+                    if (isFilled) {
+                        span.style.fontVariationSettings = "'FILL' 0";
+                        span.classList.remove('text-danger');
+                        span.classList.add('text-text-tertiary');
+                    } else {
+                        span.style.fontVariationSettings = "'FILL' 1";
+                        span.classList.remove('text-text-tertiary');
+                        span.classList.add('text-danger');
+                    }
+                }, 200);
+            });
+        });
+    </script>
+<script src="nav_interceptor.js"></script>
+</body></html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>PropVeil - Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Montserrat:wght@700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-container": "#ffd28a",
+                        "on-tertiary-fixed-variant": "#783119",
+                        "on-tertiary-fixed": "#3a0b00",
+                        "background": "#0A1628",
+                        "on-secondary-fixed-variant": "#604100",
+                        "on-surface": "#d7e3fc",
+                        "on-primary-container": "#00302a",
+                        "error": "#ffb4ab",
+                        "primary-fixed-dim": "#6bd9c7",
+                        "on-primary": "#003731",
+                        "outline-variant": "#1E293B",
+                        "on-error": "#690005",
+                        "on-background": "#d7e3fc",
+                        "tertiary-fixed": "#ffdbd0",
+                        "primary-fixed": "#89f5e3",
+                        "primary-container": "#2aa191",
+                        "surface-tint": "#6bd9c7",
+                        "tertiary-fixed-dim": "#ffb59e",
+                        "on-tertiary-container": "#511501",
+                        "surface-container-lowest": "#030e20",
+                        "inverse-primary": "#006b5f",
+                        "surface-container": "#1A2B45",
+                        "secondary-fixed": "#ffdeac",
+                        "on-primary-fixed-variant": "#005047",
+                        "surface-variant": "#2a3548",
+                        "secondary": "#D4A24C",
+                        "on-secondary": "#432c00",
+                        "inverse-on-surface": "#253144",
+                        "tertiary": "#ffb59e",
+                        "surface-bright": "#2e394d",
+                        "on-tertiary": "#5a1b05",
+                        "surface-container-low": "#101c2e",
+                        "surface-container-highest": "#142239",
+                        "inverse-surface": "#d7e3fc",
+                        "primary": "#1D9A8A",
+                        "on-primary-fixed": "#00201c",
+                        "surface-dim": "#071325",
+                        "on-secondary-fixed": "#281900",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-container": "#d4785a",
+                        "outline": "#879390",
+                        "surface-container-high": "#1f2a3d",
+                        "secondary-container": "#7e5700",
+                        "secondary-fixed-dim": "#f3be65",
+                        "on-surface-variant": "#bcc9c5",
+                        "surface": "#0A1628",
+                        "error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px",
+                        "2xl": "16px",
+                        "3xl": "24px"
+                    },
+                    "spacing": {
+                        "element-gap": "8px",
+                        "container-margin": "28px",
+                        "section-gap": "24px",
+                        "gutter": "12px",
+                        "safe": "env(safe-area-inset-bottom)"
+                    },
+                    "fontFamily": {
+                        "data-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Montserrat"],
+                        "display-xl": ["Montserrat"],
+                        "label-md": ["Inter"],
+                        "headline-md": ["Montserrat"],
+                        "data-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "data-lg": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg": ["24px", {"lineHeight": "32px", "fontWeight": "900"}],
+                        "display-xl": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "900"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "700"}],
+                        "data-sm": ["14px", {"lineHeight": "20px", "fontWeight": "500"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen pb-[90px] antialiased md:max-w-md md:mx-auto md:border-x md:border-outline-variant selection:bg-primary selection:text-white">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 border-b border-outline-variant bg-background flex justify-between items-center h-16 px-container-margin md:max-w-md">
+<h1 class="font-headline-md text-headline-md font-black text-on-background tracking-tight">Settings</h1>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-high transition-colors active:opacity-80">
+<span class="material-symbols-outlined text-on-surface-variant">search</span>
+</button>
+</header>
+<main class="pt-24 px-container-margin flex flex-col gap-section-gap">
+<!-- Profile Hero Card -->
+<section class="bg-surface-container rounded-[24px] border border-outline-variant p-4 flex items-center relative overflow-hidden group hover:border-secondary transition-colors cursor-pointer active:scale-[0.98]">
+<div class="absolute inset-0 bg-secondary/5 rounded-[24px] pointer-events-none group-hover:bg-secondary/10 transition-colors"></div>
+<div class="flex items-center gap-4 w-full relative z-10">
+<div class="relative flex-shrink-0">
+<img alt="Profile" class="w-16 h-16 rounded-full object-cover border border-outline-variant" data-alt="A professional headshot of a confident Cameroonian property manager in his late 30s. He has a neat short beard and is wearing a sharp, modern navy blue tailored suit over a crisp white shirt. The lighting is studio-quality, softly highlighting his features against a subtly textured, deep dark blue background. The mood is authoritative yet approachable, fitting for a high-end corporate real estate application." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6MH8JD0SZjaufV9u8rjsuDkXMhgy49wdItWqUfei4ZanNKgZLczVWowQi7ELAkNQ_q2hny7EZSWu6mG_PZsHPsuYytAqr680bRP9cEU-VWmNwuP16sBCy2IZlKkdlk0QlM7vctWFi4Ropcm4dmQBmzVto89SILxCs91kqJSGUrjUJmtbRvxqWSKe_2flR2X0_hS41elIa8KQPUoWdH30hIdzkCXj7VKsU62yjlzlJ0YHqVIKuIRLUaVtjl9W5AFRX1cAlL7IIGI4m"/>
+<div class="absolute bottom-0 right-0 w-6 h-6 bg-surface-container border border-outline-variant rounded-full flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">edit</span>
+</div>
+</div>
+<div class="flex-grow">
+<h2 class="font-headline-md text-headline-md text-on-background leading-tight">Mbang Emmanuel</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Property Manager</p>
+<div class="mt-2 inline-flex items-center gap-1 bg-secondary/10 px-2 py-0.5 rounded-full border border-secondary/20">
+<span class="material-symbols-outlined text-[14px] text-secondary">workspace_premium</span>
+<span class="font-label-md text-label-md text-secondary">Pro Manager</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">chevron_right</span>
+</div>
+</section>
+<!-- Subscription Mini-Card -->
+<section class="bg-surface-container rounded-2xl border border-secondary/30 p-4 flex justify-between items-center relative overflow-hidden">
+<div class="absolute inset-0 bg-secondary/5 pointer-events-none"></div>
+<div>
+<h3 class="font-data-sm text-data-sm text-secondary flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">verified</span> Pro Plan</h3>
+<p class="font-body-md text-[13px] text-on-surface-variant mt-0.5">Next billing: <span class="font-data-sm">Oct 24, 2024</span></p>
+</div>
+<a class="font-label-md text-label-md text-secondary flex items-center gap-1 hover:text-secondary-fixed transition-colors" href="#">Manage <span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+</section>
+<!-- Settings Groups -->
+<div class="flex flex-col gap-6">
+<!-- SECTION 1: ACCOUNT -->
+<section>
+<h4 class="font-label-md text-label-md text-on-surface-variant mb-2 px-1 uppercase tracking-wider">Account</h4>
+<div class="bg-surface-container rounded-2xl border border-outline-variant overflow-hidden flex flex-col">
+<button class="flex items-center justify-between p-4 hover:bg-surface-container-high transition-colors active:bg-surface-container-highest border-b border-outline-variant text-left">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">person</span>
+<span class="font-data-sm text-data-sm text-on-background">Profile</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">chevron_right</span>
+</button>
+<button class="flex items-center justify-between p-4 hover:bg-surface-container-high transition-colors active:bg-surface-container-highest border-b border-outline-variant text-left">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">domain</span>
+<span class="font-data-sm text-data-sm text-on-background">Business Profile</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">chevron_right</span>
+</button>
+<button class="flex items-center justify-between p-4 hover:bg-surface-container-high transition-colors active:bg-surface-container-highest border-b border-outline-variant text-left">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">security</span>
+<span class="font-data-sm text-data-sm text-on-background">Security</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">chevron_right</span>
+</button>
+<button class="flex items-center justify-between p-4 hover:bg-surface-container-high transition-colors active:bg-surface-container-highest text-left">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">account_balance_wallet</span>
+<span class="font-data-sm text-data-sm text-on-background">Billing Mobile Money</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">chevron_right</span>
+</button>
+</div>
+</section>
+<!-- SECTION 2: APP -->
+<section>
+<h4 class="font-label-md text-label-md text-on-surface-variant mb-2 px-1 uppercase tracking-wider">App Preferences</h4>
+<div class="bg-surface-container rounded-2xl border border-outline-variant overflow-hidden flex flex-col">
+<button class="flex items-center justify-between p-4 hover:bg-surface-container-high transition-colors active:bg-surface-container-highest border-b border-outline-variant text-left">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">language</span>
+<span class="font-data-sm text-data-sm text-on-background">Language</span>
+</div>
+<span class="font-body-md text-[13px] text-on-surface-variant mr-1">English</span>
+</button>
+<button class="flex items-center justify-between p-4 hover:bg-surface-container-high transition-colors active:bg-surface-container-highest border-b border-outline-variant text-left">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">notifications</span>
+<span class="font-data-sm text-data-sm text-on-background">Notifications</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">chevron_right</span>
+</button>
+<button class="flex items-center justify-between p-4 hover:bg-surface-container-high transition-colors active:bg-surface-container-highest text-left">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">dark_mode</span>
+<span class="font-data-sm text-data-sm text-on-background">Theme</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="bg-surface-container-highest border border-outline-variant px-2 py-0.5 rounded text-[10px] uppercase font-bold text-on-surface-variant tracking-wider">Light Coming Soon</span>
+</div>
+</button>
+</div>
+</section>
+<!-- Danger Zone -->
+<section class="mt-4 bg-surface-container-highest rounded-[14px] border border-error/20 p-4 flex flex-col gap-4">
+<button class="w-full h-12 rounded-xl border border-error text-error font-data-sm text-data-sm flex items-center justify-center gap-2 hover:bg-error/10 transition-colors active:scale-[0.98]">
+<span class="material-symbols-outlined text-[20px]">logout</span> Log out
+                 </button>
+<button class="w-full text-center font-body-md text-body-md text-error/80 hover:text-error transition-colors">
+                     Delete account
+                 </button>
+</section>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 border-t border-outline-variant bg-surface-container flex justify-around items-center h-[72px] pb-safe md:max-w-md md:left-1/2 md:-translate-x-1/2">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary-fixed-dim transition-colors active:scale-95 w-full h-full" href="#">
+<span class="material-symbols-outlined mb-1">domain</span>
+<span class="font-label-md text-[10px] tracking-wider uppercase">Market</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary-fixed-dim transition-colors active:scale-95 w-full h-full" href="#">
+<span class="material-symbols-outlined mb-1">monitoring</span>
+<span class="font-label-md text-[10px] tracking-wider uppercase">Insights</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary-fixed-dim transition-colors active:scale-95 w-full h-full" href="#">
+<span class="material-symbols-outlined mb-1">account_balance_wallet</span>
+<span class="font-label-md text-[10px] tracking-wider uppercase">Wallet</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary font-bold hover:text-primary-fixed-dim transition-colors active:scale-95 w-full h-full relative" href="#">
+<div class="absolute -top-[1px] w-8 h-[2px] bg-primary rounded-b-full"></div>
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-label-md text-[10px] tracking-wider uppercase">Profile</span>
+</a>
+</nav>
+<script src="nav_interceptor.js"></script>
+</body></html>

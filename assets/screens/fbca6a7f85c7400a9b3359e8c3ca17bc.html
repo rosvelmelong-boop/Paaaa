@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PropVeil — Unité B-3 Detail</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#6bd9c7",
+            "bg-canvas": "#0A1628",
+            "bg-surface": "#1A2B45",
+            "bg-surface-2": "#142239",
+            "border-subtle": "#1E293B",
+            "accent": "#1D9A8A",
+            "text-primary": "#FFFFFF",
+            "text-secondary": "#94A3B8",
+            "text-tertiary": "#64748B",
+            "success": "#10B981",
+            "warning": "#F59E0B",
+            "danger": "#EF4444",
+            "accent-glow": "rgba(29, 154, 138, 0.2)",
+            "on-primary": "#003731",
+          },
+          borderRadius: {
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1.25rem",
+            "full": "9999px"
+          },
+          spacing: {
+            "gutter": "28px",
+            "element-gap": "16px",
+            "section-gap": "32px",
+            "safe-area-bottom": "34px",
+          },
+          fontFamily: {
+            "montserrat": ["Montserrat", "sans-serif"],
+            "inter": ["Inter", "sans-serif"],
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .custom-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .teal-glow {
+      box-shadow: 0 0 20px 0 rgba(29, 154, 138, 0.15);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-bg-canvas text-text-primary font-inter antialiased">
+<div class="max-w-md mx-auto relative min-h-screen bg-bg-canvas pb-32">
+<!-- Header: PhotoHeroCarousel -->
+<div class="relative h-[360px] w-full overflow-hidden">
+<!-- Carousel Track -->
+<div class="flex transition-transform duration-500 ease-out h-full" id="carousel">
+<div class="min-w-full h-full bg-cover bg-center" data-alt="A modern, high-end studio apartment interior in Cameroon with sleek teal accents and warm wood flooring. The lighting is soft and cinematic, highlighting the minimalist furniture and large windows. The overall aesthetic is clean, professional, and sophisticated, consistent with the PropVeil dark-mode fintech brand identity." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC1QyPhUkxRnhXglNyP3bPWCf0FD9D7ErmH5LGYSzALGXazjyQmE28fMP7Z4Nm08ABMknj6PcoY8IbAuuI-jIob3Qfy7kVLWMqtNBuEgAZGL0lMsOYVgxeRRsHikczIvmwdwy3icJYrpx8-1A4MrL6DBqGyXEYdqZzbc-EBAFcsHpwDmQyaKXFC7RrcjY7Bgdr8wufdCiXGVvdd_sOceFmHTm5sXy6AaAtcOe_mxelW7WYDHNNIBJ68PzOAWxEhsOYQRngGrlR-3Ske')"></div>
+</div>
+<!-- Floating Controls -->
+<div class="absolute top-12 left-6 right-6 flex justify-between items-center z-10">
+<button class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white border border-white/10">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<div class="flex gap-3">
+<button class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white border border-white/10">
+<span class="material-symbols-outlined">share</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white border border-white/10">
+<span class="material-symbols-outlined">edit</span>
+</button>
+</div>
+</div>
+<!-- Dot Indicators -->
+<div class="absolute bottom-6 left-0 right-0 flex justify-center gap-2">
+<div class="w-2 h-2 rounded-full bg-white"></div>
+<div class="w-2 h-2 rounded-full bg-white/40"></div>
+<div class="w-2 h-2 rounded-full bg-white/40"></div>
+<div class="w-2 h-2 rounded-full bg-white/40"></div>
+<div class="w-2 h-2 rounded-full bg-white/40"></div>
+</div>
+</div>
+<!-- Content Wrapper -->
+<div class="px-gutter -mt-6 relative z-20">
+<!-- 1. Title Section -->
+<div class="bg-bg-canvas pt-6 rounded-t-3xl">
+<p class="text-text-secondary text-[12px] font-semibold tracking-widest uppercase mb-1">BONAMOUSSADI · BUILDING B</p>
+<h1 class="font-montserrat font-black text-[28px] leading-tight mb-2">Unité B-3</h1>
+<p class="text-text-secondary text-sm">Studio · 35 m² · Furnished · 2nd floor</p>
+</div>
+<!-- 2. Status Pills -->
+<div class="flex flex-wrap gap-2 mt-6">
+<div class="flex items-center gap-1.5 px-3 py-1.5 bg-success/10 border border-success/20 rounded-full">
+<div class="w-2 h-2 rounded-full bg-success"></div>
+<span class="text-success text-[11px] font-bold tracking-wider uppercase">Occupied</span>
+</div>
+<div class="px-3 py-1.5 bg-bg-surface-2 border border-border-subtle rounded-full">
+<span class="text-text-secondary text-[11px] font-bold tracking-wider uppercase">Lease · 8 months left</span>
+</div>
+<div class="px-3 py-1.5 bg-accent/10 border border-accent/20 rounded-full">
+<span class="text-primary text-[11px] font-bold tracking-wider uppercase">Auto-remind on</span>
+</div>
+</div>
+<!-- 3. Tenant Card -->
+<div class="mt-section-gap bg-bg-surface border border-border-subtle rounded-2xl p-4 flex items-center gap-4 teal-glow">
+<div class="relative">
+<div class="w-12 h-12 rounded-full bg-cover bg-center border-2 border-accent" data-alt="Portrait of a young Cameroonian woman, professional and friendly, with a soft smile. The lighting is bright and clear, reflecting a reliable tenant profile. She is framed against a neutral, high-end background, fitting the premium PropVeil user interface aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAteg21kd4lm_TPPeHS09KX168NW2Foup92h2sBTsrfhXbv9fx6HoaqTWTIjt6aFrvaubkjVbhf5AzdVvlN_7NG7UbnAUTnfyJu_c-vVpLpO70OaMxF5ZHTY3NWOqTUaSKWPU-1MZjJ15-CZuyFdfH5Cwtgej8qTZdjlEWZCY1TQaiGZo_0LEAPpnNy2EIYU5X8iJT3jXmCYuGew4PROHBTS6yCOYWLdXqHvozVIe8mQGe7gbLKF-s_v_7v1xlLUgdcprQfXRUZKDO1')"></div>
+<div class="absolute -bottom-1 -right-1 w-5 h-5 bg-success rounded-full border-2 border-bg-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[12px] text-white" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+</div>
+<div class="flex-1">
+<h3 class="font-bold text-base text-white">Marie Ngo</h3>
+<p class="text-text-secondary text-[12px]">Tenant since Nov 2024 · <span class="text-success">★ Good history</span></p>
+</div>
+<button class="text-primary text-sm font-bold flex items-center">
+          View <span class="material-symbols-outlined text-[18px] ml-1">arrow_forward</span>
+</button>
+</div>
+<!-- 4. Rent Block -->
+<div class="mt-section-gap">
+<p class="text-text-secondary text-[11px] font-bold tracking-widest uppercase mb-1">MONTHLY RENT · DUE 5TH</p>
+<div class="flex items-baseline gap-1">
+<h2 class="font-montserrat font-black text-3xl">XAF 75,000</h2>
+<span class="text-text-tertiary text-lg">/mo</span>
+</div>
+<div class="flex flex-wrap gap-2 mt-3">
+<div class="px-2.5 py-1 bg-white/5 rounded-lg border border-white/5 text-[11px] text-text-secondary font-medium">Deposit: XAF 150,000</div>
+<div class="px-2.5 py-1 bg-white/5 rounded-lg border border-white/5 text-[11px] text-text-secondary font-medium">Late fee: 5%</div>
+<div class="px-2.5 py-1 bg-white/5 rounded-lg border border-white/5 text-[11px] text-text-secondary font-medium">Water included</div>
+</div>
+</div>
+<!-- 5. Payment History Strip -->
+<div class="mt-section-gap">
+<div class="flex justify-between items-center mb-4">
+<h4 class="font-bold text-base text-white">Payment history</h4>
+<button class="text-primary text-sm font-bold">View all →</button>
+</div>
+<div class="flex gap-3 overflow-x-auto custom-scrollbar pb-2">
+<!-- Monthly Tile Item -->
+<div class="flex-shrink-0 w-16 h-[84px] bg-bg-surface border border-border-subtle rounded-xl flex flex-col items-center justify-center transition-all">
+<span class="text-[10px] text-text-tertiary uppercase font-bold">JAN</span>
+<span class="text-lg font-bold text-white my-1">5</span>
+<div class="w-1.5 h-1.5 rounded-full bg-success"></div>
+</div>
+<div class="flex-shrink-0 w-16 h-[84px] bg-bg-surface border border-border-subtle rounded-xl flex flex-col items-center justify-center">
+<span class="text-[10px] text-text-tertiary uppercase font-bold">FEB</span>
+<span class="text-lg font-bold text-white my-1">5</span>
+<div class="w-1.5 h-1.5 rounded-full bg-success"></div>
+</div>
+<div class="flex-shrink-0 w-16 h-[84px] bg-bg-surface border border-border-subtle rounded-xl flex flex-col items-center justify-center">
+<span class="text-[10px] text-text-tertiary uppercase font-bold">MAR</span>
+<span class="text-lg font-bold text-white my-1">7</span>
+<div class="w-1.5 h-1.5 rounded-full bg-warning"></div>
+</div>
+<div class="flex-shrink-0 w-16 h-[84px] bg-bg-surface border border-border-subtle rounded-xl flex flex-col items-center justify-center">
+<span class="text-[10px] text-text-tertiary uppercase font-bold">APR</span>
+<span class="text-lg font-bold text-white my-1">5</span>
+<div class="w-1.5 h-1.5 rounded-full bg-success"></div>
+</div>
+<!-- Active month -->
+<div class="flex-shrink-0 w-16 h-[84px] bg-bg-surface border-2 border-accent rounded-xl flex flex-col items-center justify-center shadow-[0_0_12px_rgba(29,154,138,0.2)]">
+<span class="text-[10px] text-primary uppercase font-bold">MAY</span>
+<span class="text-lg font-bold text-white my-1">5</span>
+<div class="w-1.5 h-1.5 rounded-full bg-success"></div>
+</div>
+<div class="flex-shrink-0 w-16 h-[84px] bg-bg-surface/50 border border-border-subtle border-dashed rounded-xl flex flex-col items-center justify-center opacity-40">
+<span class="text-[10px] text-text-tertiary uppercase font-bold">JUN</span>
+<span class="text-lg font-bold text-white my-1">-</span>
+<div class="w-1.5 h-1.5 rounded-full bg-text-tertiary"></div>
+</div>
+</div>
+</div>
+<!-- 6. Tabs -->
+<div class="mt-section-gap border-b border-border-subtle flex">
+<button class="flex-1 pb-4 text-sm font-bold text-primary border-b-2 border-primary">Inventory</button>
+<button class="flex-1 pb-4 text-sm font-medium text-text-secondary border-b-2 border-transparent">Meters</button>
+<button class="flex-1 pb-4 text-sm font-medium text-text-secondary border-b-2 border-transparent">Documents</button>
+</div>
+<!-- 7. Inventory Content -->
+<div class="mt-6 space-y-4">
+<div class="flex items-center justify-between p-4 bg-bg-surface-2 border border-border-subtle rounded-xl">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-bg-surface flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">chair</span>
+</div>
+<div>
+<p class="text-white font-semibold">Furniture</p>
+<p class="text-text-tertiary text-[12px]">Bed, Sofa, Tables...</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-text-secondary font-bold">12</span>
+<span class="material-symbols-outlined text-text-tertiary">chevron_right</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-4 bg-bg-surface-2 border border-border-subtle rounded-xl">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-bg-surface flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">devices</span>
+</div>
+<div>
+<p class="text-white font-semibold">Electronics</p>
+<p class="text-text-tertiary text-[12px]">Fridge, TV, AC...</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-text-secondary font-bold">5</span>
+<span class="material-symbols-outlined text-text-tertiary">chevron_right</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-4 bg-bg-surface-2 border border-border-subtle rounded-xl">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-bg-surface flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">kitchen</span>
+</div>
+<div>
+<p class="text-white font-semibold">Kitchen</p>
+<p class="text-text-tertiary text-[12px]">Utensils, Stove, Microwave...</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-text-secondary font-bold">18</span>
+<span class="material-symbols-outlined text-text-tertiary">chevron_right</span>
+</div>
+</div>
+<button class="w-full py-4 border border-accent border-dashed rounded-xl text-primary font-bold text-sm flex items-center justify-center gap-2 mt-4 hover:bg-accent/5 transition-colors">
+<span class="material-symbols-outlined">add_circle</span>
+          Edit inventory
+        </button>
+</div>
+</div>
+<!-- Sticky Bottom Bar -->
+<div class="fixed bottom-0 left-0 right-0 max-w-md mx-auto bg-bg-canvas/80 backdrop-blur-xl border-t border-border-subtle px-gutter pt-4 pb-10 z-50">
+<div class="flex items-center justify-between">
+<div>
+<p class="text-text-tertiary text-[11px] font-bold uppercase tracking-wider mb-0.5">Next rent</p>
+<p class="text-white font-bold text-sm">XAF 75,000 · <span class="text-text-secondary font-medium">June 5</span></p>
+</div>
+<button class="bg-accent hover:bg-accent-hover active:scale-95 transition-all text-on-primary font-bold px-8 py-3.5 rounded-full flex items-center gap-2 shadow-lg shadow-accent/20">
+          Collect
+          <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+    // Micro-interaction for buttons
+    document.querySelectorAll('button').forEach(btn => {
+      btn.addEventListener('click', function() {
+        this.style.transform = 'scale(0.95)';
+        setTimeout(() => this.style.transform = 'scale(1)', 100);
+      });
+    });
+
+    // Horizontal scroll effect logic (simple visual snap nudge)
+    const historyScroll = document.querySelector('.custom-scrollbar');
+    if (historyScroll) {
+      historyScroll.scrollLeft = 120; // Start with some focus on current month
+    }
+  </script>
+<script src="nav_interceptor.js"></script>
+</body></html>

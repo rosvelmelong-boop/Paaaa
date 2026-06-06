@@ -1,0 +1,181 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>PropVeil Language Selection</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Montserrat:wght@700;900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#006b5f",
+                        "on-secondary-fixed": "#091c35",
+                        "secondary": "#b6c7e8",
+                        "error-container": "#93000a",
+                        "success": "#10B981",
+                        "tertiary-fixed-dim": "#f3be65",
+                        "background": "#071325",
+                        "surface-container": "#142032",
+                        "primary-fixed-dim": "#6bd9c7",
+                        "outline-variant": "#3d4946",
+                        "on-tertiary": "#432c00",
+                        "on-primary-fixed-variant": "#005047",
+                        "error": "#ffb4ab",
+                        "tertiary-container": "#b78935",
+                        "primary-container": "#2aa191",
+                        "primary-fixed": "#89f5e3",
+                        "surface-container-high": "#1f2a3d",
+                        "on-surface": "#d7e3fc",
+                        "on-error": "#690005",
+                        "surface-dim": "#071325",
+                        "outline": "#879390",
+                        "accent-glow": "rgba(29, 154, 138, 0.2)",
+                        "bg-surface": "#1A2B45",
+                        "secondary-fixed-dim": "#b6c7e8",
+                        "surface": "#071325",
+                        "on-secondary-fixed-variant": "#374763",
+                        "tertiary": "#f3be65",
+                        "on-secondary": "#20314b",
+                        "bg-canvas": "#0A1628",
+                        "secondary-container": "#374763",
+                        "inverse-surface": "#d7e3fc",
+                        "border-subtle": "#1E293B",
+                        "surface-variant": "#2a3548",
+                        "on-tertiary-container": "#3a2600",
+                        "coral-accent": "#FF7A5A",
+                        "surface-container-highest": "#2a3548",
+                        "text-tertiary": "#64748B",
+                        "bg-surface-2": "#142239",
+                        "text-secondary": "#94A3B8",
+                        "primary": "#6bd9c7",
+                        "tertiary-fixed": "#ffdeac",
+                        "danger": "#EF4444",
+                        "on-tertiary-fixed-variant": "#604100",
+                        "surface-container-low": "#101c2e",
+                        "inverse-on-surface": "#253144",
+                        "on-primary-container": "#00302a",
+                        "on-primary": "#003731",
+                        "accent-hover": "#17806F",
+                        "warning": "#F59E0B",
+                        "on-primary-fixed": "#00201c",
+                        "surface-container-lowest": "#030e20",
+                        "secondary-fixed": "#d6e3ff",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-container": "#a5b6d6",
+                        "cream-highlight": "rgba(255, 248, 240, 0.04)",
+                        "on-tertiary-fixed": "#281900",
+                        "on-background": "#d7e3fc",
+                        "surface-tint": "#6bd9c7",
+                        "surface-bright": "#2e394d",
+                        "text-primary": "#FFFFFF",
+                        "on-surface-variant": "#bcc9c5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "32px",
+                        "safe-area-top": "44px",
+                        "safe-area-bottom": "34px",
+                        "element-gap": "16px",
+                        "gutter": "28px",
+                        "card-padding": "20px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Inter"],
+                        "headline-md": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "numeric-data": ["Inter"],
+                        "headline-sm": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "display-hero": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600" }],
+                        "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "26px", "fontWeight": "400" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "numeric-data": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                        "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "900" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-hero": ["40px", { "lineHeight": "48px", "fontWeight": "900" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-bg-canvas text-on-surface min-h-screen flex flex-col items-center justify-between font-body-md antialiased pt-safe-area-top pb-safe-area-bottom px-gutter w-full max-w-[390px] mx-auto overflow-x-hidden">
+<!-- Header Section -->
+<header class="w-full flex flex-col items-center pt-[10px]">
+<img alt="PropVeil Logo" class="h-[40px] w-auto object-contain mb-[48px] bg-transparent" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKgTeIP7SFty4pVFxMEZUEUPExtaJ1DAfofvw5CzGHlHAvZXE_PxLqz--yBdHZSADWO_ktrYzTA30HEyRVZjVwdzDxq3bm3OCfnxDezRHA6JS6EyiGZY5yen8skrAaeKDU3J1frHX45kEY-TF36zNMiQsTtlh6GMobBcXGe6wzYx9aWyq7TDkrKQ4hdUggx3jAITP9zvtTO9O5TkdK6SH9T3821BdhYCXG8GXwA26Nk4jfOVu9LAA0Uo4JubzBS5RvUqZufQx_RmPU">
+<h1 class="font-headline-lg text-headline-lg text-text-primary text-center">Choose your language</h1>
+<p class="font-body-sm text-body-sm text-text-secondary text-center mt-[12px] max-w-[280px]">You can change this anytime in Profile.</p>
+</header>
+<!-- Main Content: Language Cards -->
+<main class="w-full flex-grow flex flex-col justify-center gap-[24px] mt-[56px] mb-[40px]">
+<!-- Card 1: English (Selected) -->
+<button class="w-full bg-bg-surface rounded-xl p-[20px] flex items-center border-[1.5px] border-primary shadow-[0_0_15px_rgba(29,154,138,0.2)] transition-transform active:scale-95 text-left">
+<div class="font-headline-lg text-[32px] font-black text-primary w-[48px] mr-4 flex-shrink-0">EN</div>
+<div class="flex-grow flex flex-col">
+<span class="font-body-lg text-[18px] font-semibold text-text-primary">English</span>
+
+</div>
+<div class="w-[28px] h-[28px] rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-bg-canvas text-[16px] font-bold">check</span>
+</div>
+</button>
+<!-- Card 2: Français (Not Selected) -->
+<button class="w-full bg-bg-surface rounded-xl p-[20px] flex items-center border border-border-subtle transition-transform active:scale-95 text-left">
+<div class="font-headline-lg text-[32px] font-black text-text-secondary w-[48px] mr-4 flex-shrink-0">FR</div>
+<div class="flex-grow flex flex-col">
+<span class="font-body-lg text-[18px] font-semibold text-text-primary">Français</span>
+
+</div>
+<div class="w-[28px] h-[28px] rounded-full border-2 border-text-secondary flex-shrink-0"></div>
+</button>
+<!-- Accent: Flag & Origin -->
+<div class="flex items-center justify-center mt-4">
+<div class="flex w-[24px] h-[16px] mr-2">
+<div class="w-1/3 h-full bg-[#007A5E]"></div>
+<div class="w-1/3 h-full bg-[#CE1126]"></div>
+<div class="w-1/3 h-full bg-[#FCD116]"></div>
+</div>
+<span class="font-body-sm text-[12px] text-text-secondary">Made in Cameroon</span>
+</div>
+</main>
+<!-- Footer Action -->
+<footer class="w-full flex flex-col items-center">
+<button class="w-full h-[56px] bg-primary text-text-primary font-body-lg font-semibold text-[16px] rounded-[14px] flex items-center justify-center transition-transform active:scale-95 hover:bg-accent-hover">
+            Continue
+        </button>
+<p class="font-body-sm text-[12px] text-text-secondary mt-[16px]">
+            More languages coming soon. · <a class="text-primary hover:underline" href="#">Tell us which</a>
+</p>
+</footer>
+
+
+
+
+<script src="nav_interceptor.js"></script>
+</body></html>
