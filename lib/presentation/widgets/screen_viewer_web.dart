@@ -84,6 +84,10 @@ class _ScreenViewerState extends State<ScreenViewer> {
       String htmlContent = await rootBundle.loadString('assets/screens/${widget.fileName}');
       String js = await rootBundle.loadString('assets/screens/nav_interceptor.js');
       
+      // Remove any relative or absolute external references to nav_interceptor.js
+      // as they cause MIME type errors on web due to SPA fallback routing.
+      htmlContent = htmlContent.replaceAll(RegExp(r'<script\s+src=["\']\/?nav_interceptor\.js["\']><\/script>'), '');
+      
       if (htmlContent.contains('</body>')) {
         htmlContent = htmlContent.replaceFirst('</body>', '<script>\n$js\n</script></body>');
       } else {

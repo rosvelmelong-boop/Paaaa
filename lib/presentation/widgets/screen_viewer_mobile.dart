@@ -68,6 +68,9 @@ class _ScreenViewerState extends State<ScreenViewer> {
       String html = await rootBundle.loadString('assets/screens/${widget.fileName}');
       String js = await rootBundle.loadString('assets/screens/nav_interceptor.js');
       
+      // Remove any relative or absolute external references to nav_interceptor.js
+      html = html.replaceAll(RegExp(r'<script\s+src=["\']\/?nav_interceptor\.js["\']><\/script>'), '');
+      
       if (html.contains('</body>')) {
         html = html.replaceFirst('</body>', '<script>\n$js\n</script></body>');
       } else {
