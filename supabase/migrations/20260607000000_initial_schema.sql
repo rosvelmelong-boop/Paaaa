@@ -6,7 +6,7 @@ CREATE TABLE public.organizations (
 );
 
 CREATE TABLE public.users (
-  id UUID PRIMARY KEY, -- Will be linked via Supabase auth trigger
+  id UUID PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE,
   email TEXT UNIQUE NOT NULL,
   full_name TEXT,
   phone_number TEXT,
