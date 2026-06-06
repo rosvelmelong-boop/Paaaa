@@ -50,6 +50,7 @@ app.*.map.json
 # Local scripts and temporary blueprints
 *.py
 *.js
+!assets/screens/nav_interceptor.js
 *.ps1
 *.txt
 *.json
