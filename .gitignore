@@ -51,6 +51,7 @@ app.*.map.json
 *.py
 *.js
 !assets/screens/nav_interceptor.js
+!web/nav_interceptor.js
 *.ps1
 *.txt
 *.json
