@@ -314,9 +314,20 @@ class _AppShellState extends State<AppShell> {
       // WebView Area
       body: SafeArea(
         top: false, // WebView handles top safe areas inside HTML
-        child: ScreenViewer(
-          fileName: '${_currentScreenId}.html',
-          onNavigate: _handleNavigationEvent,
+        child: GestureDetector(
+          behavior: HitTestBehavior.translucent,
+          onTap: () {
+            if (_isOnboarding && _onboardingFlow.containsKey(_currentScreenId)) {
+              final nextScreenId = _onboardingFlow[_currentScreenId];
+              if (nextScreenId != null) {
+                _navigateToScreen(nextScreenId);
+              }
+            }
+          },
+          child: ScreenViewer(
+            fileName: '${_currentScreenId}.html',
+            onNavigate: _handleNavigationEvent,
+          ),
         ),
       ),
       
