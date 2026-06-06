@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'presentation/screens/app_shell.dart';
+import 'theme/app_theme.dart';
 
 void main() => runApp(const MyApp());
 
@@ -11,11 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'PropVeil App',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        brightness: Brightness.dark,
-        primaryColor: const Color(0xFF1D9A8A), // teal accent
-        scaffoldBackgroundColor: const Color(0xFF0A1628), // bg-canvas
-      ),
+      theme: PropveilTheme.darkTheme,
       home: const AppShell(),
     );
   }

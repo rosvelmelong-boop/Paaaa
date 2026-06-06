@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import '../widgets/screen_viewer.dart';
+import 'dashboard_screen.dart';
+import 'properties_screen.dart';
 
 class AppShell extends StatefulWidget {
   const AppShell({super.key});
@@ -311,25 +313,7 @@ class _AppShellState extends State<AppShell> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFF0A1628), // bg-canvas
-      // WebView Area
-      body: SafeArea(
-        top: false, // WebView handles top safe areas inside HTML
-        child: GestureDetector(
-          behavior: HitTestBehavior.translucent,
-          onTap: () {
-            if (_isOnboarding && _onboardingFlow.containsKey(_currentScreenId)) {
-              final nextScreenId = _onboardingFlow[_currentScreenId];
-              if (nextScreenId != null) {
-                _navigateToScreen(nextScreenId);
-              }
-            }
-          },
-          child: ScreenViewer(
-            fileName: '${_currentScreenId}.html',
-            onNavigate: _handleNavigationEvent,
-          ),
-        ),
-      ),
+      body: _buildBody(),
       
       // Drawer listing all 197 screens for testing
       endDrawer: Drawer(
@@ -525,5 +509,43 @@ class _AppShellState extends State<AppShell> {
         ),
       ),
     );
+  }
+
+  Widget _buildBody() {
+    if (_isOnboarding) {
+      return SafeArea(
+        top: false, // WebView handles top safe areas inside HTML
+        child: GestureDetector(
+          behavior: HitTestBehavior.translucent,
+          onTap: () {
+            if (_onboardingFlow.containsKey(_currentScreenId)) {
+              final nextScreenId = _onboardingFlow[_currentScreenId];
+              if (nextScreenId != null) {
+                _navigateToScreen(nextScreenId);
+              }
+            }
+          },
+          child: ScreenViewer(
+            fileName: '${_currentScreenId}.html',
+            onNavigate: _handleNavigationEvent,
+          ),
+        ),
+      );
+    } else {
+      // Route to native widgets if matches, else WebView fallback
+      if (_currentScreenId == '5add398873b243f4bd0f6c59561143e9') {
+        return const NativeDashboardScreen();
+      } else if (_currentScreenId == '34a3e073778249ef9b8d58824708e6f9') {
+        return const NativePropertiesScreen();
+      } else {
+        return SafeArea(
+          top: false,
+          child: ScreenViewer(
+            fileName: '${_currentScreenId}.html',
+            onNavigate: _handleNavigationEvent,
+          ),
+        );
+      }
+    }
   }
 }
