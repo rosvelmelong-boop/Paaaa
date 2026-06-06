@@ -23,46 +23,37 @@ $$ LANGUAGE sql STABLE SECURITY DEFINER;
 
 -- Organization-scoped RLS policies (Restricts data to only match active org_id in session metadata)
 CREATE POLICY org_isolation_policy ON public.properties
-  AS RESTRICTIVE
   USING (organization_id = public.get_auth_org_id())
   WITH CHECK (organization_id = public.get_auth_org_id());
 
 CREATE POLICY org_isolation_policy ON public.units
-  AS RESTRICTIVE
   USING (organization_id = public.get_auth_org_id())
   WITH CHECK (organization_id = public.get_auth_org_id());
 
 CREATE POLICY org_isolation_policy ON public.tenants
-  AS RESTRICTIVE
   USING (organization_id = public.get_auth_org_id())
   WITH CHECK (organization_id = public.get_auth_org_id());
 
 CREATE POLICY org_isolation_policy ON public.payments
-  AS RESTRICTIVE
   USING (organization_id = public.get_auth_org_id())
   WITH CHECK (organization_id = public.get_auth_org_id());
 
 CREATE POLICY org_isolation_policy ON public.payout_accounts
-  AS RESTRICTIVE
   USING (organization_id = public.get_auth_org_id())
   WITH CHECK (organization_id = public.get_auth_org_id());
 
 CREATE POLICY org_isolation_policy ON public.payouts
-  AS RESTRICTIVE
   USING (organization_id = public.get_auth_org_id())
   WITH CHECK (organization_id = public.get_auth_org_id());
 
 CREATE POLICY org_isolation_policy ON public.rent_invoices
-  AS RESTRICTIVE
   USING (organization_id = public.get_auth_org_id())
   WITH CHECK (organization_id = public.get_auth_org_id());
 
 CREATE POLICY org_isolation_policy ON public.maintenance_requests
-  AS RESTRICTIVE
   USING (organization_id = public.get_auth_org_id())
   WITH CHECK (organization_id = public.get_auth_org_id());
 
 CREATE POLICY org_isolation_policy ON public.documents
-  AS RESTRICTIVE
   USING (organization_id = public.get_auth_org_id())
   WITH CHECK (organization_id = public.get_auth_org_id());
